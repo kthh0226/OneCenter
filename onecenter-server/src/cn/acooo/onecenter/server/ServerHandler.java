@@ -48,6 +48,11 @@ public class ServerHandler extends SimpleChannelInboundHandler<KMessage> {
 		 ctx.write("Welcome to " + InetAddress.getLocalHost().getHostName() + "!\r\n");
 	     ctx.write("It is " + new Date() + " now.\r\n");
 	     ctx.flush();
+	     
+	     InetSocketAddress socketAddress = (InetSocketAddress)ctx.channel().remoteAddress();
+		 InetAddress inetaddress = socketAddress.getAddress();
+		 ChannelManager.putChannel(ctx, new PhoneClient(ctx,inetaddress.getHostAddress()));
+		 App.handler.sendEmptyMessage(BaseActivity.UI_MSG_ID_NEW_PHONE);
 	}
 
 	@Override
@@ -66,10 +71,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<KMessage> {
 	public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
 		super.channelRegistered(ctx);
 		Log.i(App.TAG, "into server channelRegistered");
-		InetSocketAddress socketAddress = (InetSocketAddress)ctx.channel().remoteAddress();
-		InetAddress inetaddress = socketAddress.getAddress();
-		ChannelManager.putChannel(ctx, new PhoneClient(ctx,inetaddress.getHostAddress()));
-		App.handler.sendEmptyMessage(BaseActivity.UI_MSG_ID_NEW_PHONE);
+		
 	}
 
 	@Override
