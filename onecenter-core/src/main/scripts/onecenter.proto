@@ -1,0 +1,72 @@
+
+package acooo.onecenter;
+
+option java_package = "cn.acooo.onecenter.core.auto";
+option java_outer_classname = "OneCenterProtos";
+
+//标识属于哪个模块
+enum MessageType
+{
+    MSG_ID_LOGIN = 10;//登陆，以及版本检查
+	MSG_ID_APPS = 11;//查询应用列表
+}
+
+message MessageContent{
+	required MessageType messageType = 1;
+	optional MessageCode messageCode = 2;
+	
+	optional CSQueryApps csQueryApps = 100;
+	optional SCQueryApps scQueryApps = 101;
+	
+	
+	optional SCPushImage scPushImage = 1000;
+	
+}
+message ImageInfo{
+	optional string name = 1;
+	optional bytes image = 2;
+}
+
+message SCPushImage{
+	optional ImageInfo imageInfo = 1;
+}
+message CSQueryApps{
+
+}
+message SCQueryApps{
+	repeated AppInfo apps = 1;
+}
+message AppInfo{
+	optional string icon = 1;
+	optional string name = 2;
+	optional string version = 3;
+	optional string packageName = 4;
+	optional string packageSize = 5;
+}
+
+message Phone{
+	required string imei = 1;
+	optional string deviceType = 2;
+}
+
+message CSLogin{
+	optional Phone phone = 1;
+}
+message SCLogin{
+	optional int32 code = 1;
+}
+enum MessageCode
+{
+	SYS_NORMAL = 1;//正常的通信,非1的话就是有错误
+	Err_Not_Known=1000;//
+	Err_Money_NotEnough=1001;//
+	Err_Power_NotEnough=1002;//
+	Err_BattleSoul_NotEnough=1003;//
+	Err_Diamond_NotEnough=1004;//
+	
+}
+enum VersionStatus{
+	PROHIBIT = 0;//禁止
+	EXPIRE = 1;//过期
+	NORMAL = 2;//正常
+}
