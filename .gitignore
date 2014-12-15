@@ -24,3 +24,19 @@ proguard/
 
 # Log Files
 *.log
+onecenter-core/.classpath
+onecenter-core/target
+onecenter-server/target
+onecenter-phone/targer
+onecenter-core/gen
+onecenter-phone/gen
+onecenter-server/gen
+onecenter-core/.project
+onecenter-core/.settings/org.eclipse.core.resources.prefs
+onecenter-core/.settings/org.eclipse.jdt.core.prefs
+onecenter-core/.settings/org.eclipse.m2e.core.prefs
+onecenter-phone/.classpath
+onecenter-phone/.project
+onecenter-server/.classpath
+onecenter-server/.project
+onecenter-server/.settings/org.eclipse.jdt.core.prefs
