@@ -19,6 +19,7 @@ public class KMessageDecoder extends ByteToMessageDecoder{
         in.markReaderIndex();
 
         int messageType = in.readShort();
+        int messageCode = in.readShort();
         int magicNumber = in.readInt();
         if (!KMessage.validMagicNumber(messageType, magicNumber)) {
             in.resetReaderIndex();
@@ -37,7 +38,7 @@ public class KMessageDecoder extends ByteToMessageDecoder{
         // Convert the received data into a new BigInteger.
         byte[] decoded = new byte[dataLength];
         in.readBytes(decoded);
-        KMessage m = new KMessage(messageType,decoded);
+        KMessage m = new KMessage(messageType,messageCode,decoded);
         out.add(m);
 	}
 

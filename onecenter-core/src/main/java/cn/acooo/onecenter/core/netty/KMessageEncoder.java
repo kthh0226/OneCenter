@@ -10,6 +10,7 @@ public class KMessageEncoder extends MessageToByteEncoder<KMessage>{
 	protected void encode(ChannelHandlerContext ctx, KMessage msg, ByteBuf out)
 			throws Exception {
 		out.writeShort(msg.getMessageType());  // message type
+		out.writeShort(msg.getMessageCode());
         out.writeInt(msg.getMagicNumber()); // magic number
         out.writeShort(msg.getLength());// data length
         out.writeBytes(msg.getData());      // data

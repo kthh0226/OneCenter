@@ -1,8 +1,13 @@
 package cn.acooo.onecenter.phone;
 
-import android.content.Context;
+import java.io.File;
+import java.util.List;
+
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Handler.Callback;
 import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
@@ -10,13 +15,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import cn.acooo.onecenter.auto.OneCenterProtos.AppInfo;
+import cn.acooo.onecenter.auto.OneCenterProtos.MessageType;
+import cn.acooo.onecenter.auto.OneCenterProtos.SCQueryApps;
+import cn.acooo.onecenter.phone.logic.AppLogic;
 import cn.acooo.onecenter.phone.service.SocketService;
 
 public class MainActivity extends BaseActivity {
 	private EditText ip;
 	private EditText port;
 	Intent socketServiceIntent; 
-	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,14 +60,7 @@ public class MainActivity extends BaseActivity {
 				
 			}
 		});
-		
-		
-//		List<PackageInfo> ps = AppLogic.getAllApps(this);
-//		for(PackageInfo info : ps){
-//			AppInfo appInfo = new AppInfo();
-//			appInfo.setPackageName(info.packageName);
-//			Log.i(TAG, appInfo.toString());
-//		}
+
 		
 		
 		
@@ -102,7 +103,31 @@ public class MainActivity extends BaseActivity {
 	}
 
 	@Override
-	public Context getContext() {
-		return this;
+	public Callback getActivityCallBack() {
+		return new Handler.Callback() {
+			@Override
+			public boolean handleMessage(Message msg) {
+				Log.i(TAG, "into MainActivity handle message,msg="+msg);
+				switch(msg.what){
+				case MessageType.MSG_ID_APPS_VALUE:
+						Log.i(TAG, "into UI_MSG_ID_NEW_PHONE handle message,msg="+msg);
+						SCQueryApps.Builder builder = SCQueryApps.newBuilder();
+						List<PackageInfo> ps = AppLogic.getAllApps(MainActivity.this);
+						for(PackageInfo info : ps){
+							AppInfo.Builder appInfoBuilder = AppInfo.newBuilder();
+							appInfoBuilder.setName(info.applicationInfo.loadLabel(  
+						            getPackageManager()).toString());
+							appInfoBuilder.setPackageName(info.packageName);
+							appInfoBuilder.setVersion(info.versionName);
+							appInfoBuilder.setPackageSize(""+Integer.valueOf((int) new File(info.applicationInfo.publicSourceDir).length()));
+							appInfoBuilder.setIcon(info.applicationInfo.loadIcon(getPackageManager()).toString());
+							builder.addApps(appInfoBuilder);
+						}
+						App.send(MessageType.MSG_ID_APPS, builder);
+						return true;
+				}
+				return false;
+			}
+		};
 	}
 }

@@ -2,13 +2,13 @@ package cn.acooo.onecenter.phone;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
 public abstract class BaseActivity extends Activity {
+	protected String TAG = App.TAG;
 	/**
 	 * 连接成功
 	 */
@@ -32,7 +32,7 @@ public abstract class BaseActivity extends Activity {
 		Log.i(App.TAG, "into BaseActivity===================");
 		App.handler = myHandler;
 	}
-	protected Handler myHandler = new Handler() {
+	protected Handler myHandler = new Handler(getActivityCallBack()) {
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
 			case UI_MSG_ID_CONNECTED:
@@ -56,7 +56,7 @@ public abstract class BaseActivity extends Activity {
 	};
 	
 	public void showInfo(String title, String message) {
-		new AlertDialog.Builder(getContext()).setTitle(title)
+		new AlertDialog.Builder(this).setTitle(title)
 				.setMessage(message)
 				.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 					@Override
@@ -64,9 +64,6 @@ public abstract class BaseActivity extends Activity {
 					}
 				}).show();
 	}
-	/**
-	 * 获取到当前activity的context，以便操作view
-	 * @return
-	 */
-	public abstract Context getContext();
+	
+	public abstract Handler.Callback getActivityCallBack();
 }

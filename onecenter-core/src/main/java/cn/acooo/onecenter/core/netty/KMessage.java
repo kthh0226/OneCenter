@@ -2,25 +2,38 @@ package cn.acooo.onecenter.core.netty;
 
 import java.util.Arrays;
 /**
- * 包协议：2byte(messageType) + 4byte(magic number) + 2byte(总长度) + byte[](protobuf object，len=总长度-8)
+ * 包协议：2byte(messageType) +2byte(messageCode) + 4byte(magic number) + 2byte(总长度) + byte[](protobuf object，len=总长度-8)
  * 包数据最大32k
  * @author bear
  *
  */
 public class KMessage {
-	public final static int HEAD_SIZE = 8;
+	public final static int HEAD_SIZE = 10;
 
+	public KMessage(int messageType,int messageCode,byte[] data){
+		this.magicNumber = messageType * 2;//用户数据加密，或者携带其他信息
+		this.messageType = messageType;
+		this.messageCode = messageCode;
+		this.length = data.length + KMessage.HEAD_SIZE;
+		this.data = data;
+	}
 	public KMessage(int messageType,byte[] data){
 		this.magicNumber = messageType * 2;//用户数据加密，或者携带其他信息
 		this.messageType = messageType;
+		this.messageCode = 1;
 		this.length = data.length + KMessage.HEAD_SIZE;
 		this.data = data;
 	}
 	
 	private int magicNumber;
 	private int messageType;
+	private int messageCode;
 	private int length;
 	private byte[] data;
+	
+	public int getMessageCode(){
+		return this.messageCode;
+	}
 	
 	public int getMagicNumber() {
 		return magicNumber;
@@ -47,12 +60,14 @@ public class KMessage {
 		this.data = data;
 	}
 	
+
 	@Override
 	public String toString() {
 		return "KMessage [magicNumber=" + magicNumber + ", messageType="
-				+ messageType + ", length=" + length + ", data="
-				+ Arrays.toString(data) + "]";
+				+ messageType + ", messageCode=" + messageCode + ", length="
+				+ length + ", data=" + Arrays.toString(data) + "]";
 	}
+	
 	public final static boolean validMagicNumber(int messageType,int magicNumber){
 		return KMessage.generateMagicNumber(messageType) == magicNumber;
 	}

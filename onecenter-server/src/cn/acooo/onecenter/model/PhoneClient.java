@@ -1,7 +1,12 @@
 package cn.acooo.onecenter.model;
 
 import io.netty.channel.ChannelHandlerContext;
+import cn.acooo.onecenter.auto.OneCenterProtos.MessageCode;
+import cn.acooo.onecenter.auto.OneCenterProtos.MessageType;
+import cn.acooo.onecenter.core.netty.KMessage;
 import cn.acooo.onecenter.core.netty.Sender;
+
+import com.google.protobuf.AbstractMessage.Builder;
 
 public class PhoneClient implements Sender {
 	private String model;//手机型号
@@ -23,6 +28,17 @@ public class PhoneClient implements Sender {
 	public PhoneClient(ChannelHandlerContext session,String ip){
 		this.session = session;
 		this.ip = ip;
+	}
+	@SuppressWarnings("rawtypes")
+	public void send(MessageType messageType,Builder builder){
+		KMessage m = new KMessage(messageType.getNumber(), builder.build().toByteArray());
+		this.session.writeAndFlush(m);
+	}
+	
+	@SuppressWarnings("rawtypes")
+	public void send(MessageType messageType,MessageCode messageCode,Builder builder){
+		KMessage m = new KMessage(messageType.getNumber(), messageCode.getNumber(),builder.build().toByteArray());
+		this.session.writeAndFlush(m);
 	}
 	
 	public String getModel() {

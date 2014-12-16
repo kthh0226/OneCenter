@@ -35,6 +35,11 @@ public class PhonesAdapter extends BaseAdapter {
 		}
 	}
 	
+	public PhoneClient getSelectedPhoneClient(){
+		return phones.get(selectItem);
+	}
+	
+	
 	public void reloadPhoneClient(){
 		phones = new ArrayList<PhoneClient>();
 		Enumeration<PhoneClient> senders = ChannelManager.getSenders();

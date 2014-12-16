@@ -16,7 +16,11 @@ public class ClientHandler extends SimpleChannelInboundHandler<KMessage> {
 	protected void channelRead0(ChannelHandlerContext ctx, KMessage msg)
 			throws Exception {
 		Log.i(App.TAG, "channel channelRead0==================");
-		Log.i(App.TAG, "recive==="+msg);
+		Message m = Message.obtain();
+		m.obj = msg.getData();
+		m.what = msg.getMessageType();
+		m.arg1 = msg.getMessageCode();
+		App.handler.sendMessage(m);
 	}
 
 	@Override
@@ -39,7 +43,7 @@ public class ClientHandler extends SimpleChannelInboundHandler<KMessage> {
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 		Log.i(App.TAG, "channel channelActive==================");
 		super.channelActive(ctx);
-		App.setChannel(ctx.channel());
+		App.setChannelHandlerContext(ctx);
 		App.handler.sendEmptyMessage(BaseActivity.UI_MSG_ID_CONNECTED);
 	}
 

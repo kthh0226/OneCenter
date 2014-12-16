@@ -15,14 +15,14 @@
         android:layout_columnSpan="1"
         android:layout_gravity="fill_horizontal"
         android:text="应用" /> 
-        <TextView 
-            android:id="@+id/showArea"
-            android:text="content"
-            android:layout_column="1"
-            android:layout_rowSpan="5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#2E8B57"/>
+    <ListView
+        android:id="@+id/showArea"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+       >
+    </ListView>
          <Button 
         android:layout_column="0"
         android:layout_gravity="fill_horizontal"
@@ -39,7 +39,4 @@
         android:layout_column="0"
         android:layout_gravity="fill_horizontal"
         android:text="通讯录" /> 
- 
-        
-
 </GridLayout>

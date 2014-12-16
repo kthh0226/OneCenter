@@ -1,27 +1,16 @@
 
 package acooo.onecenter;
 
-option java_package = "cn.acooo.onecenter.core.auto";
+option java_package = "cn.acooo.onecenter.auto";
 option java_outer_classname = "OneCenterProtos";
 
-//标识属于哪个模块
+//标识属于哪个模块，1000以内的id留给ui线程间的消息id
 enum MessageType
 {
-    MSG_ID_LOGIN = 10;//登陆，以及版本检查
-	MSG_ID_APPS = 11;//查询应用列表
+    MSG_ID_LOGIN = 1000;//登陆，以及版本检查
+	MSG_ID_APPS = 1100;//查询应用列表
 }
 
-message MessageContent{
-	required MessageType messageType = 1;
-	optional MessageCode messageCode = 2;
-	
-	optional CSQueryApps csQueryApps = 100;
-	optional SCQueryApps scQueryApps = 101;
-	
-	
-	optional SCPushImage scPushImage = 1000;
-	
-}
 message ImageInfo{
 	optional string name = 1;
 	optional bytes image = 2;

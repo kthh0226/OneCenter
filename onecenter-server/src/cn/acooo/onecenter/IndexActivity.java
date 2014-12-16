@@ -1,6 +1,5 @@
 package cn.acooo.onecenter;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +12,8 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import cn.acooo.onecenter.adapter.PhonesAdapter;
+import cn.acooo.onecenter.auto.OneCenterProtos.CSQueryApps;
+import cn.acooo.onecenter.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.service.ServerService;
 
 public class IndexActivity extends BaseActivity{
@@ -20,8 +21,6 @@ public class IndexActivity extends BaseActivity{
 	private ListView listView;
 	private Button openButton;
 	private Button disconnectButton;
-	private Button flushButton;
-	
 	private PhonesAdapter phonesAdapter;
 	
 	@Override
@@ -32,15 +31,6 @@ public class IndexActivity extends BaseActivity{
 		listView = (ListView)super.findViewById(R.id.phones);
 		openButton = (Button)super.findViewById(R.id.open);
 		disconnectButton = (Button)super.findViewById(R.id.disconnect);
-		flushButton = (Button)super.findViewById(R.id.flush);
-		
-		flushButton.setOnClickListener(new OnClickListener(){
-
-			@Override
-			public void onClick(View v) {
-				phonesAdapter.notifyDataSetChanged();
-			}
-		});
 		
 		openButton.setOnClickListener(new OnClickListener(){
 
@@ -48,6 +38,7 @@ public class IndexActivity extends BaseActivity{
 			public void onClick(View v) {
 				Intent intent = new Intent(IndexActivity.this, MyPhoneActivity.class);
 				startActivity(intent);
+				phonesAdapter.getSelectedPhoneClient().send(MessageType.MSG_ID_APPS,CSQueryApps.newBuilder());
 			}
 		});
 		

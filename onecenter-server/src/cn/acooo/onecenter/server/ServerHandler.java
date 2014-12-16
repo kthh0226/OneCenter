@@ -8,6 +8,7 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.util.Date;
 
+import android.os.Message;
 import android.util.Log;
 import cn.acooo.onecenter.App;
 import cn.acooo.onecenter.BaseActivity;
@@ -34,12 +35,11 @@ public class ServerHandler extends SimpleChannelInboundHandler<KMessage> {
 	protected void channelRead0(ChannelHandlerContext ctx, KMessage msg)
 			throws Exception {
 		Log.i(App.TAG, "into channelRead0");
-//		FlyProtos.CSLogin cslogin = FlyProtos.CSLogin.parseFrom(msg.getData());
-		//ChannelManager.putChannel(ctx, new Player(1,ctx.channel().toString()));
-//		FlyProtos.SCLogin.Builder builder = FlyProtos.SCLogin.newBuilder();
-//		builder.setState(1);
-//		KMessage m = new KMessage(111, builder.build().toByteArray());
-//		ctx.writeAndFlush(m);
+		Message m = Message.obtain();
+		m.obj = msg.getData();
+		m.what = msg.getMessageType();
+		m.arg1 = msg.getMessageCode();
+		App.handler.sendMessage(m);
 	}
 	
 	@Override
