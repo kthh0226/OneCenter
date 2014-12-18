@@ -1,7 +1,7 @@
 package cn.acooo.onecenter.server.model;
 
+import cn.acooo.onecenter.auto.OneCenterProtos.AppInfo;
 import cn.acooo.onecenter.server.R;
-import cn.acooo.onecenter.server.auto.OneCenterProtos.AppInfo;
 
 
 public class AppItem {

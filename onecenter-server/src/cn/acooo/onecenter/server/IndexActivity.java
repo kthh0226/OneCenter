@@ -11,9 +11,9 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import cn.acooo.onecenter.auto.OneCenterProtos.CSQueryApps;
+import cn.acooo.onecenter.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.server.adapter.PhonesAdapter;
-import cn.acooo.onecenter.server.auto.OneCenterProtos.CSQueryApps;
-import cn.acooo.onecenter.server.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.server.model.PhoneClient;
 import cn.acooo.onecenter.server.service.ServerService;
 

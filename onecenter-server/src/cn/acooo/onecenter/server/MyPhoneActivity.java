@@ -7,10 +7,10 @@ import android.os.Handler.Callback;
 import android.os.Message;
 import android.util.Log;
 import android.widget.ListView;
+import cn.acooo.onecenter.auto.OneCenterProtos.AppInfo;
+import cn.acooo.onecenter.auto.OneCenterProtos.MessageType;
+import cn.acooo.onecenter.auto.OneCenterProtos.SCQueryApps;
 import cn.acooo.onecenter.server.adapter.MyAppListAdapter;
-import cn.acooo.onecenter.server.auto.OneCenterProtos.AppInfo;
-import cn.acooo.onecenter.server.auto.OneCenterProtos.MessageType;
-import cn.acooo.onecenter.server.auto.OneCenterProtos.SCQueryApps;
 import cn.acooo.onecenter.server.model.AppItem;
 
 public class MyPhoneActivity extends BaseActivity{

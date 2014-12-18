@@ -1,10 +1,10 @@
 package cn.acooo.onecenter.server.model;
 
 import io.netty.channel.ChannelHandlerContext;
+import cn.acooo.onecenter.auto.OneCenterProtos.MessageCode;
+import cn.acooo.onecenter.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.core.netty.KMessage;
 import cn.acooo.onecenter.core.netty.Sender;
-import cn.acooo.onecenter.server.auto.OneCenterProtos.MessageCode;
-import cn.acooo.onecenter.server.auto.OneCenterProtos.MessageType;
 
 import com.google.protobuf.AbstractMessage.Builder;
 
