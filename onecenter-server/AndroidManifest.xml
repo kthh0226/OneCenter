@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.acooo.onecenter"
+    package="cn.acooo.onecenter.server"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -10,11 +10,9 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:name=".App" 
+        android:name="cn.acooo.onecenter.server.App" 
         android:theme="@style/AppTheme" >
-        <activity
-            android:name=".IndexActivity"
-            android:label="@string/app_name" >
+        <activity android:name=".IndexActivity" android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -22,7 +20,7 @@
         </activity>
         <activity android:name = ".MyPhoneActivity"></activity>
         <!--<activity android:name=".MainActivity"></activity> --> 
-        <service android:enabled="true" android:name=".service.ServerService" ></service>
+        <service android:enabled="true" android:name="cn.acooo.onecenter.server.service.ServerService" ></service>
     </application>
 
 </manifest>

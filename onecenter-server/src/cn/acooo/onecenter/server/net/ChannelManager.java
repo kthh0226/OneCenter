@@ -1,4 +1,4 @@
-package cn.acooo.onecenter.server;
+package cn.acooo.onecenter.server.net;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -6,7 +6,7 @@ import java.util.Enumeration;
 import java.util.concurrent.ConcurrentHashMap;
 
 import cn.acooo.onecenter.core.netty.Sender;
-import cn.acooo.onecenter.model.PhoneClient;
+import cn.acooo.onecenter.server.model.PhoneClient;
 /**
  * 所有与服务器建立连接的管理器
  * @author bear

@@ -1,4 +1,4 @@
-package cn.acooo.onecenter;
+package cn.acooo.onecenter.server;
 
 import android.app.Activity;
 import android.app.AlertDialog;

@@ -1,4 +1,4 @@
-package cn.acooo.onecenter;
+package cn.acooo.onecenter.server;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,10 +11,11 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import cn.acooo.onecenter.adapter.PhonesAdapter;
-import cn.acooo.onecenter.auto.OneCenterProtos.CSQueryApps;
-import cn.acooo.onecenter.auto.OneCenterProtos.MessageType;
-import cn.acooo.onecenter.service.ServerService;
+import cn.acooo.onecenter.server.adapter.PhonesAdapter;
+import cn.acooo.onecenter.server.auto.OneCenterProtos.CSQueryApps;
+import cn.acooo.onecenter.server.auto.OneCenterProtos.MessageType;
+import cn.acooo.onecenter.server.model.PhoneClient;
+import cn.acooo.onecenter.server.service.ServerService;
 
 public class IndexActivity extends BaseActivity{
 	
@@ -36,9 +37,15 @@ public class IndexActivity extends BaseActivity{
 
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(IndexActivity.this, MyPhoneActivity.class);
-				startActivity(intent);
-				phonesAdapter.getSelectedPhoneClient().send(MessageType.MSG_ID_APPS,CSQueryApps.newBuilder());
+				PhoneClient pc = phonesAdapter.getSelectedPhoneClient();
+				if(pc == null){
+					showInfo("提示", "没有任何连接的设备");
+				}else{
+					Intent intent = new Intent(IndexActivity.this, MyPhoneActivity.class);
+					startActivity(intent);
+					pc.send(MessageType.MSG_ID_APPS,CSQueryApps.newBuilder());
+				}
+				
 			}
 		});
 		

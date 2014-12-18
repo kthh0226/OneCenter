@@ -1,4 +1,4 @@
-package cn.acooo.onecenter.ViewHolder;
+package cn.acooo.onecenter.server.ViewHolder;
 
 import android.widget.TextView;
 

@@ -1,4 +1,4 @@
-package cn.acooo.onecenter.adapter;
+package cn.acooo.onecenter.server.adapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,27 +13,24 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.acooo.onecenter.R;
-import cn.acooo.onecenter.ViewHolder.AppViewHolder;
-import cn.acooo.onecenter.model.AppItem;
+import cn.acooo.onecenter.server.R;
+import cn.acooo.onecenter.server.ViewHolder.AppViewHolder;
+import cn.acooo.onecenter.server.model.AppItem;
 
 public class MyAppListAdapter extends BaseAdapter {
 	public static final String TAG = "MyAppListAdapter";
 	private LayoutInflater mInflater;
 	private List<AppItem> appItems = new ArrayList<AppItem>();
-
-	private void initTestData(){
-		for(int i =0;i<10;i++){
-			AppItem appItem = new AppItem();
-			appItem.setDes("desc~~~~~"+i);
-			appItem.setName("name====+"+i);
-			appItem.setIcon(R.drawable.i1);
+	public void addAppItem(AppItem appItem){
+		if(appItem != null){
 			appItems.add(appItem);
 		}
 	}
+	public void setApps(List<AppItem> appItems){
+		this.appItems = appItems;
+	}
 	
 	public MyAppListAdapter(Context context) {
-		this.initTestData();
 		this.mInflater = LayoutInflater.from(context);
 	}
 
@@ -56,31 +53,33 @@ public class MyAppListAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(final int position, View convertView, ViewGroup parent) {
 		
 		AppViewHolder holder = null;
 		if (convertView == null) {
 			holder = new AppViewHolder();  
 			convertView = mInflater.inflate(R.layout.app_item, null);
-			holder.icon = (ImageView)convertView.findViewById(R.id.img);
-			holder.name = (TextView)convertView.findViewById(R.id.title);
-			holder.des = (TextView)convertView.findViewById(R.id.info);
-			holder.viewBtn = (Button)convertView.findViewById(R.id.view_btn);
+			holder.appIcon = (ImageView)convertView.findViewById(R.id.appIcon);
+			holder.appName = (TextView)convertView.findViewById(R.id.appName);
+			holder.appVersion = (TextView)convertView.findViewById(R.id.appVersion);
+			holder.appLocalVersion = (TextView)convertView.findViewById(R.id.appLocalVersion);
+			holder.appSize = (TextView)convertView.findViewById(R.id.appSize);
+			holder.btn = (Button)convertView.findViewById(R.id.btn);
 			convertView.setTag(holder);
 		}else {
 			holder = (AppViewHolder)convertView.getTag();
 		}
 		
-		
-		holder.icon.setBackgroundResource((Integer)appItems.get(position).getIcon());
-		holder.name.setText((String)appItems.get(position).getName());
-		holder.des.setText((String)appItems.get(position).getDes());
-		
-		holder.viewBtn.setOnClickListener(new View.OnClickListener() {
-			
+		AppItem ai = appItems.get(position);
+		holder.appIcon.setBackgroundResource(ai.getAppIcon());
+		holder.appName.setText(ai.getAppName());
+		holder.appSize.setText(ai.getAppSize());
+		holder.appVersion.setText(ai.getAppVersion());
+		holder.appLocalVersion.setText(ai.getAppLocalVersion());
+		holder.btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				showInfo(v.getContext());					
+				showInfo(v.getContext(),position);					
 			}
 		});
 		
@@ -90,15 +89,14 @@ public class MyAppListAdapter extends BaseAdapter {
 	/**
 	 * listview中点击按键弹出对话框
 	 */
-	public void showInfo(Context context){
+	public void showInfo(Context context,int position){
 		new AlertDialog.Builder(context)
-		.setTitle("我的listview")
-		.setMessage("介绍...")
+		.setTitle("TIP")
+		.setMessage(appItems.get(position).getPackageName())
 		.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 			}
-		})
-		.show();
+		}).show();
 	}
 }

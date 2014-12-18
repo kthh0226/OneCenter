@@ -1,6 +1,6 @@
-package cn.acooo.onecenter;
+package cn.acooo.onecenter.server;
 
-import cn.acooo.onecenter.model.PhoneClient;
+import cn.acooo.onecenter.server.model.PhoneClient;
 import android.app.Application;
 import android.os.Handler;
 

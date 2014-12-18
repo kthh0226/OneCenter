@@ -1,9 +1,8 @@
-package cn.acooo.onecenter;
+package cn.acooo.onecenter.server;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
@@ -23,8 +22,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ListView;
 import android.widget.TextView;
-import cn.acooo.onecenter.adapter.MyAppListAdapter;
-import cn.acooo.onecenter.service.ServerService;
+import cn.acooo.onecenter.server.adapter.MyAppListAdapter;
+import cn.acooo.onecenter.server.service.ServerService;
 
 public class MainActivity extends BaseActivity {
 	private ViewPager viewPager;// 页卡内容
@@ -50,27 +49,6 @@ public class MainActivity extends BaseActivity {
 		InitViewPager();
 		
 		//this.startServer();
-	}
-	
-	private List<String> getData(){
-		
-		List<String> data = new ArrayList<String>();
-		data.add("测试数据1");
-		data.add("测试数据2");
-		data.add("测试数据3");
-		data.add("测试数据4");
-		data.add("测试数据5");
-		data.add("测试数据6");
-		data.add("测试数据7");
-		data.add("测试数据8");
-		data.add("测试数据9");
-		data.add("测试数据10");
-		data.add("测试数据11");
-		data.add("测试数据12");
-		data.add("测试数据13");
-		data.add("测试数据14");
-		data.add("测试数据15");
-		return data;
 	}
 	
 	private void InitViewPager() {

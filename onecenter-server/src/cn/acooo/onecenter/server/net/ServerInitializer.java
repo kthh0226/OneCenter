@@ -1,4 +1,4 @@
-package cn.acooo.onecenter.server;
+package cn.acooo.onecenter.server.net;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

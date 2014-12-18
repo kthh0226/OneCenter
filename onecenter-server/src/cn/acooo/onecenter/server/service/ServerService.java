@@ -1,12 +1,12 @@
-package cn.acooo.onecenter.service;
+package cn.acooo.onecenter.server.service;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
-import cn.acooo.onecenter.App;
-import cn.acooo.onecenter.server.Server;
+import cn.acooo.onecenter.server.App;
+import cn.acooo.onecenter.server.net.Server;
 
 public class ServerService extends Service{
 

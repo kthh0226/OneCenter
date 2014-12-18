@@ -1,4 +1,4 @@
-package cn.acooo.onecenter.adapter;
+package cn.acooo.onecenter.server.adapter;
 
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import cn.acooo.onecenter.App;
-import cn.acooo.onecenter.R;
-import cn.acooo.onecenter.ViewHolder.PhoneViewHolder;
-import cn.acooo.onecenter.model.PhoneClient;
-import cn.acooo.onecenter.server.ChannelManager;
+import cn.acooo.onecenter.server.App;
+import cn.acooo.onecenter.server.R;
+import cn.acooo.onecenter.server.ViewHolder.PhoneViewHolder;
+import cn.acooo.onecenter.server.model.PhoneClient;
+import cn.acooo.onecenter.server.net.ChannelManager;
 
 public class PhonesAdapter extends BaseAdapter {
 	private LayoutInflater mInflater;
@@ -36,7 +36,11 @@ public class PhonesAdapter extends BaseAdapter {
 	}
 	
 	public PhoneClient getSelectedPhoneClient(){
-		return phones.get(selectItem);
+		if(selectItem != -1){
+			return phones.get(selectItem);
+		}
+		return null;
+		
 	}
 	
 	
@@ -46,6 +50,11 @@ public class PhonesAdapter extends BaseAdapter {
 		while(senders.hasMoreElements()){
 			PhoneClient s = senders.nextElement();
 			phones.add(s);
+		}
+		if(phones.size() >0){
+			this.setSelectItem(0);
+		}else{
+			selectItem = -1;
 		}
 	}
 
@@ -83,7 +92,7 @@ public class PhonesAdapter extends BaseAdapter {
 		
 		holder.getTextView().setText(phones.get(position).getIp());
 		if(position == selectItem){
-			convertView.setBackgroundColor(Color.RED);  
+			convertView.setBackgroundColor(Color.BLUE);  
 		}else{
 			convertView.setBackgroundColor(Color.TRANSPARENT);  
 		}

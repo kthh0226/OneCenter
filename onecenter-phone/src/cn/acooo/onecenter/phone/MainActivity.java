@@ -1,10 +1,12 @@
 package cn.acooo.onecenter.phone;
 
 import java.io.File;
+import java.text.DecimalFormat;
 import java.util.List;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Handler.Callback;
@@ -24,7 +26,8 @@ import cn.acooo.onecenter.phone.service.SocketService;
 public class MainActivity extends BaseActivity {
 	private EditText ip;
 	private EditText port;
-	Intent socketServiceIntent; 
+	private Intent socketServiceIntent; 
+	private DecimalFormat df = new DecimalFormat("#.00");
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -118,9 +121,12 @@ public class MainActivity extends BaseActivity {
 							appInfoBuilder.setName(info.applicationInfo.loadLabel(  
 						            getPackageManager()).toString());
 							appInfoBuilder.setPackageName(info.packageName);
-							appInfoBuilder.setVersion(info.versionName);
-							appInfoBuilder.setPackageSize(""+Integer.valueOf((int) new File(info.applicationInfo.publicSourceDir).length()));
-							appInfoBuilder.setIcon(info.applicationInfo.loadIcon(getPackageManager()).toString());
+							appInfoBuilder.setVersion("version: "+info.versionName);
+							double size = Double.valueOf(new File(info.applicationInfo.publicSourceDir).length());
+							appInfoBuilder.setPackageSize("size："+df.format(size/1024/1024)+"M");
+//							Drawable icon = info.applicationInfo.loadIcon(getPackageManager());
+//							icon.getBounds().
+							appInfoBuilder.setIcon("");
 							builder.addApps(appInfoBuilder);
 						}
 						App.send(MessageType.MSG_ID_APPS, builder);

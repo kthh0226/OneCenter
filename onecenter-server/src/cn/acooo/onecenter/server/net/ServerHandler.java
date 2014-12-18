@@ -1,4 +1,4 @@
-package cn.acooo.onecenter.server;
+package cn.acooo.onecenter.server.net;
 
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
@@ -10,11 +10,11 @@ import java.util.Date;
 
 import android.os.Message;
 import android.util.Log;
-import cn.acooo.onecenter.App;
-import cn.acooo.onecenter.BaseActivity;
 import cn.acooo.onecenter.core.netty.KMessage;
 import cn.acooo.onecenter.core.netty.Sender;
-import cn.acooo.onecenter.model.PhoneClient;
+import cn.acooo.onecenter.server.App;
+import cn.acooo.onecenter.server.BaseActivity;
+import cn.acooo.onecenter.server.model.PhoneClient;
 
 @Sharable
 public class ServerHandler extends SimpleChannelInboundHandler<KMessage> {
