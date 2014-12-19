@@ -13,6 +13,9 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import cn.acooo.onecenter.auto.OneCenterProtos.CSDownloadApk;
+import cn.acooo.onecenter.auto.OneCenterProtos.MessageType;
+import cn.acooo.onecenter.server.App;
 import cn.acooo.onecenter.server.R;
 import cn.acooo.onecenter.server.ViewHolder.AppViewHolder;
 import cn.acooo.onecenter.server.model.AppItem;
@@ -71,7 +74,7 @@ public class MyAppListAdapter extends BaseAdapter {
 		}
 		
 		AppItem ai = appItems.get(position);
-		holder.appIcon.setBackgroundResource(ai.getAppIcon());
+		holder.appIcon.setImageBitmap(ai.getAppIcon());
 		holder.appName.setText(ai.getAppName());
 		holder.appSize.setText(ai.getAppSize());
 		holder.appVersion.setText(ai.getAppVersion());
@@ -79,7 +82,10 @@ public class MyAppListAdapter extends BaseAdapter {
 		holder.btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				showInfo(v.getContext(),position);					
+				AppItem appItem = appItems.get(position);
+				CSDownloadApk.Builder builder = CSDownloadApk.newBuilder();
+				builder.setPackageName(appItem.getPackageName());
+				App.selectedPhoneClient.send(MessageType.MSG_ID_DOWNLOAD_APK, builder);
 			}
 		});
 		

@@ -62,7 +62,7 @@ public class PhoneClient implements Sender {
 	
 	@Override
 	public boolean closeOnException() {
-		return false;
+		return true;
 	}
 
 	@Override

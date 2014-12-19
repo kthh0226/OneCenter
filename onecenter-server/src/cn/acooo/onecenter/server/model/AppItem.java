@@ -1,23 +1,31 @@
 package cn.acooo.onecenter.server.model;
 
+import android.content.pm.PackageInfo;
+import android.graphics.Bitmap;
+import android.util.Log;
 import cn.acooo.onecenter.auto.OneCenterProtos.AppInfo;
-import cn.acooo.onecenter.server.R;
+import cn.acooo.onecenter.server.App;
+import cn.acooo.onecenter.utils.ImageUtil;
+
+import com.google.protobuf.ByteString;
 
 
 public class AppItem {
-	private Integer appIcon;
+	private Bitmap appIcon;
 	private String appName;
 	private String appSize;
 	private String appVersion;
 	private String appLocalVersion;
 	private String packageName;
 	
-	public AppItem(AppInfo appInfo , String localVersion){
-		this.appIcon = R.drawable.ic_launcher;
+	public AppItem(AppInfo appInfo , PackageInfo packageInfo){
+		ByteString bs = appInfo.getIcon();
+		Log.i(App.TAG, "bs.size======="+bs.size());
+		this.appIcon = ImageUtil.Bytes2Bimap(appInfo.getIcon().toByteArray());
 		this.appName = appInfo.getName();
 		this.appSize = appInfo.getPackageSize();
 		this.appVersion = appInfo.getVersion();
-		this.appLocalVersion = localVersion == null ? "未安装":localVersion;
+		this.appLocalVersion = packageInfo == null ? "未安装":packageInfo.versionName;
 		this.packageName = appInfo.getPackageName();
 	}
 	
@@ -27,12 +35,15 @@ public class AppItem {
 	public void setPackageName(String packageName) {
 		this.packageName = packageName;
 	}
-	public Integer getAppIcon() {
+
+	public Bitmap getAppIcon() {
 		return appIcon;
 	}
-	public void setAppIcon(Integer appIcon) {
+
+	public void setAppIcon(Bitmap appIcon) {
 		this.appIcon = appIcon;
 	}
+
 	public String getAppName() {
 		return appName;
 	}

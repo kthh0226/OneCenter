@@ -23,11 +23,12 @@ public class ServerHandler extends SimpleChannelInboundHandler<KMessage> {
 	@Override
     public void exceptionCaught(ChannelHandlerContext ctx,
             Throwable cause) throws Exception {
-		Log.i(App.TAG, "into exceptionCaught");
+		Log.e(App.TAG, "into exceptionCaught",cause);
         Sender sender = ChannelManager.getSender(ctx);
         if(sender.closeOnException()){
         	ChannelManager.removeChannel(ctx);
         	ctx.close();
+        	App.handler.sendEmptyMessage(BaseActivity.UI_MSG_ID_NEW_PHONE);
         }
     }
 	

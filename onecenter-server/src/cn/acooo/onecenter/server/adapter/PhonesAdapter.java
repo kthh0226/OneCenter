@@ -18,6 +18,9 @@ import cn.acooo.onecenter.server.net.ChannelManager;
 
 public class PhonesAdapter extends BaseAdapter {
 	private LayoutInflater mInflater;
+	/**
+	 * TODO:这里有线程安全问题，list中会出现冗余的数据，有时间搞定，怀疑是handler异步线程中修改了本集合
+	 */
 	private ArrayList<PhoneClient> phones;
 	private int selectItem = -1;
 	

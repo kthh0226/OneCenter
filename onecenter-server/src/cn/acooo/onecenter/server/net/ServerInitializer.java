@@ -19,5 +19,4 @@ public class ServerInitializer extends ChannelInitializer<SocketChannel>{
         p.addLast("handler",HANDLER);
 		
 	}
-
 }

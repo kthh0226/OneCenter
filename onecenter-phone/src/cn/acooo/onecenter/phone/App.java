@@ -1,9 +1,12 @@
 package cn.acooo.onecenter.phone;
 
 import io.netty.channel.ChannelHandlerContext;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.Application;
 import android.os.Handler;
-
 import cn.acooo.onecenter.auto.OneCenterProtos.MessageCode;
 import cn.acooo.onecenter.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.core.netty.KMessage;
@@ -16,7 +19,10 @@ public class App extends Application {
 	public static volatile boolean socketIsRun = false;
 	public static final String TAG = "ONE";
 	public static Handler handler;
-	
+	/**
+	 * <packageName,publicSourceDir>
+	 */
+	public static Map<String,String> apkPaths = new HashMap<String,String>();
 	
 	@SuppressWarnings("rawtypes")
 	public static void send(MessageType messageType,Builder builder){

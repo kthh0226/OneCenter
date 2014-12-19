@@ -12,8 +12,7 @@ public class KMessageEncoder extends MessageToByteEncoder<KMessage>{
 		out.writeShort(msg.getMessageType());  // message type
 		out.writeShort(msg.getMessageCode());
         out.writeInt(msg.getMagicNumber()); // magic number
-        out.writeShort(msg.getLength());// data length
+        out.writeInt(msg.getLength());// data length
         out.writeBytes(msg.getData());      // data
 	}
-
 }

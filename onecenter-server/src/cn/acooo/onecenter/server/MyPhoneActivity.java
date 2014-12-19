@@ -1,6 +1,10 @@
 package cn.acooo.onecenter.server;
 
+import java.util.Map;
+
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Handler.Callback;
@@ -9,9 +13,11 @@ import android.util.Log;
 import android.widget.ListView;
 import cn.acooo.onecenter.auto.OneCenterProtos.AppInfo;
 import cn.acooo.onecenter.auto.OneCenterProtos.MessageType;
+import cn.acooo.onecenter.auto.OneCenterProtos.SCDownloadApk;
 import cn.acooo.onecenter.auto.OneCenterProtos.SCQueryApps;
 import cn.acooo.onecenter.server.adapter.MyAppListAdapter;
 import cn.acooo.onecenter.server.model.AppItem;
+import cn.acooo.onecenter.utils.CommonsUtil;
 
 public class MyPhoneActivity extends BaseActivity{
 	
@@ -34,10 +40,25 @@ public class MyPhoneActivity extends BaseActivity{
 			public boolean handleMessage(Message msg) {
 				try{
 					switch(msg.what){
+					case MessageType.MSG_ID_DOWNLOAD_APK_VALUE:
+						SCDownloadApk scDownloadApk = SCDownloadApk.parseFrom((byte[])msg.obj);
+						byte[] data = scDownloadApk.getData().toByteArray();
+						Log.i(TAG, "recive data length=="+data.length);
+						
+//						Intent intent = new Intent();
+//		                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//		                intent.setAction(android.content.Intent.ACTION_VIEW);
+//		                intent.setDataAndType(Uri.fromFile(new File()),
+//		                                 "application/vnd.android.package-archive");
+//		                startActivity(intent);
+		                 
 					case MessageType.MSG_ID_APPS_VALUE:
+						Log.d(TAG, "into apps============");
 						SCQueryApps builder = SCQueryApps.parseFrom((byte[])msg.obj);
+						Map<String,PackageInfo> ms = CommonsUtil.getAllAppsByMap(MyPhoneActivity.this);
 						for(AppInfo app : builder.getAppsList()){
-							myAppListAdapter.addAppItem(new AppItem(app,null));
+							PackageInfo pinfo = ms.get(app.getPackageName());
+							myAppListAdapter.addAppItem(new AppItem(app,pinfo));
 						}
 						myAppListAdapter.notifyDataSetChanged();
 						return true;

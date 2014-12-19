@@ -34,6 +34,10 @@ public abstract class BaseActivity extends Activity {
 	}
 	protected Handler myHandler = new Handler(getActivityCallBack()) {
 		public void handleMessage(Message msg) {
+			//产生了异常，非正常返回
+			if(msg.what > 1000 && msg.arg1 != 1){
+				throw new IllegalArgumentException("messageCode error,msg="+msg);
+			}
 			switch (msg.what) {
 			case UI_MSG_ID_CONNECTED:
 				showInfo("网络连接", "连接成功");

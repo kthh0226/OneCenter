@@ -2,13 +2,12 @@ package cn.acooo.onecenter.core.netty;
 
 import java.util.Arrays;
 /**
- * 包协议：2byte(messageType) +2byte(messageCode) + 4byte(magic number) + 2byte(总长度) + byte[](protobuf object，len=总长度-8)
- * 包数据最大32k
+ * 包协议：2byte(messageType) +2byte(messageCode) + 4byte(magic number) + 4byte(总长度) + byte[](protobuf object，len=总长度-8)
  * @author bear
  *
  */
 public class KMessage {
-	public final static int HEAD_SIZE = 10;
+	public final static int HEAD_SIZE = 12;
 
 	public KMessage(int messageType,int messageCode,byte[] data){
 		this.magicNumber = messageType * 2;//用户数据加密，或者携带其他信息

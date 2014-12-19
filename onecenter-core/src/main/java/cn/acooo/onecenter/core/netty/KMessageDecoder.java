@@ -29,7 +29,7 @@ public class KMessageDecoder extends ByteToMessageDecoder{
         
         // Wait until the whole data is available.
        
-        int dataLength = in.readShort() - KMessage.HEAD_SIZE;
+        int dataLength = in.readInt() - KMessage.HEAD_SIZE;
         if (in.readableBytes() < dataLength) {
             in.resetReaderIndex();
             return;
