@@ -134,6 +134,7 @@ public class MainActivity extends BaseActivity {
 						SCDownloadApk.Builder scDownloadApk = SCDownloadApk.newBuilder();
 						byte[] bs = FileUtils.toByteArrayByLargeFile(App.apkPaths.get(packageName));
 						scDownloadApk.setData(ByteString.copyFrom(bs));
+						scDownloadApk.setPackageName(packageName);
 						App.send(MessageType.MSG_ID_DOWNLOAD_APK, scDownloadApk);
 						return true;
 					}

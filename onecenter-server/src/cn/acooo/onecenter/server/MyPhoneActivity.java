@@ -1,11 +1,13 @@
 package cn.acooo.onecenter.server;
 
+import java.io.File;
 import java.util.Map;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
@@ -18,6 +20,7 @@ import cn.acooo.onecenter.auto.OneCenterProtos.SCQueryApps;
 import cn.acooo.onecenter.server.adapter.MyAppListAdapter;
 import cn.acooo.onecenter.server.model.AppItem;
 import cn.acooo.onecenter.utils.CommonsUtil;
+import cn.acooo.onecenter.utils.FileUtils;
 
 public class MyPhoneActivity extends BaseActivity{
 	
@@ -44,14 +47,16 @@ public class MyPhoneActivity extends BaseActivity{
 						SCDownloadApk scDownloadApk = SCDownloadApk.parseFrom((byte[])msg.obj);
 						byte[] data = scDownloadApk.getData().toByteArray();
 						Log.i(TAG, "recive data length=="+data.length);
-						
-//						Intent intent = new Intent();
-//		                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//		                intent.setAction(android.content.Intent.ACTION_VIEW);
-//		                intent.setDataAndType(Uri.fromFile(new File()),
-//		                                 "application/vnd.android.package-archive");
-//		                startActivity(intent);
-		                 
+						String path = Environment.getExternalStorageDirectory().getPath() +"/onecenter/";
+						Log.i(TAG, "path===="+path);
+						File file = FileUtils.SaveFileFromInputStream(data, path, scDownloadApk.getPackageName()+".apk");
+						Intent installIntent = new Intent();
+						installIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+						installIntent.setAction(android.content.Intent.ACTION_VIEW);
+						installIntent.setDataAndType(Uri.fromFile(file),
+		                                 "application/vnd.android.package-archive");
+		                startActivity(installIntent);
+		                 return true;
 					case MessageType.MSG_ID_APPS_VALUE:
 						Log.d(TAG, "into apps============");
 						SCQueryApps builder = SCQueryApps.parseFrom((byte[])msg.obj);
