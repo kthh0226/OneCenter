@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OneCenter-Server</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name = "tuijian_app">推荐应用</string>
+    <string name = "my_phone">我的手机</string>
+    <string name = "my_script">我的脚本</string>
+</resources>

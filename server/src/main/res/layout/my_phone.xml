@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:useDefaultMargins="true"
+    android:alignmentMode="alignBounds"
+    android:rowCount="5"
+    android:columnCount="4"
+    android:background="#F0F0F0"
+    android:padding="10dp">
+    <Button 
+        android:layout_column="0"
+        android:background="@color/white"
+        android:layout_width="400dp"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill_horizontal"
+        android:textSize="30dp"
+        android:text="应用" /> 
+    <ListView
+        android:id="@+id/showArea"
+        android:layout_gravity="fill_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_column="1"
+        android:layout_columnSpan="3"
+        android:layout_rowSpan="5"
+        android:dividerHeight="20dp"
+       >
+    </ListView>
+         <Button 
+        	android:layout_column="0"
+        	android:background="@color/white"
+        	android:layout_gravity="fill_horizontal"
+        	android:textSize="30dp"
+        	android:text="短信" /> 
+         <Button 
+        	android:layout_column="0"
+         	android:background="@color/white"
+        	android:layout_gravity="fill_horizontal"
+        	android:textSize="30dp"
+        	android:text="通话记录" /> 
+         <Button 
+        	android:layout_column="0"
+         	android:background="@color/white"
+        	android:layout_gravity="fill_horizontal"
+        	android:textSize="30dp"
+        	android:text="打电话" /> 
+         <Button 
+        	android:layout_column="0"
+         	android:background="@color/white"
+        	android:layout_gravity="fill_horizontal"
+        	android:textSize="30dp"
+        	android:text="通讯录" /> 
+</GridLayout>
