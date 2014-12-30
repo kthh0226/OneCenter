@@ -1,13 +1,13 @@
 package cn.acooo.onecenter.phone.service;
 
+import android.os.Message;
+import android.util.Log;
+import cn.acooo.onecenter.core.BaseActivity;
+import cn.acooo.onecenter.core.netty.KMessage;
+import cn.acooo.onecenter.phone.App;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import android.os.Message;
-import android.util.Log;
-import cn.acooo.onecenter.core.netty.KMessage;
-import cn.acooo.onecenter.phone.App;
-import cn.acooo.onecenter.phone.BaseActivity;
 
 @Sharable
 public class ClientHandler extends SimpleChannelInboundHandler<KMessage> {

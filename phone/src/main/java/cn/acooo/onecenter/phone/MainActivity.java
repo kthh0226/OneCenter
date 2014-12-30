@@ -20,6 +20,7 @@ import java.io.File;
 import java.text.DecimalFormat;
 import java.util.List;
 
+import cn.acooo.onecenter.core.BaseActivity;
 import cn.acooo.onecenter.core.auto.OneCenterProtos;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk;
@@ -34,8 +35,14 @@ import cn.acooo.onecenter.phone.service.SocketService;
 public class MainActivity extends BaseActivity {
 	private EditText ip;
 	private EditText port;
-	private Intent socketServiceIntent; 
-	private DecimalFormat df = new DecimalFormat("#.00");
+	private Intent socketServiceIntent;
+
+    @Override
+    protected void initHandler() {
+        App.handler = myHandler;
+    }
+
+    private DecimalFormat df = new DecimalFormat("#.00");
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -71,16 +78,8 @@ public class MainActivity extends BaseActivity {
 				
 			}
 		});
-
-//		Channel channel = App.getInstance().getChannel();
-//		for(int i = 0;i<10;i++){
-//			FlyProtos.CSLogin.Builder builder = FlyProtos.CSLogin.newBuilder();
-//			builder.setPlayerId(10000);
-//			byte[] bytes = builder.build().toByteArray();
-//			KMessage km = new KMessage(120,bytes);
-//			channel.writeAndFlush(km);
-//			
-//		}
+        String smses = AppLogic.getInstance().getSmsInPhone(this);
+        Log.i(TAG,smses);
 	}
 	
 	@Override

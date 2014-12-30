@@ -21,7 +21,7 @@ public class AppItem {
 	
 	public AppItem(AppInfo appInfo , PackageInfo packageInfo){
 		ByteString bs = appInfo.getIcon();
-		Log.i(App.TAG, "bs.size======="+bs.size());
+		Log.d(App.TAG, "bs.size======="+bs.size());
 		this.appIcon = ImageUtil.Bytes2Bimap(appInfo.getIcon().toByteArray());
 		this.appName = appInfo.getName();
 		this.appSize = appInfo.getPackageSize();

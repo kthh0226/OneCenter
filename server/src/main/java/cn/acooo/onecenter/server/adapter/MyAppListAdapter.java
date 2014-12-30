@@ -3,6 +3,7 @@ package cn.acooo.onecenter.server.adapter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.server.App;
@@ -76,6 +76,7 @@ public class MyAppListAdapter extends BaseAdapter {
 		
 		AppItem ai = appItems.get(position);
 		holder.appIcon.setImageBitmap(ai.getAppIcon());
+        Log.i(TAG,"w="+ai.getAppIcon().getWidth()+",h="+ai.getAppIcon().getHeight());
 		holder.appName.setText(ai.getAppName());
 		holder.appSize.setText(ai.getAppSize());
 		holder.appVersion.setText(ai.getAppVersion());
@@ -106,4 +107,9 @@ public class MyAppListAdapter extends BaseAdapter {
 			}
 		}).show();
 	}
+    public interface CallBacks{
+        public void addAppItem(AppItem appItem);
+    }
+
+
 }

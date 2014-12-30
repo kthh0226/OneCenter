@@ -11,16 +11,22 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryApps;
-import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageType;
+
+import cn.acooo.onecenter.core.BaseActivity;
 import cn.acooo.onecenter.server.adapter.PhonesAdapter;
 import cn.acooo.onecenter.server.model.PhoneClient;
 import cn.acooo.onecenter.server.service.ServerService;
 
-public class IndexActivity extends BaseActivity{
+public class IndexActivity extends BaseActivity {
 	
 	private ListView listView;
-	private Button openButton;
+
+    @Override
+    protected void initHandler() {
+        App.handler = myHandler;
+    }
+
+    private Button openButton;
 	private Button disconnectButton;
 	private PhonesAdapter phonesAdapter;
 	
@@ -43,7 +49,6 @@ public class IndexActivity extends BaseActivity{
 				}else{
 					Intent intent = new Intent(IndexActivity.this, MyPhoneActivity.class);
 					startActivity(intent);
-					pc.send(MessageType.MSG_ID_APPS,CSQueryApps.newBuilder());
 				}
 				
 			}

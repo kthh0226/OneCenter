@@ -1,8 +1,9 @@
 package cn.acooo.onecenter.server;
 
-import cn.acooo.onecenter.server.model.PhoneClient;
 import android.app.Application;
 import android.os.Handler;
+
+import cn.acooo.onecenter.server.model.PhoneClient;
 
 public class App extends Application{
 	

@@ -5,8 +5,9 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
+
+import cn.acooo.onecenter.core.BaseActivity;
 import cn.acooo.onecenter.phone.App;
-import cn.acooo.onecenter.phone.BaseActivity;
 
 public class SocketService extends Service{
 	

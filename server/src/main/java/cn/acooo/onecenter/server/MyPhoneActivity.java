@@ -14,6 +14,8 @@ import android.widget.ListView;
 import java.io.File;
 import java.util.Map;
 
+import cn.acooo.onecenter.core.BaseActivity;
+import cn.acooo.onecenter.core.auto.OneCenterProtos;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk;
@@ -23,18 +25,20 @@ import cn.acooo.onecenter.core.utils.FileUtils;
 import cn.acooo.onecenter.server.adapter.MyAppListAdapter;
 import cn.acooo.onecenter.server.model.AppItem;
 
-public class MyPhoneActivity extends BaseActivity{
+public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListFragment.Callbacks {
 	
 	private ListView listView;
-	private MyAppListAdapter myAppListAdapter;
-	
+//	private MyAppListAdapter myAppListAdapter;
+	private AppDetailListFragment appDetail;
+    private MyPhoneFeatureListFragment ff;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.my_phone);
-		listView = (ListView)findViewById(R.id.showArea);
-		myAppListAdapter = new MyAppListAdapter(this);
-		listView.setAdapter(myAppListAdapter);
+		setContentView(R.layout.activity_phone);
+        ff = (MyPhoneFeatureListFragment)(getFragmentManager().findFragmentById(R.id.phone_feature_list));
+        ff.setActivateOnItemClick(true);
+        ff.getListView().setItemChecked(0,true);
+        onItemSelected("0");
 	}
 
 	@Override
@@ -60,6 +64,7 @@ public class MyPhoneActivity extends BaseActivity{
 		                 return true;
 					case MessageType.MSG_ID_APPS_VALUE:
 						Log.d(TAG, "into apps============");
+                        MyAppListAdapter myAppListAdapter = (MyAppListAdapter)appDetail.getListView().getAdapter();
 						SCQueryApps builder = SCQueryApps.parseFrom((byte[])msg.obj);
 						Map<String,PackageInfo> ms = CommonsUtil.getAllAppsByMap(MyPhoneActivity.this);
 						for(AppInfo app : builder.getAppsList()){
@@ -82,4 +87,24 @@ public class MyPhoneActivity extends BaseActivity{
 			}
 		};
 	}
+
+    @Override
+    protected void initHandler() {
+        App.handler = myHandler;
+    }
+
+    @Override
+    public void onItemSelected(String id) {
+        Log.i(TAG,"onItemSelected,id========="+id);
+        Bundle args = new Bundle();
+        if("0".equals(id)){
+            App.selectedPhoneClient.send(MessageType.MSG_ID_APPS, OneCenterProtos.CSQueryApps.newBuilder());
+            appDetail = appDetail == null? new AppDetailListFragment():appDetail;
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.phone_feature_detail_container, appDetail).commit();
+        }else{
+//            getFragmentManager().beginTransaction()
+//                    .replace(R.id.phone_feature_detail_container, null).commit();
+        }
+    }
 }

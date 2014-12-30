@@ -1,14 +1,18 @@
-package cn.acooo.onecenter.phone;
+package cn.acooo.onecenter.core;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 
 public abstract class BaseActivity extends Activity {
-	protected String TAG = App.TAG;
+
+    public BaseActivity(){
+        this.initHandler();
+    }
+
+	protected String TAG = "ONE";
 	/**
 	 * 连接成功
 	 */
@@ -27,17 +31,14 @@ public abstract class BaseActivity extends Activity {
 	 */
 	public final static int UI_MSG_ID_NOT_CONNECTED = 4;
 	
-	
-	public BaseActivity(){
-		Log.i(App.TAG, "into BaseActivity===================");
-		App.handler = myHandler;
-	}
+	/**
+	 * 有新的电话连接上
+	 */
+	public final static int UI_MSG_ID_NEW_PHONE = 5;
+
 	protected Handler myHandler = new Handler(getActivityCallBack()) {
 		public void handleMessage(Message msg) {
-			//产生了异常，非正常返回
-			if(msg.what > 1000 && msg.arg1 != 1){
-				throw new IllegalArgumentException("messageCode error,msg="+msg);
-			}
+			super.handleMessage(msg);
 			switch (msg.what) {
 			case UI_MSG_ID_CONNECTED:
 				showInfo("网络连接", "连接成功");
@@ -55,7 +56,6 @@ public abstract class BaseActivity extends Activity {
 				throw new RuntimeException("not catch ui message id,id="
 						+ msg.what);
 			}
-			super.handleMessage(msg);
 		}
 	};
 	
@@ -68,6 +68,15 @@ public abstract class BaseActivity extends Activity {
 					}
 				}).show();
 	}
-	
-	public abstract Handler.Callback getActivityCallBack();
+
+    /**
+     * 处理本页面的消息回掉
+     * @return
+     */
+	protected abstract Handler.Callback getActivityCallBack();
+
+    /**
+     * handler已经被实例化,放到app中，方便发送数据
+     */
+    protected abstract void initHandler();
 }
