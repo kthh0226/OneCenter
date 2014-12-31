@@ -1,19 +1,26 @@
 package cn.acooo.onecenter.phone.logic;
 
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import cn.acooo.onecenter.core.model.ContactsInfo;
 
 public class AppLogic {
 	private final static AppLogic appLogic = new AppLogic();
@@ -114,69 +121,88 @@ public class AppLogic {
         return smsBuilder.toString();
     }
 
-    public List<String> getLocalContactsInfos(Context context) {
+    /**
+     * 获取全部的联系人
+     * @param context
+     * @return
+     */
+    public List<ContactsInfo> getAllContacts(Context context){
+        List<ContactsInfo> rs = this.getLocalContacts(context);
+        Log.d("one1",rs.toString());
+
+        rs.addAll(this.getSIMContacts(context));
+        Log.d("one2",rs.toString());
+        return rs;
+    }
+
+    /**
+     * 获取本地存储的联系人
+     * @param context
+     * @return
+     */
+    public List<ContactsInfo> getLocalContacts(Context context) {
         ContentResolver cr = context.getContentResolver();
+        List<ContactsInfo> result = new ArrayList<ContactsInfo>();
         String str[] = { Phone.CONTACT_ID, Phone.DISPLAY_NAME, Phone.NUMBER,
                 Phone.PHOTO_ID };
         Cursor cur = cr.query(Phone.CONTENT_URI, str, null,null, null);
-
-        if (cur != null) {
-            while (cur.moveToNext()) {
-//                contactsInfo = new ContactsInfo();
-//                contactsInfo.setContactsPhone(cur.getString(cur
-//                        .getColumnIndex(Phone.NUMBER)));// 得到手机号码
-//                contactsInfo.setContactsName(cur.getString(cur
-//                        .getColumnIndex(Phone.DISPLAY_NAME)));
-//                // contactsInfo.setContactsPhotoId(cur.getLong(cur.getColumnIndex(Phone.PHOTO_ID)));
-//                long contactid = cur.getLong(cur
-//                        .getColumnIndex(Phone.CONTACT_ID));
-//                long photoid = cur.getLong(cur.getColumnIndex(Phone.PHOTO_ID));
-//                // 如果photoid 大于0 表示联系人有头像 ，如果没有给此人设置头像则给他一个默认的
-//                if (photoid > 0) {
-//                    Uri uri = ContentUris.withAppendedId(
-//                            ContactsContract.Contacts.CONTENT_URI, contactid);
-//                    InputStream input = ContactsContract.Contacts
-//                            .openContactPhotoInputStream(cr, uri);
-//                    contactsInfo.setBitmap(BitmapFactory.decodeStream(input));
-//                } else {
-//                    contactsInfo.setBitmap(BitmapFactory.decodeResource(
-//                            context.getResources(), R.drawable.ic_launcher));
-//                }
-//
-//                System.out.println("---------联系人电话--"
-//                        + contactsInfo.getContactsPhone());
-//                localList.add(contactsInfo);
-
+        try{
+            if (cur != null) {
+                while (cur.moveToNext()) {
+                    ContactsInfo contactsInfo = new ContactsInfo();
+                    contactsInfo.setType(1);
+                    contactsInfo.setNumber(cur.getString(cur
+                            .getColumnIndex(Phone.NUMBER)));// 得到手机号码
+                    contactsInfo.setName(cur.getString(cur
+                            .getColumnIndex(Phone.DISPLAY_NAME)));
+                    // contactsInfo.setContactsPhotoId(cur.getLong(cur.getColumnIndex(Phone.PHOTO_ID)));
+                    long contactId = cur.getLong(cur.getColumnIndex(Phone.CONTACT_ID));
+                    contactsInfo.setId(contactId);
+                    long photoId = cur.getLong(cur.getColumnIndex(Phone.PHOTO_ID));
+                    // photoId 大于0 表示联系人有头像 ，如果没有给此人设置头像则给他一个默认的
+                    if (photoId > 0) {
+                        Uri uri = ContentUris.withAppendedId(
+                                ContactsContract.Contacts.CONTENT_URI, contactId);
+                        InputStream input = ContactsContract.Contacts
+                                .openContactPhotoInputStream(cr, uri);
+                        contactsInfo.setIcon(BitmapFactory.decodeStream(input));
+                    } else {
+//                        contactsInfo.setBitmap(BitmapFactory.decodeResource(
+//                                context.getResources(), R.drawable.ic_launcher));
+                    }
+                    result.add(contactsInfo);
+                }
             }
+        }finally {
+            cur.close();
         }
-        cur.close();
-        return null;
-
+        return result;
     }
-    public List<String> getSIMContactsInfos(Context context) {
+
+    /**
+     * 获取sim卡的联系人
+     * @param context
+     * @return
+     */
+    public List<ContactsInfo> getSIMContacts(Context context) {
         TelephonyManager mTelephonyManager = (TelephonyManager) context
                 .getSystemService(Context.TELEPHONY_SERVICE);
-
-        System.out.println("---------SIM--------");
+        List<ContactsInfo> result = new ArrayList<>();
         ContentResolver cr = context.getContentResolver();
         final String SIM_URI_ADN = "content://icc/adn";// SIM卡
 
         Uri uri = Uri.parse(SIM_URI_ADN);
         Cursor cursor = cr.query(uri, null, null, null, null);
-        while (cursor.moveToFirst()) {
-//            SIMContactsInfo = new ContactsInfo();
-//            SIMContactsInfo.setContactsName(cursor.getString(cursor
-//                    .getColumnIndex("name")));
-//            SIMContactsInfo
-//                    .setContactsPhone(cursor.getString(cursor
-//                            .getColumnIndex("number")));
-//            SIMContactsInfo
-//                    .setBitmap(BitmapFactory.decodeResource(
-//                            context.getResources(),
-//                            R.drawable.ic_launcher));
-//            SIMList.add(SIMContactsInfo);
+        try{
+            while (cursor.moveToFirst()) {
+                ContactsInfo info = new ContactsInfo();
+                info.setType(0);
+                info.setName(cursor.getString(cursor.getColumnIndex("name")));
+                result.add(info);
+            }
+        }finally {
+            cursor.close();
         }
-        cursor.close();
-        return null;
+        return result;
     }
 }

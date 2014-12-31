@@ -27,6 +27,7 @@ import cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryApps;
+import cn.acooo.onecenter.core.model.ContactsInfo;
 import cn.acooo.onecenter.core.utils.FileUtils;
 import cn.acooo.onecenter.core.utils.ImageUtil;
 import cn.acooo.onecenter.phone.logic.AppLogic;
@@ -78,8 +79,6 @@ public class MainActivity extends BaseActivity {
 				
 			}
 		});
-        String smses = AppLogic.getInstance().getSmsInPhone(this);
-        Log.i(TAG,smses);
 	}
 	
 	@Override
@@ -113,11 +112,11 @@ public class MainActivity extends BaseActivity {
 							appInfoBuilder.setName(info.applicationInfo.loadLabel(  
 						            getPackageManager()).toString());
 							appInfoBuilder.setPackageName(info.packageName);
-							appInfoBuilder.setVersion("version: "+info.versionName);
+							appInfoBuilder.setVersion(info.versionName == null ? "":info.versionName);
 							String publicSourceDir = info.applicationInfo.publicSourceDir;
 							App.apkPaths.put(info.packageName, publicSourceDir);
 							double size = Double.valueOf(new File(publicSourceDir).length());
-							appInfoBuilder.setPackageSize("size："+df.format(size/1024/1024)+"M");
+							appInfoBuilder.setPackageSize(df.format(size/1024/1024)+"M");
 							Drawable icon = info.applicationInfo.loadIcon(getPackageManager());
 							ByteString byteString = ByteString.copyFrom(ImageUtil.drawableToBytes(icon));
 							appInfoBuilder.setIcon(byteString);
@@ -134,6 +133,22 @@ public class MainActivity extends BaseActivity {
 						scDownloadApk.setPackageName(packageName);
 						App.send(MessageType.MSG_ID_DOWNLOAD_APK, scDownloadApk);
 						return true;
+                    case MessageType.MSG_ID_QUERY_CONTACTS_VALUE:
+                        OneCenterProtos.SCQueryContacts.Builder scQueryContacts = OneCenterProtos.SCQueryContacts.newBuilder();
+                        List<ContactsInfo> contacts = AppLogic.getInstance().getAllContacts(MainActivity.this);
+                        for(ContactsInfo info : contacts){
+                            OneCenterProtos.ContactsInfo.Builder contactsInfo = OneCenterProtos.ContactsInfo.newBuilder();
+                            contactsInfo.setId(info.getId());
+                            contactsInfo.setName(info.getName());
+                            contactsInfo.setNumber(info.getNumber());
+                            contactsInfo.setType(info.getType());
+                            if(info.getType() != 0 && info.getIcon() != null){
+                                contactsInfo.setIcon(ByteString.copyFrom(ImageUtil.Bitmap2Bytes(info.getIcon())));
+                            }
+                            scQueryContacts.addInfos(contactsInfo);
+                        }
+                        App.send(MessageType.MSG_ID_QUERY_CONTACTS,scQueryContacts);
+                        return true;
 					}
 				}catch(Exception e){
 					Log.e(TAG, "MainActivityHandler error", e);

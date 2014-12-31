@@ -1,17 +1,13 @@
-package cn.acooo.onecenter.server.model;
+package cn.acooo.onecenter.core.model;
 
 import android.content.pm.PackageInfo;
 import android.graphics.Bitmap;
-import android.util.Log;
-
 import com.google.protobuf.ByteString;
-
-import cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo;
+import cn.acooo.onecenter.core.auto.OneCenterProtos;
 import cn.acooo.onecenter.core.utils.ImageUtil;
-import cn.acooo.onecenter.server.App;
 
 
-public class AppItem {
+public class AppInfo {
 	private Bitmap appIcon;
 	private String appName;
 	private String appSize;
@@ -19,9 +15,8 @@ public class AppItem {
 	private String appLocalVersion;
 	private String packageName;
 	
-	public AppItem(AppInfo appInfo , PackageInfo packageInfo){
+	public AppInfo(OneCenterProtos.AppInfo appInfo, PackageInfo packageInfo){
 		ByteString bs = appInfo.getIcon();
-		Log.d(App.TAG, "bs.size======="+bs.size());
 		this.appIcon = ImageUtil.Bytes2Bimap(appInfo.getIcon().toByteArray());
 		this.appName = appInfo.getName();
 		this.appSize = appInfo.getPackageSize();

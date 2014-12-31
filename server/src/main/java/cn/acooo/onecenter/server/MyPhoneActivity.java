@@ -16,20 +16,24 @@ import java.util.Map;
 
 import cn.acooo.onecenter.core.BaseActivity;
 import cn.acooo.onecenter.core.auto.OneCenterProtos;
-import cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryApps;
+import cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts;
+import cn.acooo.onecenter.core.model.ContactsInfo;
 import cn.acooo.onecenter.core.utils.CommonsUtil;
 import cn.acooo.onecenter.core.utils.FileUtils;
+import cn.acooo.onecenter.server.adapter.ContactsAdapter;
 import cn.acooo.onecenter.server.adapter.MyAppListAdapter;
-import cn.acooo.onecenter.server.model.AppItem;
+import cn.acooo.onecenter.core.model.AppInfo;
+import cn.acooo.onecenter.server.model.PhoneMenus;
 
 public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListFragment.Callbacks {
 	
 	private ListView listView;
-//	private MyAppListAdapter myAppListAdapter;
 	private AppDetailListFragment appDetail;
+    private ContactsDetailListFragment contactsDetail;
+
     private MyPhoneFeatureListFragment ff;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +41,8 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
 		setContentView(R.layout.activity_phone);
         ff = (MyPhoneFeatureListFragment)(getFragmentManager().findFragmentById(R.id.phone_feature_list));
         ff.setActivateOnItemClick(true);
-        ff.getListView().setItemChecked(0,true);
-        onItemSelected("0");
+        ff.getListView().setItemChecked(PhoneMenus.APPS.ordinal(),true);
+        onItemSelected(PhoneMenus.APPS);
 	}
 
 	@Override
@@ -64,15 +68,25 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
 		                 return true;
 					case MessageType.MSG_ID_APPS_VALUE:
 						Log.d(TAG, "into apps============");
-                        MyAppListAdapter myAppListAdapter = (MyAppListAdapter)appDetail.getListView().getAdapter();
+                        MyAppListAdapter myAppListAdapter = (MyAppListAdapter)appDetail.getListAdapter();
 						SCQueryApps builder = SCQueryApps.parseFrom((byte[])msg.obj);
 						Map<String,PackageInfo> ms = CommonsUtil.getAllAppsByMap(MyPhoneActivity.this);
-						for(AppInfo app : builder.getAppsList()){
+                        myAppListAdapter.clearAppItem();
+						for(OneCenterProtos.AppInfo app : builder.getAppsList()){
 							PackageInfo pinfo = ms.get(app.getPackageName());
-							myAppListAdapter.addAppItem(new AppItem(app,pinfo));
+							myAppListAdapter.addAppItem(new AppInfo(app,pinfo));
 						}
 						myAppListAdapter.notifyDataSetChanged();
 						return true;
+                    case MessageType.MSG_ID_QUERY_CONTACTS_VALUE:
+                        ContactsAdapter contactsAdapter = (ContactsAdapter)contactsDetail.getListAdapter();
+                        SCQueryContacts scQueryContacts = SCQueryContacts.parseFrom((byte[])msg.obj);
+                        contactsAdapter.clearData();
+                        for(OneCenterProtos.ContactsInfo info : scQueryContacts.getInfosList()){
+                            contactsAdapter.addContacts(new ContactsInfo(info));
+                        }
+                        contactsAdapter.notifyDataSetChanged();
+                        return true;
 					case UI_MSG_ID_NEW_PHONE:
 						Log.i(TAG, "into UI_MSG_ID_NEW_PHONE handle message,msg="+msg);
 						Intent intent = new Intent(MyPhoneActivity.this,IndexActivity.class);
@@ -94,17 +108,28 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
     }
 
     @Override
-    public void onItemSelected(String id) {
-        Log.i(TAG,"onItemSelected,id========="+id);
+    public void onItemSelected(PhoneMenus phones) {
+        Log.i(TAG,"onItemSelected,id========="+phones);
         Bundle args = new Bundle();
-        if("0".equals(id)){
-            App.selectedPhoneClient.send(MessageType.MSG_ID_APPS, OneCenterProtos.CSQueryApps.newBuilder());
-            appDetail = appDetail == null? new AppDetailListFragment():appDetail;
-            getFragmentManager().beginTransaction()
-                    .replace(R.id.phone_feature_detail_container, appDetail).commit();
-        }else{
-//            getFragmentManager().beginTransaction()
-//                    .replace(R.id.phone_feature_detail_container, null).commit();
+        switch (phones){
+            case APPS:
+                App.selectedPhoneClient.send(MessageType.MSG_ID_APPS, OneCenterProtos.CSQueryApps.newBuilder());
+                appDetail = appDetail == null? new AppDetailListFragment():appDetail;
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.phone_feature_detail_container, appDetail).commit();
+                break;
+            case CONTACTS:
+                App.selectedPhoneClient.send(MessageType.MSG_ID_QUERY_CONTACTS,OneCenterProtos.CSQueryContacts.newBuilder());
+                contactsDetail = contactsDetail == null? new ContactsDetailListFragment():contactsDetail;
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.phone_feature_detail_container, contactsDetail).commit();
+                break;
+            case TALKS:
+                break;
+            case MESSAGE:
+                break;
+            default:
+                Log.e(TAG,"MyPhoneContent error,MyPhoneContent="+phones);
         }
     }
 }

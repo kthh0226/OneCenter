@@ -10,8 +10,21 @@ enum MessageType
     MSG_ID_LOGIN = 1000;//登陆，以及版本检查
 	MSG_ID_APPS = 1100;//查询应用列表
 	MSG_ID_DOWNLOAD_APK = 1101;//下载apk
+	MSG_ID_QUERY_CONTACTS = 1102;//查询联系人
 }
+message ContactsInfo{
+	optional int64 id = 1;
+	optional string name = 2;
+	optional string number = 3;
+	optional int32 type = 4;
+	optional bytes icon = 5;
+}
+message CSQueryContacts{
 
+}
+message SCQueryContacts{
+	repeated ContactsInfo infos = 1;
+}
 message CSDownloadApk{
 	optional string packageName = 1;
 }

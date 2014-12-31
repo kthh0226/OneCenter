@@ -41,6 +41,14 @@ public final class OneCenterProtos {
      * </pre>
      */
     MSG_ID_DOWNLOAD_APK(2, 1101),
+    /**
+     * <code>MSG_ID_QUERY_CONTACTS = 1102;</code>
+     *
+     * <pre>
+     *查询联系人
+     * </pre>
+     */
+    MSG_ID_QUERY_CONTACTS(3, 1102),
     ;
 
     /**
@@ -67,6 +75,14 @@ public final class OneCenterProtos {
      * </pre>
      */
     public static final int MSG_ID_DOWNLOAD_APK_VALUE = 1101;
+    /**
+     * <code>MSG_ID_QUERY_CONTACTS = 1102;</code>
+     *
+     * <pre>
+     *查询联系人
+     * </pre>
+     */
+    public static final int MSG_ID_QUERY_CONTACTS_VALUE = 1102;
 
 
     public final int getNumber() { return value; }
@@ -76,6 +92,7 @@ public final class OneCenterProtos {
         case 1000: return MSG_ID_LOGIN;
         case 1100: return MSG_ID_APPS;
         case 1101: return MSG_ID_DOWNLOAD_APK;
+        case 1102: return MSG_ID_QUERY_CONTACTS;
         default: return null;
       }
     }
@@ -396,6 +413,1865 @@ public final class OneCenterProtos {
     }
 
     // @@protoc_insertion_point(enum_scope:acooo.onecenter.VersionStatus)
+  }
+
+  public interface ContactsInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.ContactsInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int64 id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional int64 id = 1;</code>
+     */
+    long getId();
+
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional string number = 3;</code>
+     */
+    boolean hasNumber();
+    /**
+     * <code>optional string number = 3;</code>
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>optional string number = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+
+    /**
+     * <code>optional int32 type = 4;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>optional int32 type = 4;</code>
+     */
+    int getType();
+
+    /**
+     * <code>optional bytes icon = 5;</code>
+     */
+    boolean hasIcon();
+    /**
+     * <code>optional bytes icon = 5;</code>
+     */
+    com.google.protobuf.ByteString getIcon();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.ContactsInfo}
+   */
+  public static final class ContactsInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.ContactsInfo)
+      ContactsInfoOrBuilder {
+    // Use ContactsInfo.newBuilder() to construct.
+    private ContactsInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ContactsInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ContactsInfo defaultInstance;
+    public static ContactsInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ContactsInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ContactsInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              name_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              number_ = bs;
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              type_ = input.readInt32();
+              break;
+            }
+            case 42: {
+              bitField0_ |= 0x00000010;
+              icon_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_ContactsInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_ContactsInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.class, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ContactsInfo> PARSER =
+        new com.google.protobuf.AbstractParser<ContactsInfo>() {
+      public ContactsInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ContactsInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContactsInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_;
+    /**
+     * <code>optional int64 id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int64 id = 1;</code>
+     */
+    public long getId() {
+      return id_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.Object name_;
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 3;
+    private java.lang.Object number_;
+    /**
+     * <code>optional string number = 3;</code>
+     */
+    public boolean hasNumber() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string number = 3;</code>
+     */
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          number_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string number = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 4;
+    private int type_;
+    /**
+     * <code>optional int32 type = 4;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 type = 4;</code>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    public static final int ICON_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString icon_;
+    /**
+     * <code>optional bytes icon = 5;</code>
+     */
+    public boolean hasIcon() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bytes icon = 5;</code>
+     */
+    public com.google.protobuf.ByteString getIcon() {
+      return icon_;
+    }
+
+    private void initFields() {
+      id_ = 0L;
+      name_ = "";
+      number_ = "";
+      type_ = 0;
+      icon_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getNumberBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, type_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, icon_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getNumberBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, type_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, icon_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.ContactsInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.ContactsInfo)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_ContactsInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_ContactsInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.class, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        id_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        number_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        icon_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_ContactsInfo_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo result = new cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.number_ = number_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.icon_ = icon_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000002;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasNumber()) {
+          bitField0_ |= 0x00000004;
+          number_ = other.number_;
+          onChanged();
+        }
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasIcon()) {
+          setIcon(other.getIcon());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>optional int64 id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int64 id = 1;</code>
+       */
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int64 id = 1;</code>
+       */
+      public Builder setId(long value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object number_ = "";
+      /**
+       * <code>optional string number = 3;</code>
+       */
+      public boolean hasNumber() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string number = 3;</code>
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            number_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 3;</code>
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 3;</code>
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        number_ = getDefaultInstance().getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 3;</code>
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 4;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 type = 4;</code>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 4;</code>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000008;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 4;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString icon_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes icon = 5;</code>
+       */
+      public boolean hasIcon() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bytes icon = 5;</code>
+       */
+      public com.google.protobuf.ByteString getIcon() {
+        return icon_;
+      }
+      /**
+       * <code>optional bytes icon = 5;</code>
+       */
+      public Builder setIcon(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        icon_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes icon = 5;</code>
+       */
+      public Builder clearIcon() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        icon_ = getDefaultInstance().getIcon();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.ContactsInfo)
+    }
+
+    static {
+      defaultInstance = new ContactsInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.ContactsInfo)
+  }
+
+  public interface CSQueryContactsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSQueryContacts)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.CSQueryContacts}
+   */
+  public static final class CSQueryContacts extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSQueryContacts)
+      CSQueryContactsOrBuilder {
+    // Use CSQueryContacts.newBuilder() to construct.
+    private CSQueryContacts(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSQueryContacts(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSQueryContacts defaultInstance;
+    public static CSQueryContacts getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSQueryContacts getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSQueryContacts(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryContacts_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryContacts_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSQueryContacts> PARSER =
+        new com.google.protobuf.AbstractParser<CSQueryContacts>() {
+      public CSQueryContacts parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSQueryContacts(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSQueryContacts> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.CSQueryContacts}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSQueryContacts)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContactsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryContacts_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryContacts_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryContacts_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryContacts) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSQueryContacts)
+    }
+
+    static {
+      defaultInstance = new CSQueryContacts(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSQueryContacts)
+  }
+
+  public interface SCQueryContactsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCQueryContacts)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+     */
+    java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo> 
+        getInfosList();
+    /**
+     * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo getInfos(int index);
+    /**
+     * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+     */
+    int getInfosCount();
+    /**
+     * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+     */
+    java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfoOrBuilder> 
+        getInfosOrBuilderList();
+    /**
+     * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfoOrBuilder getInfosOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SCQueryContacts}
+   */
+  public static final class SCQueryContacts extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCQueryContacts)
+      SCQueryContactsOrBuilder {
+    // Use SCQueryContacts.newBuilder() to construct.
+    private SCQueryContacts(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCQueryContacts(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCQueryContacts defaultInstance;
+    public static SCQueryContacts getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCQueryContacts getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCQueryContacts(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                infos_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              infos_.add(input.readMessage(cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          infos_ = java.util.Collections.unmodifiableList(infos_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryContacts_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryContacts_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCQueryContacts> PARSER =
+        new com.google.protobuf.AbstractParser<SCQueryContacts>() {
+      public SCQueryContacts parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCQueryContacts(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCQueryContacts> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int INFOS_FIELD_NUMBER = 1;
+    private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo> infos_;
+    /**
+     * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+     */
+    public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo> getInfosList() {
+      return infos_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+     */
+    public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfoOrBuilder> 
+        getInfosOrBuilderList() {
+      return infos_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+     */
+    public int getInfosCount() {
+      return infos_.size();
+    }
+    /**
+     * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo getInfos(int index) {
+      return infos_.get(index);
+    }
+    /**
+     * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfoOrBuilder getInfosOrBuilder(
+        int index) {
+      return infos_.get(index);
+    }
+
+    private void initFields() {
+      infos_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < infos_.size(); i++) {
+        output.writeMessage(1, infos_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < infos_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, infos_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SCQueryContacts}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCQueryContacts)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContactsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryContacts_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryContacts_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getInfosFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (infosBuilder_ == null) {
+          infos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          infosBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryContacts_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts(this);
+        int from_bitField0_ = bitField0_;
+        if (infosBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            infos_ = java.util.Collections.unmodifiableList(infos_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.infos_ = infos_;
+        } else {
+          result.infos_ = infosBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts.getDefaultInstance()) return this;
+        if (infosBuilder_ == null) {
+          if (!other.infos_.isEmpty()) {
+            if (infos_.isEmpty()) {
+              infos_ = other.infos_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInfosIsMutable();
+              infos_.addAll(other.infos_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.infos_.isEmpty()) {
+            if (infosBuilder_.isEmpty()) {
+              infosBuilder_.dispose();
+              infosBuilder_ = null;
+              infos_ = other.infos_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              infosBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getInfosFieldBuilder() : null;
+            } else {
+              infosBuilder_.addAllMessages(other.infos_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryContacts) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo> infos_ =
+        java.util.Collections.emptyList();
+      private void ensureInfosIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          infos_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo>(infos_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfoOrBuilder> infosBuilder_;
+
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo> getInfosList() {
+        if (infosBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(infos_);
+        } else {
+          return infosBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public int getInfosCount() {
+        if (infosBuilder_ == null) {
+          return infos_.size();
+        } else {
+          return infosBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo getInfos(int index) {
+        if (infosBuilder_ == null) {
+          return infos_.get(index);
+        } else {
+          return infosBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public Builder setInfos(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo value) {
+        if (infosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfosIsMutable();
+          infos_.set(index, value);
+          onChanged();
+        } else {
+          infosBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public Builder setInfos(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder builderForValue) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          infosBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public Builder addInfos(cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo value) {
+        if (infosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfosIsMutable();
+          infos_.add(value);
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public Builder addInfos(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo value) {
+        if (infosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfosIsMutable();
+          infos_.add(index, value);
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public Builder addInfos(
+          cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder builderForValue) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.add(builderForValue.build());
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public Builder addInfos(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder builderForValue) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public Builder addAllInfos(
+          java.lang.Iterable<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo> values) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, infos_);
+          onChanged();
+        } else {
+          infosBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public Builder clearInfos() {
+        if (infosBuilder_ == null) {
+          infos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          infosBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public Builder removeInfos(int index) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.remove(index);
+          onChanged();
+        } else {
+          infosBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder getInfosBuilder(
+          int index) {
+        return getInfosFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfoOrBuilder getInfosOrBuilder(
+          int index) {
+        if (infosBuilder_ == null) {
+          return infos_.get(index);  } else {
+          return infosBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfoOrBuilder> 
+           getInfosOrBuilderList() {
+        if (infosBuilder_ != null) {
+          return infosBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(infos_);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder addInfosBuilder() {
+        return getInfosFieldBuilder().addBuilder(
+            cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder addInfosBuilder(
+          int index) {
+        return getInfosFieldBuilder().addBuilder(
+            index, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ContactsInfo infos = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder> 
+           getInfosBuilderList() {
+        return getInfosFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfoOrBuilder> 
+          getInfosFieldBuilder() {
+        if (infosBuilder_ == null) {
+          infosBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.ContactsInfoOrBuilder>(
+                  infos_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          infos_ = null;
+        }
+        return infosBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCQueryContacts)
+    }
+
+    static {
+      defaultInstance = new SCQueryContacts(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCQueryContacts)
   }
 
   public interface CSDownloadApkOrBuilder extends
@@ -6072,6 +7948,21 @@ public final class OneCenterProtos {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_ContactsInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_ContactsInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_CSQueryContacts_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_CSQueryContacts_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SCQueryContacts_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SCQueryContacts_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_acooo_onecenter_CSDownloadApk_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -6130,28 +8021,33 @@ public final class OneCenterProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017onecenter.proto\022\017acooo.onecenter\"$\n\rCS" +
-      "DownloadApk\022\023\n\013packageName\030\001 \001(\t\"2\n\rSCDo" +
-      "wnloadApk\022\023\n\013packageName\030\001 \001(\t\022\014\n\004data\030\002" +
-      " \001(\014\"(\n\tImageInfo\022\014\n\004name\030\001 \001(\t\022\r\n\005image" +
-      "\030\002 \001(\014\"<\n\013SCPushImage\022-\n\timageInfo\030\001 \001(\013" +
-      "2\032.acooo.onecenter.ImageInfo\"\r\n\013CSQueryA" +
-      "pps\"5\n\013SCQueryApps\022&\n\004apps\030\001 \003(\0132\030.acooo" +
-      ".onecenter.AppInfo\"`\n\007AppInfo\022\014\n\004icon\030\001 " +
-      "\001(\014\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\022\023\n\013pa" +
-      "ckageName\030\004 \001(\t\022\023\n\013packageSize\030\005 \001(\t\")\n\005",
-      "Phone\022\014\n\004imei\030\001 \002(\t\022\022\n\ndeviceType\030\002 \001(\t\"" +
-      "0\n\007CSLogin\022%\n\005phone\030\001 \001(\0132\026.acooo.onecen" +
-      "ter.Phone\"\027\n\007SCLogin\022\014\n\004code\030\001 \001(\005*L\n\013Me" +
-      "ssageType\022\021\n\014MSG_ID_LOGIN\020\350\007\022\020\n\013MSG_ID_A" +
-      "PPS\020\314\010\022\030\n\023MSG_ID_DOWNLOAD_APK\020\315\010*\240\001\n\013Mes" +
-      "sageCode\022\016\n\nSYS_NORMAL\020\001\022\022\n\rErr_Not_Know" +
-      "n\020\350\007\022\030\n\023Err_Money_NotEnough\020\351\007\022\030\n\023Err_Po" +
-      "wer_NotEnough\020\352\007\022\035\n\030Err_BattleSoul_NotEn" +
-      "ough\020\353\007\022\032\n\025Err_Diamond_NotEnough\020\354\007*5\n\rV" +
-      "ersionStatus\022\014\n\010PROHIBIT\020\000\022\n\n\006EXPIRE\020\001\022\n",
-      "\n\006NORMAL\020\002B/\n\034cn.acooo.onecenter.core.au" +
-      "toB\017OneCenterProtos"
+      "\n\017onecenter.proto\022\017acooo.onecenter\"T\n\014Co" +
+      "ntactsInfo\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\016\n\006" +
+      "number\030\003 \001(\t\022\014\n\004type\030\004 \001(\005\022\014\n\004icon\030\005 \001(\014" +
+      "\"\021\n\017CSQueryContacts\"?\n\017SCQueryContacts\022," +
+      "\n\005infos\030\001 \003(\0132\035.acooo.onecenter.Contacts" +
+      "Info\"$\n\rCSDownloadApk\022\023\n\013packageName\030\001 \001" +
+      "(\t\"2\n\rSCDownloadApk\022\023\n\013packageName\030\001 \001(\t" +
+      "\022\014\n\004data\030\002 \001(\014\"(\n\tImageInfo\022\014\n\004name\030\001 \001(" +
+      "\t\022\r\n\005image\030\002 \001(\014\"<\n\013SCPushImage\022-\n\timage" +
+      "Info\030\001 \001(\0132\032.acooo.onecenter.ImageInfo\"\r",
+      "\n\013CSQueryApps\"5\n\013SCQueryApps\022&\n\004apps\030\001 \003" +
+      "(\0132\030.acooo.onecenter.AppInfo\"`\n\007AppInfo\022" +
+      "\014\n\004icon\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003" +
+      " \001(\t\022\023\n\013packageName\030\004 \001(\t\022\023\n\013packageSize" +
+      "\030\005 \001(\t\")\n\005Phone\022\014\n\004imei\030\001 \002(\t\022\022\n\ndeviceT" +
+      "ype\030\002 \001(\t\"0\n\007CSLogin\022%\n\005phone\030\001 \001(\0132\026.ac" +
+      "ooo.onecenter.Phone\"\027\n\007SCLogin\022\014\n\004code\030\001" +
+      " \001(\005*h\n\013MessageType\022\021\n\014MSG_ID_LOGIN\020\350\007\022\020" +
+      "\n\013MSG_ID_APPS\020\314\010\022\030\n\023MSG_ID_DOWNLOAD_APK\020" +
+      "\315\010\022\032\n\025MSG_ID_QUERY_CONTACTS\020\316\010*\240\001\n\013Messa",
+      "geCode\022\016\n\nSYS_NORMAL\020\001\022\022\n\rErr_Not_Known\020" +
+      "\350\007\022\030\n\023Err_Money_NotEnough\020\351\007\022\030\n\023Err_Powe" +
+      "r_NotEnough\020\352\007\022\035\n\030Err_BattleSoul_NotEnou" +
+      "gh\020\353\007\022\032\n\025Err_Diamond_NotEnough\020\354\007*5\n\rVer" +
+      "sionStatus\022\014\n\010PROHIBIT\020\000\022\n\n\006EXPIRE\020\001\022\n\n\006" +
+      "NORMAL\020\002B/\n\034cn.acooo.onecenter.core.auto" +
+      "B\017OneCenterProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6165,62 +8061,80 @@ public final class OneCenterProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_acooo_onecenter_CSDownloadApk_descriptor =
+    internal_static_acooo_onecenter_ContactsInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_acooo_onecenter_ContactsInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_ContactsInfo_descriptor,
+        new java.lang.String[] { "Id", "Name", "Number", "Type", "Icon", });
+    internal_static_acooo_onecenter_CSQueryContacts_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_acooo_onecenter_CSQueryContacts_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_CSQueryContacts_descriptor,
+        new java.lang.String[] { });
+    internal_static_acooo_onecenter_SCQueryContacts_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_acooo_onecenter_SCQueryContacts_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SCQueryContacts_descriptor,
+        new java.lang.String[] { "Infos", });
+    internal_static_acooo_onecenter_CSDownloadApk_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_acooo_onecenter_CSDownloadApk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_CSDownloadApk_descriptor,
         new java.lang.String[] { "PackageName", });
     internal_static_acooo_onecenter_SCDownloadApk_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_acooo_onecenter_SCDownloadApk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCDownloadApk_descriptor,
         new java.lang.String[] { "PackageName", "Data", });
     internal_static_acooo_onecenter_ImageInfo_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_acooo_onecenter_ImageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_ImageInfo_descriptor,
         new java.lang.String[] { "Name", "Image", });
     internal_static_acooo_onecenter_SCPushImage_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_acooo_onecenter_SCPushImage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCPushImage_descriptor,
         new java.lang.String[] { "ImageInfo", });
     internal_static_acooo_onecenter_CSQueryApps_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_acooo_onecenter_CSQueryApps_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_CSQueryApps_descriptor,
         new java.lang.String[] { });
     internal_static_acooo_onecenter_SCQueryApps_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_acooo_onecenter_SCQueryApps_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCQueryApps_descriptor,
         new java.lang.String[] { "Apps", });
     internal_static_acooo_onecenter_AppInfo_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_acooo_onecenter_AppInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_AppInfo_descriptor,
         new java.lang.String[] { "Icon", "Name", "Version", "PackageName", "PackageSize", });
     internal_static_acooo_onecenter_Phone_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_acooo_onecenter_Phone_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_Phone_descriptor,
         new java.lang.String[] { "Imei", "DeviceType", });
     internal_static_acooo_onecenter_CSLogin_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_acooo_onecenter_CSLogin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_CSLogin_descriptor,
         new java.lang.String[] { "Phone", });
     internal_static_acooo_onecenter_SCLogin_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_acooo_onecenter_SCLogin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCLogin_descriptor,

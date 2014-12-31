@@ -16,22 +16,25 @@ import java.util.ArrayList;
 import java.util.List;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageType;
+import cn.acooo.onecenter.core.model.AppInfo;
 import cn.acooo.onecenter.server.App;
 import cn.acooo.onecenter.server.R;
 import cn.acooo.onecenter.server.ViewHolder.AppViewHolder;
-import cn.acooo.onecenter.server.model.AppItem;
 
 public class MyAppListAdapter extends BaseAdapter {
-	public static final String TAG = "MyAppListAdapter";
+	public static final String TAG = "ONE";
 	private LayoutInflater mInflater;
-	private List<AppItem> appItems = new ArrayList<AppItem>();
-	public void addAppItem(AppItem appItem){
-		if(appItem != null){
-			appItems.add(appItem);
+	private List<AppInfo> appInfos = new ArrayList<AppInfo>();
+    public void clearAppItem(){
+        this.appInfos.clear();
+    }
+	public void addAppItem(AppInfo appInfo){
+		if(appInfo != null){
+			appInfos.add(appInfo);
 		}
 	}
-	public void setApps(List<AppItem> appItems){
-		this.appItems = appItems;
+	public void setApps(List<AppInfo> appInfos){
+		this.appInfos = appInfos;
 	}
 	
 	public MyAppListAdapter(Context context) {
@@ -41,7 +44,7 @@ public class MyAppListAdapter extends BaseAdapter {
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return appItems.size();
+		return appInfos.size();
 	}
 
 	@Override
@@ -74,7 +77,7 @@ public class MyAppListAdapter extends BaseAdapter {
 			holder = (AppViewHolder)convertView.getTag();
 		}
 		
-		AppItem ai = appItems.get(position);
+		AppInfo ai = appInfos.get(position);
 		holder.appIcon.setImageBitmap(ai.getAppIcon());
         Log.i(TAG,"w="+ai.getAppIcon().getWidth()+",h="+ai.getAppIcon().getHeight());
 		holder.appName.setText(ai.getAppName());
@@ -84,9 +87,9 @@ public class MyAppListAdapter extends BaseAdapter {
 		holder.btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				AppItem appItem = appItems.get(position);
+				AppInfo appInfo = appInfos.get(position);
 				CSDownloadApk.Builder builder = CSDownloadApk.newBuilder();
-				builder.setPackageName(appItem.getPackageName());
+				builder.setPackageName(appInfo.getPackageName());
 				App.selectedPhoneClient.send(MessageType.MSG_ID_DOWNLOAD_APK, builder);
 			}
 		});
@@ -100,7 +103,7 @@ public class MyAppListAdapter extends BaseAdapter {
 	public void showInfo(Context context,int position){
 		new AlertDialog.Builder(context)
 		.setTitle("TIP")
-		.setMessage(appItems.get(position).getPackageName())
+		.setMessage(appInfos.get(position).getPackageName())
 		.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
@@ -108,7 +111,7 @@ public class MyAppListAdapter extends BaseAdapter {
 		}).show();
 	}
     public interface CallBacks{
-        public void addAppItem(AppItem appItem);
+        public void addAppItem(AppInfo appInfo);
     }
 
 

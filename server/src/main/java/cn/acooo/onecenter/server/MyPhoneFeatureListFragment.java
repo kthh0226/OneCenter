@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import cn.acooo.onecenter.server.model.MyPhoneContent;
+import cn.acooo.onecenter.server.model.PhoneMenus;
 
 /**
  * Created by kthh on 14/12/26.
@@ -39,7 +39,7 @@ public class MyPhoneFeatureListFragment extends ListFragment {
         /**
          * Callback for when an item has been selected.
          */
-        public void onItemSelected(String id);
+        public void onItemSelected(PhoneMenus content);
     }
 
     /**
@@ -48,7 +48,7 @@ public class MyPhoneFeatureListFragment extends ListFragment {
      */
     private static Callbacks sDummyCallbacks = new Callbacks() {
         @Override
-        public void onItemSelected(String id) {
+        public void onItemSelected(PhoneMenus content) {
         }
     };
 
@@ -65,11 +65,11 @@ public class MyPhoneFeatureListFragment extends ListFragment {
         super.onCreate(savedInstanceState);
 
         // TODO: replace with a real list adapter.
-        setListAdapter(new ArrayAdapter<MyPhoneContent.PhoneItem>(
+        setListAdapter(new ArrayAdapter<PhoneMenus>(
                 getActivity(),
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
-                MyPhoneContent.ITEMS));
+                PhoneMenus.toItems()));
     }
 
     @Override
@@ -110,7 +110,7 @@ public class MyPhoneFeatureListFragment extends ListFragment {
 
         // Notify the active callbacks interface (the activity, if the
         // fragment is attached to one) that an item has been selected.
-        mCallbacks.onItemSelected(MyPhoneContent.ITEMS.get(position).getId());
+        mCallbacks.onItemSelected(PhoneMenus.indexOf(position));
     }
 
     @Override
