@@ -15,7 +15,7 @@ public class ClientHandler extends SimpleChannelInboundHandler<KMessage> {
 	@Override
 	protected void channelRead0(ChannelHandlerContext ctx, KMessage msg)
 			throws Exception {
-		Log.i(App.TAG, "channel channelRead0==================");
+		Log.i(App.TAG, "recive Kmessage=="+msg.toString());
 		Message m = Message.obtain();
 		m.obj = msg.getData();
 		m.what = msg.getMessageType();

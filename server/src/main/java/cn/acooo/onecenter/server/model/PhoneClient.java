@@ -1,5 +1,7 @@
 package cn.acooo.onecenter.server.model;
 
+import android.util.Log;
+
 import com.google.protobuf.AbstractMessage.Builder;
 
 import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageCode;
@@ -31,14 +33,14 @@ public class PhoneClient implements Sender {
 	}
 	@SuppressWarnings("rawtypes")
 	public void send(MessageType messageType,Builder builder){
-		KMessage m = new KMessage(messageType.getNumber(), builder.build().toByteArray());
-		this.session.writeAndFlush(m);
+		this.send(messageType,MessageCode.SYS_NORMAL,builder);
 	}
 	
 	@SuppressWarnings("rawtypes")
 	public void send(MessageType messageType,MessageCode messageCode,Builder builder){
 		KMessage m = new KMessage(messageType.getNumber(), messageCode.getNumber(),builder.build().toByteArray());
-		this.session.writeAndFlush(m);
+        Log.i("ONE","ready send Kmessage="+m.toString());
+        this.session.writeAndFlush(m);
 	}
 	
 	public String getModel() {

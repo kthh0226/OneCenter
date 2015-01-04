@@ -11,7 +11,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
-import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import java.io.InputStream;
@@ -59,13 +58,13 @@ public class AppLogic {
         final String SMS_URI_DRAFT = "content://sms/draft";
 
         StringBuilder smsBuilder = new StringBuilder();
-
+        Cursor cur = null;
         try{
             ContentResolver cr = context.getContentResolver();
             String[] projection = new String[]{"_id", "address", "person",
                     "body", "date", "type"};
             Uri uri = Uri.parse(SMS_URI_ALL);
-            Cursor cur = cr.query(uri, projection, null, null, "date desc");
+            cur = cr.query(uri, projection, null, null, "date desc");
 
             if (cur.moveToFirst()) {
                 String name;
@@ -116,7 +115,9 @@ public class AppLogic {
             smsBuilder.append("getSmsInPhone has executed!");
         } catch(SQLiteException ex) {
 
-            Log.d("SQLiteException in getSmsInPhone", ex.getMessage());
+            Log.e("SQLiteException in getSmsInPhone", ex.getMessage());
+        }finally {
+            cur.close();
         }
         return smsBuilder.toString();
     }
@@ -128,10 +129,7 @@ public class AppLogic {
      */
     public List<ContactsInfo> getAllContacts(Context context){
         List<ContactsInfo> rs = this.getLocalContacts(context);
-        Log.d("one1",rs.toString());
-
-        rs.addAll(this.getSIMContacts(context));
-        Log.d("one2",rs.toString());
+        Log.i("ONE","local contacts"+rs.toString());
         return rs;
     }
 
@@ -175,33 +173,6 @@ public class AppLogic {
             }
         }finally {
             cur.close();
-        }
-        return result;
-    }
-
-    /**
-     * 获取sim卡的联系人
-     * @param context
-     * @return
-     */
-    public List<ContactsInfo> getSIMContacts(Context context) {
-        TelephonyManager mTelephonyManager = (TelephonyManager) context
-                .getSystemService(Context.TELEPHONY_SERVICE);
-        List<ContactsInfo> result = new ArrayList<>();
-        ContentResolver cr = context.getContentResolver();
-        final String SIM_URI_ADN = "content://icc/adn";// SIM卡
-
-        Uri uri = Uri.parse(SIM_URI_ADN);
-        Cursor cursor = cr.query(uri, null, null, null, null);
-        try{
-            while (cursor.moveToFirst()) {
-                ContactsInfo info = new ContactsInfo();
-                info.setType(0);
-                info.setName(cursor.getString(cursor.getColumnIndex("name")));
-                result.add(info);
-            }
-        }finally {
-            cursor.close();
         }
         return result;
     }

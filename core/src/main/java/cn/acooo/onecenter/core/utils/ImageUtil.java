@@ -25,6 +25,9 @@ public class ImageUtil {
 	}
 
 	public static byte[] Bitmap2Bytes(Bitmap bm) {
+        if(bm == null){
+            throw new IllegalArgumentException("bitmap2bytes error,arg is null");
+        }
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
 		return baos.toByteArray();
