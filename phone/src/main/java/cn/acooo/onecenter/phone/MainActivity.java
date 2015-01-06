@@ -47,7 +47,7 @@ public class MainActivity extends BaseActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-        Log.i(TAG,"into phone MainActivity onCreate=====");
+        Log.d(TAG,"into phone MainActivity onCreate=====");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		Button connectButton = (Button) findViewById(R.id.connect);
@@ -120,7 +120,6 @@ public class MainActivity extends BaseActivity {
 							ByteString byteString = ByteString.copyFrom(ImageUtil.drawableToBytes(icon));
 							appInfoBuilder.setIcon(byteString);
 							builder.addApps(appInfoBuilder);
-                            break;
 						}
 						App.send(MessageType.MSG_ID_APPS,builder);
 						return true;

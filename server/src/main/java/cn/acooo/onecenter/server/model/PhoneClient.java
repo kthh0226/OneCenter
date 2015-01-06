@@ -38,8 +38,8 @@ public class PhoneClient implements Sender {
 	
 	@SuppressWarnings("rawtypes")
 	public void send(MessageType messageType,MessageCode messageCode,Builder builder){
+        Log.i("ONE",String.format("send message======messageType=%s,messageCode=%s,builder=%s",messageType,messageCode,builder));
 		KMessage m = new KMessage(messageType.getNumber(), messageCode.getNumber(),builder.build().toByteArray());
-        Log.i("ONE","ready send Kmessage="+m.toString());
         this.session.writeAndFlush(m);
 	}
 	

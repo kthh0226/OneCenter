@@ -8,6 +8,7 @@ import android.util.Log;
 
 import cn.acooo.onecenter.core.BaseActivity;
 import cn.acooo.onecenter.phone.App;
+import cn.acooo.onecenter.phone.jetty.HttpServer;
 
 public class SocketService extends Service{
 	
@@ -36,7 +37,9 @@ public class SocketService extends Service{
 		}else{
 			App.handler.sendEmptyMessage(BaseActivity.UI_MSG_ID_AREADY_CONNECTED);
 		}
-		
+		if(App.jettyServer == null && !App.jettyServer.isRunning()){
+            new Thread(new HttpServer(9090)).start();
+        }
 		return Service.START_STICKY;
 	}
 
@@ -49,6 +52,13 @@ public class SocketService extends Service{
 	public void onDestroy() {
 		Log.i(TAG, "onDestroy＝＝＝＝＝＝＝＝＝＝＝＝＝");
 		App.disconnect();
+        if(App.jettyServer != null && App.jettyServer.isRunning()){
+            try {
+                App.jettyServer.stop();
+            } catch (Exception e) {
+               Log.e(TAG,"jetty http server stop error",e);
+            }
+        }
 		super.onDestroy();
 	}
 

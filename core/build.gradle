@@ -21,6 +21,8 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'org.slf4j:slf4j-api:1.7.9'
     compile 'io.netty:netty-all:4.0.24.Final'
     compile 'com.google.protobuf:protobuf-java:2.6.1'
+    compile 'org.eclipse.jetty:jetty-server:8.1.16.v20140903'
 }

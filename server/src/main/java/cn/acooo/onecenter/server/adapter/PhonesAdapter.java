@@ -14,7 +14,7 @@ import cn.acooo.onecenter.server.App;
 import cn.acooo.onecenter.server.R;
 import cn.acooo.onecenter.server.ViewHolder.PhoneViewHolder;
 import cn.acooo.onecenter.server.model.PhoneClient;
-import cn.acooo.onecenter.server.net.ChannelManager;
+import cn.acooo.onecenter.server.net.netty.ChannelManager;
 
 public class PhonesAdapter extends BaseAdapter {
 	private LayoutInflater mInflater;

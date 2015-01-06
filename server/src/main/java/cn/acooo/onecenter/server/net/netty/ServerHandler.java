@@ -1,4 +1,4 @@
-package cn.acooo.onecenter.server.net;
+package cn.acooo.onecenter.server.net.netty;
 
 import android.os.Message;
 import android.util.Log;
@@ -6,6 +6,7 @@ import android.util.Log;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.util.Date;
+
 import cn.acooo.onecenter.core.BaseActivity;
 import cn.acooo.onecenter.core.netty.KMessage;
 import cn.acooo.onecenter.core.netty.Sender;
@@ -64,7 +65,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<KMessage> {
 	@Override
 	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
 		Log.i(App.TAG, "into channelReadComplete");
-		 ctx.flush();
+        super.channelReadComplete(ctx);
 	}
 
 	@Override

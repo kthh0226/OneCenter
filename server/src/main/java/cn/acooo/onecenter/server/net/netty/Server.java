@@ -1,7 +1,8 @@
-package cn.acooo.onecenter.server.net;
+package cn.acooo.onecenter.server.net.netty;
+
+import android.util.Log;
 
 import cn.acooo.onecenter.server.App;
-import android.util.Log;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;
@@ -18,6 +19,7 @@ public class Server implements Runnable {
 	
 	@Override
 	public void run() {
+        //启动netty服务器，用做长连接的通信
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {

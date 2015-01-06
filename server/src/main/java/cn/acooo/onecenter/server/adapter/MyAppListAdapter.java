@@ -91,6 +91,9 @@ public class MyAppListAdapter extends BaseAdapter {
 				CSDownloadApk.Builder builder = CSDownloadApk.newBuilder();
 				builder.setPackageName(appInfo.getPackageName());
 				App.selectedPhoneClient.send(MessageType.MSG_ID_DOWNLOAD_APK, builder);
+
+
+
 			}
 		});
 		

@@ -80,7 +80,6 @@ public class IndexActivity extends BaseActivity {
 			Intent intent = new Intent(this, ServerService.class);
 			super.startService(intent);
 		}
-
 	}
 	
 	@Override

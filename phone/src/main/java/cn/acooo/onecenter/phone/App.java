@@ -5,6 +5,8 @@ import android.os.Handler;
 
 import com.google.protobuf.AbstractMessage.Builder;
 
+import org.eclipse.jetty.server.Server;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,6 +21,7 @@ public class App extends Application {
 	public static volatile boolean socketIsRun = false;
 	public static final String TAG = "ONE";
 	public static Handler handler;
+    public static Server jettyServer;
 	/**
 	 * <packageName,publicSourceDir>
 	 */
