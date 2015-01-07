@@ -2,6 +2,7 @@ package cn.acooo.onecenter.server.ViewHolder;
 
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class AppViewHolder {
@@ -11,4 +12,5 @@ public class AppViewHolder {
      public TextView appVersion;
      public TextView appLocalVersion;
      public Button btn;
+     public ProgressBar progressBar;
 }

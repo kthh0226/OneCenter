@@ -3,23 +3,22 @@ package cn.acooo.onecenter.server.adapter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-import cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk;
-import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageType;
+
 import cn.acooo.onecenter.core.model.AppInfo;
-import cn.acooo.onecenter.server.App;
 import cn.acooo.onecenter.server.R;
 import cn.acooo.onecenter.server.ViewHolder.AppViewHolder;
+import cn.acooo.onecenter.server.async.DownloadAppTask;
 
 public class MyAppListAdapter extends BaseAdapter {
 	public static final String TAG = "ONE";
@@ -49,8 +48,7 @@ public class MyAppListAdapter extends BaseAdapter {
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
-		return null;
+		return appInfos.get(position);
 	}
 
 	@Override
@@ -63,6 +61,8 @@ public class MyAppListAdapter extends BaseAdapter {
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		
 		AppViewHolder holder = null;
+        AppInfo ai = appInfos.get(position);
+
 		if (convertView == null) {
 			holder = new AppViewHolder();  
 			convertView = mInflater.inflate(R.layout.app_item, null);
@@ -72,14 +72,22 @@ public class MyAppListAdapter extends BaseAdapter {
 			holder.appLocalVersion = (TextView)convertView.findViewById(R.id.appLocalVersion);
 			holder.appSize = (TextView)convertView.findViewById(R.id.appSize);
 			holder.btn = (Button)convertView.findViewById(R.id.btn);
+            holder.progressBar = (ProgressBar)convertView.findViewById(R.id.appProgress);
 			convertView.setTag(holder);
 		}else {
 			holder = (AppViewHolder)convertView.getTag();
 		}
-		
-		AppInfo ai = appInfos.get(position);
+        if(ai.isDownloading()){
+            holder.progressBar.setVisibility(View.VISIBLE);
+            holder.progressBar.setMax(100);
+            holder.progressBar.setProgress(ai.getCurProgress());
+            holder.btn.setVisibility(View.GONE);
+        }else{
+            holder.progressBar.setVisibility(View.GONE);
+            holder.btn.setVisibility(View.VISIBLE);
+        }
+
 		holder.appIcon.setImageBitmap(ai.getAppIcon());
-        Log.i(TAG,"w="+ai.getAppIcon().getWidth()+",h="+ai.getAppIcon().getHeight());
 		holder.appName.setText(ai.getAppName());
 		holder.appSize.setText(ai.getAppSize());
 		holder.appVersion.setText(ai.getAppVersion());
@@ -87,16 +95,15 @@ public class MyAppListAdapter extends BaseAdapter {
 		holder.btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				AppInfo appInfo = appInfos.get(position);
-				CSDownloadApk.Builder builder = CSDownloadApk.newBuilder();
-				builder.setPackageName(appInfo.getPackageName());
-				App.selectedPhoneClient.send(MessageType.MSG_ID_DOWNLOAD_APK, builder);
+                AppInfo appInfo = appInfos.get(position);
+                DownloadAppTask task = new DownloadAppTask(MyAppListAdapter.this,appInfo);
+                task.execute(appInfo.getPackageName());
+                appInfo.setDownloading(true);
 
+                MyAppListAdapter.this.notifyDataSetChanged();
 
-
-			}
+            }
 		});
-		
 		
 		return convertView;
 	}

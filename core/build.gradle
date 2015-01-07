@@ -25,4 +25,5 @@ dependencies {
     compile 'io.netty:netty-all:4.0.24.Final'
     compile 'com.google.protobuf:protobuf-java:2.6.1'
     compile 'org.eclipse.jetty:jetty-server:8.1.16.v20140903'
+    compile 'org.apache.httpcomponents:httpclient:4.3.6'
 }

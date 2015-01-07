@@ -34,12 +34,12 @@ public class HttpServer implements Runnable {
             ResourceHandler resource_handler = new ResourceHandler();
             resource_handler.setDirectoriesListed(true);
             resource_handler.setWelcomeFiles(new String[]{ "index.html" });
-            resource_handler.setResourceBase("/data/app");
+            resource_handler.setResourceBase(".");
             HandlerList handlers = new HandlerList();
             handlers.setHandlers(new Handler[] { resource_handler, new DefaultHandler() });
             server.setHandler(handlers);
             server.start();
-
+            Log.i("ONE","jetty server starting");
             App.jettyServer = server;
             server.join();
         }catch (Exception e){

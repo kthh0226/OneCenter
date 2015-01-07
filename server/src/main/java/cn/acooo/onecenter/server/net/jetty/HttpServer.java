@@ -34,7 +34,7 @@ public class HttpServer implements Runnable {
             resource_handler.setDirectoriesListed(true);
             resource_handler.setWelcomeFiles(new String[]{ "index.html" });
 
-            resource_handler.setResourceBase("/data/app");
+            resource_handler.setResourceBase(".");
 
             HandlerList handlers = new HandlerList();
             handlers.setHandlers(new Handler[] { resource_handler, new DefaultHandler() });

@@ -14,8 +14,25 @@ public class AppInfo {
 	private String appVersion;
 	private String appLocalVersion;
 	private String packageName;
-	
-	public AppInfo(OneCenterProtos.AppInfo appInfo, PackageInfo packageInfo){
+	private boolean downloading = false;
+    private int curProgress = 0;
+    public int getCurProgress() {
+        return curProgress;
+    }
+
+    public void setCurProgress(int curProgress) {
+        this.curProgress = curProgress;
+    }
+
+    public boolean isDownloading() {
+        return downloading;
+    }
+
+    public void setDownloading(boolean downloading) {
+        this.downloading = downloading;
+    }
+
+    public AppInfo(OneCenterProtos.AppInfo appInfo, PackageInfo packageInfo){
 		ByteString bs = appInfo.getIcon();
 		this.appIcon = ImageUtil.Bytes2Bimap(appInfo.getIcon().toByteArray());
 		this.appName = appInfo.getName();
@@ -65,12 +82,16 @@ public class AppInfo {
 		this.appLocalVersion = appLocalVersion;
 	}
 
-	
-	@Override
-	public String toString() {
-		return "AppItem [appIcon=" + appIcon + ", appName=" + appName
-				+ ", appSize=" + appSize + ", appVersion=" + appVersion
-				+ ", appLocalVersion=" + appLocalVersion + ", packageName="
-				+ packageName + "]";
-	}
+    @Override
+    public String toString() {
+        return "AppInfo{" +
+                "appIcon=" + appIcon +
+                ", appName='" + appName + '\'' +
+                ", appSize='" + appSize + '\'' +
+                ", appVersion='" + appVersion + '\'' +
+                ", appLocalVersion='" + appLocalVersion + '\'' +
+                ", packageName='" + packageName + '\'' +
+                ", downloading=" + downloading +
+                '}';
+    }
 }

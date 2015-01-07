@@ -37,8 +37,12 @@ public class SocketService extends Service{
 		}else{
 			App.handler.sendEmptyMessage(BaseActivity.UI_MSG_ID_AREADY_CONNECTED);
 		}
-		if(App.jettyServer == null && !App.jettyServer.isRunning()){
-            new Thread(new HttpServer(9090)).start();
+        Log.i(TAG,"httpServer=="+App.jettyServer);
+		if(App.jettyServer == null || !App.jettyServer.isRunning()){
+            Log.i(TAG,"jetty begin start");
+            Thread t = new Thread(new HttpServer(9090));
+            t.setDaemon(true);
+            t.start();
         }
 		return Service.START_STICKY;
 	}
