@@ -7,20 +7,23 @@ import cn.acooo.onecenter.core.auto.OneCenterProtos;
 import cn.acooo.onecenter.core.utils.ImageUtil;
 
 
+/**
+ * TODO：这个类有个bug，但是不着急处理，当文件大小超过2G，也就是int最大值的时候，进度条显示会异常
+ */
 public class AppInfo {
 	private Bitmap appIcon;
 	private String appName;
-	private String appSize;
+	private Long appSize;
 	private String appVersion;
 	private String appLocalVersion;
 	private String packageName;
 	private boolean downloading = false;
-    private int curProgress = 0;
-    public int getCurProgress() {
+    private Long curProgress = 0L;
+    public Long getCurProgress() {
         return curProgress;
     }
 
-    public void setCurProgress(int curProgress) {
+    public void setCurProgress(Long curProgress) {
         this.curProgress = curProgress;
     }
 
@@ -63,10 +66,10 @@ public class AppInfo {
 	public void setAppName(String appName) {
 		this.appName = appName;
 	}
-	public String getAppSize() {
+	public Long getAppSize() {
 		return appSize;
 	}
-	public void setAppSize(String appSize) {
+	public void setAppSize(long appSize) {
 		this.appSize = appSize;
 	}
 	public String getAppVersion() {

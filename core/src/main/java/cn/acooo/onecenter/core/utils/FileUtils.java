@@ -1,5 +1,11 @@
 package cn.acooo.onecenter.core.utils;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -127,7 +133,6 @@ public class FileUtils {
 	 * 保存文件
 	 * @param stream
 	 * @param path
-	 * @param filename
 	 * @throws IOException
 	 */
     public static void SaveFileFromInputStream(InputStream stream,String path,String fileName) throws IOException
@@ -185,7 +190,39 @@ public class FileUtils {
         fs.write(bytes);
         fs.flush();
         fs.close();
+
         return file;
-    } 
-   
+    }
+
+    /**
+     * 下载文件
+     * @param url            http://www.xxx.com/img/333.jpg
+     * @param destFileName   xxx.jpg/xxx.png/xxx.txt
+     * @throws ClientProtocolException
+     * @throws IOException
+     */
+    public static void getFileByHttp(String url, String destFileName)
+            throws ClientProtocolException, IOException {
+        DefaultHttpClient httpClient = new DefaultHttpClient();
+        HttpGet httpget = new HttpGet(url);
+        HttpResponse response = httpClient.execute(httpget);
+        HttpEntity entity = response.getEntity();
+        InputStream in = entity.getContent();
+        File file = new File(destFileName);
+        FileOutputStream fout = new FileOutputStream(file);
+        try {
+            int l = -1;
+            byte[] tmp = new byte[1024];
+            while ((l = in.read(tmp)) != -1) {
+                fout.write(tmp, 0, l);
+                // 注意这里如果用OutputStream.write(buff)的话，图片会失真，大家可以试试
+            }
+            fout.flush();
+        } finally {
+            // 关闭低层流。
+            in.close();
+            fout.close();
+            httpClient.getConnectionManager().shutdown();
+        }
+    }
 }

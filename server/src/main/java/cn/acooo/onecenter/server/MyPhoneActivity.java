@@ -110,7 +110,6 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
     @Override
     public void onItemSelected(PhoneMenus phones) {
         Log.i(TAG,"onItemSelected,id========="+phones);
-        Bundle args = new Bundle();
         switch (phones){
             case APPS:
                 App.selectedPhoneClient.send(MessageType.MSG_ID_APPS, OneCenterProtos.CSQueryApps.newBuilder());

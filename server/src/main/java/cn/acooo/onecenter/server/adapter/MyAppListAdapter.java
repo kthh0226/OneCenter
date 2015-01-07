@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,8 @@ import cn.acooo.onecenter.server.async.DownloadAppTask;
 
 public class MyAppListAdapter extends BaseAdapter {
 	public static final String TAG = "ONE";
+    private DecimalFormat df = new DecimalFormat("#.00");
+
 	private LayoutInflater mInflater;
 	private List<AppInfo> appInfos = new ArrayList<AppInfo>();
     public void clearAppItem(){
@@ -79,8 +82,8 @@ public class MyAppListAdapter extends BaseAdapter {
 		}
         if(ai.isDownloading()){
             holder.progressBar.setVisibility(View.VISIBLE);
-            holder.progressBar.setMax(100);
-            holder.progressBar.setProgress(ai.getCurProgress());
+            holder.progressBar.setMax(ai.getAppSize().intValue());
+            holder.progressBar.setProgress(ai.getCurProgress().intValue());
             holder.btn.setVisibility(View.GONE);
         }else{
             holder.progressBar.setVisibility(View.GONE);
@@ -89,7 +92,8 @@ public class MyAppListAdapter extends BaseAdapter {
 
 		holder.appIcon.setImageBitmap(ai.getAppIcon());
 		holder.appName.setText(ai.getAppName());
-		holder.appSize.setText(ai.getAppSize());
+
+		holder.appSize.setText(df.format(ai.getAppSize()/1024/1024)+"M");
 		holder.appVersion.setText(ai.getAppVersion());
 		holder.appLocalVersion.setText(ai.getAppLocalVersion());
 		holder.btn.setOnClickListener(new View.OnClickListener() {

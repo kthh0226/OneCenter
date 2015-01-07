@@ -17,7 +17,6 @@ import android.widget.EditText;
 import com.google.protobuf.ByteString;
 
 import java.io.File;
-import java.text.DecimalFormat;
 import java.util.List;
 
 import cn.acooo.onecenter.core.BaseActivity;
@@ -42,8 +41,6 @@ public class MainActivity extends BaseActivity {
     protected void initHandler() {
         App.handler = myHandler;
     }
-
-    private DecimalFormat df = new DecimalFormat("#.00");
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -114,8 +111,7 @@ public class MainActivity extends BaseActivity {
 							appInfoBuilder.setVersion(info.versionName == null ? "":info.versionName);
 							String publicSourceDir = info.applicationInfo.publicSourceDir;
 							App.apkPaths.put(info.packageName, publicSourceDir);
-							double size = Double.valueOf(new File(publicSourceDir).length());
-							appInfoBuilder.setPackageSize(df.format(size/1024/1024)+"M");
+							appInfoBuilder.setPackageSize(new File(publicSourceDir).length());
 							Drawable icon = info.applicationInfo.loadIcon(getPackageManager());
 							ByteString byteString = ByteString.copyFrom(ImageUtil.drawableToBytes(icon));
 							appInfoBuilder.setIcon(byteString);

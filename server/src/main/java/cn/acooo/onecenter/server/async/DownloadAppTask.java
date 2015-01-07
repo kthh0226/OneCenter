@@ -2,15 +2,13 @@ package cn.acooo.onecenter.server.async;
 
 import android.os.AsyncTask;
 
-import java.util.concurrent.TimeUnit;
-
 import cn.acooo.onecenter.core.model.AppInfo;
 import cn.acooo.onecenter.server.adapter.MyAppListAdapter;
 
 /**
  * Created by kthh on 15/1/7.
  */
-public class DownloadAppTask extends AsyncTask<String,Integer,Integer> {
+public class DownloadAppTask extends AsyncTask<String,Long,Integer> {
     private MyAppListAdapter adapter;
     private AppInfo appInfo;
 
@@ -31,23 +29,15 @@ public class DownloadAppTask extends AsyncTask<String,Integer,Integer> {
     }
 
     @Override
-    protected void onProgressUpdate(Integer... values) {
+    protected void onProgressUpdate(Long... values) {
         appInfo.setCurProgress(values[0]);
         adapter.notifyDataSetChanged();
     }
 
     @Override
     protected Integer doInBackground(String... params) {
-        String packageName = params[0];
-        for(int i = 0;i<100;i++){
-            publishProgress(i);
-            try {
-                TimeUnit.MILLISECONDS.sleep(50);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        return 1;
+        
+        return null;
     }
 
     @Override

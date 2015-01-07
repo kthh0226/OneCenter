@@ -81,7 +81,7 @@ public class MyPhoneFeatureListFragment extends ListFragment {
                 && savedInstanceState.containsKey(STATE_ACTIVATED_POSITION)) {
             setActivatedPosition(savedInstanceState.getInt(STATE_ACTIVATED_POSITION));
         }
-        this.setActivatedPosition(1);
+        //this.setActivatedPosition(1);
     }
 
     @Override

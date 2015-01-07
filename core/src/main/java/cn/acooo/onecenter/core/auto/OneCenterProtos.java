@@ -5417,18 +5417,13 @@ public final class OneCenterProtos {
         getPackageNameBytes();
 
     /**
-     * <code>optional string packageSize = 5;</code>
+     * <code>optional int64 packageSize = 5;</code>
      */
     boolean hasPackageSize();
     /**
-     * <code>optional string packageSize = 5;</code>
+     * <code>optional int64 packageSize = 5;</code>
      */
-    java.lang.String getPackageSize();
-    /**
-     * <code>optional string packageSize = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getPackageSizeBytes();
+    long getPackageSize();
   }
   /**
    * Protobuf type {@code acooo.onecenter.AppInfo}
@@ -5505,10 +5500,9 @@ public final class OneCenterProtos {
               packageName_ = bs;
               break;
             }
-            case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 40: {
               bitField0_ |= 0x00000010;
-              packageSize_ = bs;
+              packageSize_ = input.readInt64();
               break;
             }
           }
@@ -5693,45 +5687,18 @@ public final class OneCenterProtos {
     }
 
     public static final int PACKAGESIZE_FIELD_NUMBER = 5;
-    private java.lang.Object packageSize_;
+    private long packageSize_;
     /**
-     * <code>optional string packageSize = 5;</code>
+     * <code>optional int64 packageSize = 5;</code>
      */
     public boolean hasPackageSize() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional string packageSize = 5;</code>
+     * <code>optional int64 packageSize = 5;</code>
      */
-    public java.lang.String getPackageSize() {
-      java.lang.Object ref = packageSize_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          packageSize_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string packageSize = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPackageSizeBytes() {
-      java.lang.Object ref = packageSize_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        packageSize_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getPackageSize() {
+      return packageSize_;
     }
 
     private void initFields() {
@@ -5739,7 +5706,7 @@ public final class OneCenterProtos {
       name_ = "";
       version_ = "";
       packageName_ = "";
-      packageSize_ = "";
+      packageSize_ = 0L;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5767,7 +5734,7 @@ public final class OneCenterProtos {
         output.writeBytes(4, getPackageNameBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBytes(5, getPackageSizeBytes());
+        output.writeInt64(5, packageSize_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5796,7 +5763,7 @@ public final class OneCenterProtos {
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, getPackageSizeBytes());
+          .computeInt64Size(5, packageSize_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5923,7 +5890,7 @@ public final class OneCenterProtos {
         bitField0_ = (bitField0_ & ~0x00000004);
         packageName_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
-        packageSize_ = "";
+        packageSize_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
@@ -6008,9 +5975,7 @@ public final class OneCenterProtos {
           onChanged();
         }
         if (other.hasPackageSize()) {
-          bitField0_ |= 0x00000010;
-          packageSize_ = other.packageSize_;
-          onChanged();
+          setPackageSize(other.getPackageSize());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -6302,78 +6267,34 @@ public final class OneCenterProtos {
         return this;
       }
 
-      private java.lang.Object packageSize_ = "";
+      private long packageSize_ ;
       /**
-       * <code>optional string packageSize = 5;</code>
+       * <code>optional int64 packageSize = 5;</code>
        */
       public boolean hasPackageSize() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional string packageSize = 5;</code>
+       * <code>optional int64 packageSize = 5;</code>
        */
-      public java.lang.String getPackageSize() {
-        java.lang.Object ref = packageSize_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            packageSize_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public long getPackageSize() {
+        return packageSize_;
       }
       /**
-       * <code>optional string packageSize = 5;</code>
+       * <code>optional int64 packageSize = 5;</code>
        */
-      public com.google.protobuf.ByteString
-          getPackageSizeBytes() {
-        java.lang.Object ref = packageSize_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          packageSize_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string packageSize = 5;</code>
-       */
-      public Builder setPackageSize(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      public Builder setPackageSize(long value) {
+        bitField0_ |= 0x00000010;
         packageSize_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string packageSize = 5;</code>
+       * <code>optional int64 packageSize = 5;</code>
        */
       public Builder clearPackageSize() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        packageSize_ = getDefaultInstance().getPackageSize();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string packageSize = 5;</code>
-       */
-      public Builder setPackageSizeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-        packageSize_ = value;
+        packageSize_ = 0L;
         onChanged();
         return this;
       }
@@ -8035,7 +7956,7 @@ public final class OneCenterProtos {
       "(\0132\030.acooo.onecenter.AppInfo\"`\n\007AppInfo\022" +
       "\014\n\004icon\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003" +
       " \001(\t\022\023\n\013packageName\030\004 \001(\t\022\023\n\013packageSize" +
-      "\030\005 \001(\t\")\n\005Phone\022\014\n\004imei\030\001 \002(\t\022\022\n\ndeviceT" +
+      "\030\005 \001(\003\")\n\005Phone\022\014\n\004imei\030\001 \002(\t\022\022\n\ndeviceT" +
       "ype\030\002 \001(\t\"0\n\007CSLogin\022%\n\005phone\030\001 \001(\0132\026.ac" +
       "ooo.onecenter.Phone\"\027\n\007SCLogin\022\014\n\004code\030\001" +
       " \001(\005*h\n\013MessageType\022\021\n\014MSG_ID_LOGIN\020\350\007\022\020" +
