@@ -91,9 +91,9 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
             case APPS:
                 if(appDetail == null){
                     appDetail = new AppDetailListFragment();
-                    Log.i(TAG,"appDetail is null=============");
+                    App.selectedPhoneClient.send(MessageType.MSG_ID_APPS, OneCenterProtos.CSQueryApps.newBuilder());
                 }
-                App.selectedPhoneClient.send(MessageType.MSG_ID_APPS, OneCenterProtos.CSQueryApps.newBuilder());
+
                 getFragmentManager().beginTransaction()
                         .replace(R.id.phone_feature_detail_container, appDetail).commit();
                 break;
