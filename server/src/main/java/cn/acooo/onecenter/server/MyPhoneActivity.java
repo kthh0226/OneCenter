@@ -47,18 +47,25 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
 			public boolean handleMessage(Message msg) {
 				try{
 					switch(msg.what){
-					case MessageType.MSG_ID_APPS_VALUE:
-						Log.d(TAG, "into apps============");
+					case MessageType.MSG_ID_APPS_VALUE:{
                         MyAppListAdapter myAppListAdapter = (MyAppListAdapter)appDetail.getListAdapter();
-						SCQueryApps builder = SCQueryApps.parseFrom((byte[])msg.obj);
-						Map<String,PackageInfo> ms = CommonsUtil.getAllAppsByMap(MyPhoneActivity.this);
+                        SCQueryApps builder = SCQueryApps.parseFrom((byte[])msg.obj);
+                        Map<String,PackageInfo> ms = CommonsUtil.getAllAppsByMap(MyPhoneActivity.this);
                         myAppListAdapter.clearAppItem();
-						for(OneCenterProtos.AppInfo app : builder.getAppsList()){
-							PackageInfo pinfo = ms.get(app.getPackageName());
-							myAppListAdapter.addAppItem(new AppInfo(app,pinfo));
-						}
-						myAppListAdapter.notifyDataSetChanged();
-						return true;
+                        for(OneCenterProtos.AppInfo app : builder.getAppsList()){
+                            PackageInfo pinfo = ms.get(app.getPackageName());
+                            myAppListAdapter.addAppItem(new AppInfo(app,pinfo));
+                        }
+                        myAppListAdapter.notifyDataSetChanged();
+                        return true;
+                    }
+//                    case MessageType.MSG_ID_DOWNLOAD_ICON_VALUE:{
+//                        OneCenterProtos.SCPushImage scPushImage = OneCenterProtos.SCPushImage.parseFrom((byte[])msg.obj);
+//                        MyAppListAdapter myAppListAdapter = (MyAppListAdapter)appDetail.getListAdapter();
+//                        myAppListAdapter.putAppIcon(scPushImage.getImageInfo().getName(),scPushImage.getImageInfo().getImage());
+//                        return true;
+//                    }
+
                     case MessageType.MSG_ID_QUERY_CONTACTS_VALUE:
                         ContactsAdapter contactsAdapter = (ContactsAdapter)contactsDetail.getListAdapter();
                         SCQueryContacts scQueryContacts = SCQueryContacts.parseFrom((byte[])msg.obj);
@@ -93,8 +100,10 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
         Log.i(TAG,"onItemSelected,id========="+phones);
         switch (phones){
             case APPS:
+                if(appDetail == null){
+                    appDetail = new AppDetailListFragment();
+                }
                 App.selectedPhoneClient.send(MessageType.MSG_ID_APPS, OneCenterProtos.CSQueryApps.newBuilder());
-                appDetail = appDetail == null? new AppDetailListFragment():appDetail;
                 getFragmentManager().beginTransaction()
                         .replace(R.id.phone_feature_detail_container, appDetail).commit();
                 break;

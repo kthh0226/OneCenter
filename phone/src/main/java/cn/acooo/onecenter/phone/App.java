@@ -22,6 +22,7 @@ public class App extends Application {
 	public static final String TAG = "ONE";
 	public static Handler handler;
     public static Server jettyServer;
+    //public static Map<String,ByteString> IconCache = new HashMap<String,ByteString>();
 	/**
 	 * <packageName,publicSourceDir>
 	 */
@@ -29,8 +30,7 @@ public class App extends Application {
 	
 	@SuppressWarnings("rawtypes")
 	public static void send(MessageType messageType,Builder builder){
-		KMessage m = new KMessage(messageType.getNumber(), builder.build().toByteArray());
-		session.writeAndFlush(m);
+        send(messageType,MessageCode.SYS_NORMAL,builder);
 	}
 	
 	@SuppressWarnings("rawtypes")

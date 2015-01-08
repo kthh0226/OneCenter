@@ -34,13 +34,21 @@ public final class OneCenterProtos {
      */
     MSG_ID_APPS(1, 1100),
     /**
+     * <code>MSG_ID_DOWNLOAD_ICON = 1101;</code>
+     *
+     * <pre>
+     *下载icon
+     * </pre>
+     */
+    MSG_ID_DOWNLOAD_ICON(2, 1101),
+    /**
      * <code>MSG_ID_QUERY_CONTACTS = 1102;</code>
      *
      * <pre>
-     *MSG_ID_DOWNLOAD_APK = 1101;//下载apk
+     *查询联系人
      * </pre>
      */
-    MSG_ID_QUERY_CONTACTS(2, 1102),
+    MSG_ID_QUERY_CONTACTS(3, 1102),
     ;
 
     /**
@@ -60,10 +68,18 @@ public final class OneCenterProtos {
      */
     public static final int MSG_ID_APPS_VALUE = 1100;
     /**
+     * <code>MSG_ID_DOWNLOAD_ICON = 1101;</code>
+     *
+     * <pre>
+     *下载icon
+     * </pre>
+     */
+    public static final int MSG_ID_DOWNLOAD_ICON_VALUE = 1101;
+    /**
      * <code>MSG_ID_QUERY_CONTACTS = 1102;</code>
      *
      * <pre>
-     *MSG_ID_DOWNLOAD_APK = 1101;//下载apk
+     *查询联系人
      * </pre>
      */
     public static final int MSG_ID_QUERY_CONTACTS_VALUE = 1102;
@@ -75,6 +91,7 @@ public final class OneCenterProtos {
       switch (value) {
         case 1000: return MSG_ID_LOGIN;
         case 1100: return MSG_ID_APPS;
+        case 1101: return MSG_ID_DOWNLOAD_ICON;
         case 1102: return MSG_ID_QUERY_CONTACTS;
         default: return null;
       }
@@ -7102,16 +7119,16 @@ public final class OneCenterProtos {
       "publicSourceDir\030\006 \001(\t\")\n\005Phone\022\014\n\004imei\030\001" +
       " \002(\t\022\022\n\ndeviceType\030\002 \001(\t\"0\n\007CSLogin\022%\n\005p" +
       "hone\030\001 \001(\0132\026.acooo.onecenter.Phone\"\027\n\007SC" +
-      "Login\022\014\n\004code\030\001 \001(\005*N\n\013MessageType\022\021\n\014MS" +
-      "G_ID_LOGIN\020\350\007\022\020\n\013MSG_ID_APPS\020\314\010\022\032\n\025MSG_I" +
-      "D_QUERY_CONTACTS\020\316\010*\240\001\n\013MessageCode\022\016\n\nS" +
-      "YS_NORMAL\020\001\022\022\n\rErr_Not_Known\020\350\007\022\030\n\023Err_M" +
-      "oney_NotEnough\020\351\007\022\030\n\023Err_Power_NotEnough",
-      "\020\352\007\022\035\n\030Err_BattleSoul_NotEnough\020\353\007\022\032\n\025Er" +
-      "r_Diamond_NotEnough\020\354\007*5\n\rVersionStatus\022" +
-      "\014\n\010PROHIBIT\020\000\022\n\n\006EXPIRE\020\001\022\n\n\006NORMAL\020\002B/\n" +
-      "\034cn.acooo.onecenter.core.autoB\017OneCenter" +
-      "Protos"
+      "Login\022\014\n\004code\030\001 \001(\005*i\n\013MessageType\022\021\n\014MS" +
+      "G_ID_LOGIN\020\350\007\022\020\n\013MSG_ID_APPS\020\314\010\022\031\n\024MSG_I" +
+      "D_DOWNLOAD_ICON\020\315\010\022\032\n\025MSG_ID_QUERY_CONTA" +
+      "CTS\020\316\010*\240\001\n\013MessageCode\022\016\n\nSYS_NORMAL\020\001\022\022" +
+      "\n\rErr_Not_Known\020\350\007\022\030\n\023Err_Money_NotEnoug",
+      "h\020\351\007\022\030\n\023Err_Power_NotEnough\020\352\007\022\035\n\030Err_Ba" +
+      "ttleSoul_NotEnough\020\353\007\022\032\n\025Err_Diamond_Not" +
+      "Enough\020\354\007*5\n\rVersionStatus\022\014\n\010PROHIBIT\020\000" +
+      "\022\n\n\006EXPIRE\020\001\022\n\n\006NORMAL\020\002B/\n\034cn.acooo.one" +
+      "center.core.autoB\017OneCenterProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

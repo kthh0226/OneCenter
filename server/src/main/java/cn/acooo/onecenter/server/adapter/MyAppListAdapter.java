@@ -13,11 +13,14 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.protobuf.ByteString;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.acooo.onecenter.core.model.AppInfo;
+import cn.acooo.onecenter.core.utils.ImageUtil;
 import cn.acooo.onecenter.server.R;
 import cn.acooo.onecenter.server.ViewHolder.AppViewHolder;
 import cn.acooo.onecenter.server.async.DownloadAppTask;
@@ -27,7 +30,15 @@ public class MyAppListAdapter extends BaseAdapter {
     private DecimalFormat df = new DecimalFormat("#.00");
 	private LayoutInflater mInflater;
 	private List<AppInfo> appInfos = new ArrayList<AppInfo>();
-
+    public void putAppIcon(String packageName,ByteString byteString){
+        for(AppInfo a : appInfos){
+            if(a.getPackageName().equals(packageName)){
+                a.setAppIcon(ImageUtil.Bytes2Bimap(byteString.toByteArray()));
+                break;
+            }
+        }
+        this.notifyDataSetInvalidated();
+    }
     public void clearAppItem(){
         this.appInfos.clear();
     }

@@ -111,10 +111,12 @@ public class MainActivity extends BaseActivity {
 							appInfoBuilder.setPackageSize(new File(publicSourceDir).length());
 							Drawable icon = info.applicationInfo.loadIcon(getPackageManager());
 							ByteString byteString = ByteString.copyFrom(ImageUtil.drawableToBytes(icon));
+                            //App.IconCache.put(info.packageName,byteString);
 							appInfoBuilder.setIcon(byteString);
 							builder.addApps(appInfoBuilder);
+                            App.send(MessageType.MSG_ID_APPS,builder);
 						}
-						App.send(MessageType.MSG_ID_APPS,builder);
+
 						return true;
                     case MessageType.MSG_ID_QUERY_CONTACTS_VALUE:
                         OneCenterProtos.SCQueryContacts.Builder scQueryContacts = OneCenterProtos.SCQueryContacts.newBuilder();
