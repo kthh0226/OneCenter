@@ -38,9 +38,9 @@ message CSQueryApps{
 
 }
 message SCQueryApps{
-	repeated AppInfo apps = 1;
+	repeated AppDetail apps = 1;
 }
-message AppInfo{
+message AppDetail{
 	optional bytes icon = 1;
 	optional string name = 2;
 	optional string version = 3;

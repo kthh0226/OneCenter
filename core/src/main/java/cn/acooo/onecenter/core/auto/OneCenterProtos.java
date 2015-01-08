@@ -3657,27 +3657,27 @@ public final class OneCenterProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+     * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
      */
-    java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo> 
+    java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail> 
         getAppsList();
     /**
-     * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+     * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
      */
-    cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo getApps(int index);
+    cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail getApps(int index);
     /**
-     * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+     * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
      */
     int getAppsCount();
     /**
-     * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+     * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
      */
-    java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfoOrBuilder> 
+    java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetailOrBuilder> 
         getAppsOrBuilderList();
     /**
-     * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+     * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
      */
-    cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfoOrBuilder getAppsOrBuilder(
+    cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetailOrBuilder getAppsOrBuilder(
         int index);
   }
   /**
@@ -3734,10 +3734,10 @@ public final class OneCenterProtos {
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                apps_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo>();
+                apps_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              apps_.add(input.readMessage(cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.PARSER, extensionRegistry));
+              apps_.add(input.readMessage(cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.PARSER, extensionRegistry));
               break;
             }
           }
@@ -3783,36 +3783,36 @@ public final class OneCenterProtos {
     }
 
     public static final int APPS_FIELD_NUMBER = 1;
-    private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo> apps_;
+    private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail> apps_;
     /**
-     * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+     * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
      */
-    public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo> getAppsList() {
+    public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail> getAppsList() {
       return apps_;
     }
     /**
-     * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+     * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
      */
-    public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfoOrBuilder> 
+    public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetailOrBuilder> 
         getAppsOrBuilderList() {
       return apps_;
     }
     /**
-     * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+     * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
      */
     public int getAppsCount() {
       return apps_.size();
     }
     /**
-     * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+     * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
      */
-    public cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo getApps(int index) {
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail getApps(int index) {
       return apps_.get(index);
     }
     /**
-     * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+     * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
      */
-    public cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfoOrBuilder getAppsOrBuilder(
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetailOrBuilder getAppsOrBuilder(
         int index) {
       return apps_.get(index);
     }
@@ -4077,22 +4077,22 @@ public final class OneCenterProtos {
       }
       private int bitField0_;
 
-      private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo> apps_ =
+      private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail> apps_ =
         java.util.Collections.emptyList();
       private void ensureAppsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          apps_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo>(apps_);
+          apps_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail>(apps_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfoOrBuilder> appsBuilder_;
+          cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetailOrBuilder> appsBuilder_;
 
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
-      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo> getAppsList() {
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail> getAppsList() {
         if (appsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(apps_);
         } else {
@@ -4100,7 +4100,7 @@ public final class OneCenterProtos {
         }
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
       public int getAppsCount() {
         if (appsBuilder_ == null) {
@@ -4110,9 +4110,9 @@ public final class OneCenterProtos {
         }
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo getApps(int index) {
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail getApps(int index) {
         if (appsBuilder_ == null) {
           return apps_.get(index);
         } else {
@@ -4120,10 +4120,10 @@ public final class OneCenterProtos {
         }
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
       public Builder setApps(
-          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo value) {
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail value) {
         if (appsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4137,10 +4137,10 @@ public final class OneCenterProtos {
         return this;
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
       public Builder setApps(
-          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder builderForValue) {
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder builderForValue) {
         if (appsBuilder_ == null) {
           ensureAppsIsMutable();
           apps_.set(index, builderForValue.build());
@@ -4151,9 +4151,9 @@ public final class OneCenterProtos {
         return this;
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
-      public Builder addApps(cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo value) {
+      public Builder addApps(cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail value) {
         if (appsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4167,10 +4167,10 @@ public final class OneCenterProtos {
         return this;
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
       public Builder addApps(
-          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo value) {
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail value) {
         if (appsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4184,10 +4184,10 @@ public final class OneCenterProtos {
         return this;
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
       public Builder addApps(
-          cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder builderForValue) {
+          cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder builderForValue) {
         if (appsBuilder_ == null) {
           ensureAppsIsMutable();
           apps_.add(builderForValue.build());
@@ -4198,10 +4198,10 @@ public final class OneCenterProtos {
         return this;
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
       public Builder addApps(
-          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder builderForValue) {
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder builderForValue) {
         if (appsBuilder_ == null) {
           ensureAppsIsMutable();
           apps_.add(index, builderForValue.build());
@@ -4212,10 +4212,10 @@ public final class OneCenterProtos {
         return this;
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
       public Builder addAllApps(
-          java.lang.Iterable<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo> values) {
+          java.lang.Iterable<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail> values) {
         if (appsBuilder_ == null) {
           ensureAppsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4227,7 +4227,7 @@ public final class OneCenterProtos {
         return this;
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
       public Builder clearApps() {
         if (appsBuilder_ == null) {
@@ -4240,7 +4240,7 @@ public final class OneCenterProtos {
         return this;
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
       public Builder removeApps(int index) {
         if (appsBuilder_ == null) {
@@ -4253,16 +4253,16 @@ public final class OneCenterProtos {
         return this;
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder getAppsBuilder(
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder getAppsBuilder(
           int index) {
         return getAppsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfoOrBuilder getAppsOrBuilder(
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetailOrBuilder getAppsOrBuilder(
           int index) {
         if (appsBuilder_ == null) {
           return apps_.get(index);  } else {
@@ -4270,9 +4270,9 @@ public final class OneCenterProtos {
         }
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
-      public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfoOrBuilder> 
+      public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetailOrBuilder> 
            getAppsOrBuilderList() {
         if (appsBuilder_ != null) {
           return appsBuilder_.getMessageOrBuilderList();
@@ -4281,33 +4281,33 @@ public final class OneCenterProtos {
         }
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder addAppsBuilder() {
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder addAppsBuilder() {
         return getAppsFieldBuilder().addBuilder(
-            cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.getDefaultInstance());
+            cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.getDefaultInstance());
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder addAppsBuilder(
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder addAppsBuilder(
           int index) {
         return getAppsFieldBuilder().addBuilder(
-            index, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.getDefaultInstance());
+            index, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.getDefaultInstance());
       }
       /**
-       * <code>repeated .acooo.onecenter.AppInfo apps = 1;</code>
+       * <code>repeated .acooo.onecenter.AppDetail apps = 1;</code>
        */
-      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder> 
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder> 
            getAppsBuilderList() {
         return getAppsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfoOrBuilder> 
+          cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetailOrBuilder> 
           getAppsFieldBuilder() {
         if (appsBuilder_ == null) {
           appsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfoOrBuilder>(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetailOrBuilder>(
                   apps_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -4328,8 +4328,8 @@ public final class OneCenterProtos {
     // @@protoc_insertion_point(class_scope:acooo.onecenter.SCQueryApps)
   }
 
-  public interface AppInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:acooo.onecenter.AppInfo)
+  public interface AppDetailOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.AppDetail)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4419,25 +4419,25 @@ public final class OneCenterProtos {
         getPublicSourceDirBytes();
   }
   /**
-   * Protobuf type {@code acooo.onecenter.AppInfo}
+   * Protobuf type {@code acooo.onecenter.AppDetail}
    */
-  public static final class AppInfo extends
+  public static final class AppDetail extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:acooo.onecenter.AppInfo)
-      AppInfoOrBuilder {
-    // Use AppInfo.newBuilder() to construct.
-    private AppInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.AppDetail)
+      AppDetailOrBuilder {
+    // Use AppDetail.newBuilder() to construct.
+    private AppDetail(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private AppInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private AppDetail(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final AppInfo defaultInstance;
-    public static AppInfo getDefaultInstance() {
+    private static final AppDetail defaultInstance;
+    public static AppDetail getDefaultInstance() {
       return defaultInstance;
     }
 
-    public AppInfo getDefaultInstanceForType() {
+    public AppDetail getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -4447,7 +4447,7 @@ public final class OneCenterProtos {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private AppInfo(
+    private AppDetail(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4518,28 +4518,28 @@ public final class OneCenterProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_AppInfo_descriptor;
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_AppDetail_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_AppInfo_fieldAccessorTable
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_AppDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.class, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder.class);
+              cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.class, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<AppInfo> PARSER =
-        new com.google.protobuf.AbstractParser<AppInfo>() {
-      public AppInfo parsePartialFrom(
+    public static com.google.protobuf.Parser<AppDetail> PARSER =
+        new com.google.protobuf.AbstractParser<AppDetail>() {
+      public AppDetail parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AppInfo(input, extensionRegistry);
+        return new AppDetail(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AppInfo> getParserForType() {
+    public com.google.protobuf.Parser<AppDetail> getParserForType() {
       return PARSER;
     }
 
@@ -4838,53 +4838,53 @@ public final class OneCenterProtos {
       return super.writeReplace();
     }
 
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parseFrom(
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parseFrom(
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parseFrom(byte[] data)
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parseFrom(
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parseFrom(java.io.InputStream input)
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parseFrom(
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parseDelimitedFrom(java.io.InputStream input)
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parseDelimitedFrom(
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parseFrom(
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parseFrom(
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4893,7 +4893,7 @@ public final class OneCenterProtos {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo prototype) {
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -4905,25 +4905,25 @@ public final class OneCenterProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code acooo.onecenter.AppInfo}
+     * Protobuf type {@code acooo.onecenter.AppDetail}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:acooo.onecenter.AppInfo)
-        cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfoOrBuilder {
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.AppDetail)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetailOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_AppInfo_descriptor;
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_AppDetail_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_AppInfo_fieldAccessorTable
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_AppDetail_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.class, cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.Builder.class);
+                cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.class, cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.Builder.class);
       }
 
-      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.newBuilder()
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4964,23 +4964,23 @@ public final class OneCenterProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_AppInfo_descriptor;
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_AppDetail_descriptor;
       }
 
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo getDefaultInstanceForType() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.getDefaultInstance();
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.getDefaultInstance();
       }
 
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo build() {
-        cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo result = buildPartial();
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo buildPartial() {
-        cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo result = new cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo(this);
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail result = new cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -5013,16 +5013,16 @@ public final class OneCenterProtos {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo) {
-          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo)other);
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo other) {
-        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo.getDefaultInstance()) return this;
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail.getDefaultInstance()) return this;
         if (other.hasIcon()) {
           setIcon(other.getIcon());
         }
@@ -5061,11 +5061,11 @@ public final class OneCenterProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo parsedMessage = null;
+        cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo) e.getUnfinishedMessage();
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.AppDetail) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -5471,15 +5471,15 @@ public final class OneCenterProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:acooo.onecenter.AppInfo)
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.AppDetail)
     }
 
     static {
-      defaultInstance = new AppInfo(true);
+      defaultInstance = new AppDetail(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:acooo.onecenter.AppInfo)
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.AppDetail)
   }
 
   public interface PhoneOrBuilder extends
@@ -7076,10 +7076,10 @@ public final class OneCenterProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_acooo_onecenter_SCQueryApps_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_acooo_onecenter_AppInfo_descriptor;
+    internal_static_acooo_onecenter_AppDetail_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_acooo_onecenter_AppInfo_fieldAccessorTable;
+      internal_static_acooo_onecenter_AppDetail_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_acooo_onecenter_Phone_descriptor;
   private static
@@ -7112,23 +7112,23 @@ public final class OneCenterProtos {
       "Info\"(\n\tImageInfo\022\014\n\004name\030\001 \001(\t\022\r\n\005image" +
       "\030\002 \001(\014\"<\n\013SCPushImage\022-\n\timageInfo\030\001 \001(\013" +
       "2\032.acooo.onecenter.ImageInfo\"\r\n\013CSQueryA" +
-      "pps\"5\n\013SCQueryApps\022&\n\004apps\030\001 \003(\0132\030.acooo" +
-      ".onecenter.AppInfo\"y\n\007AppInfo\022\014\n\004icon\030\001 ",
-      "\001(\014\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\022\023\n\013pa" +
-      "ckageName\030\004 \001(\t\022\023\n\013packageSize\030\005 \001(\003\022\027\n\017" +
-      "publicSourceDir\030\006 \001(\t\")\n\005Phone\022\014\n\004imei\030\001" +
-      " \002(\t\022\022\n\ndeviceType\030\002 \001(\t\"0\n\007CSLogin\022%\n\005p" +
-      "hone\030\001 \001(\0132\026.acooo.onecenter.Phone\"\027\n\007SC" +
-      "Login\022\014\n\004code\030\001 \001(\005*i\n\013MessageType\022\021\n\014MS" +
-      "G_ID_LOGIN\020\350\007\022\020\n\013MSG_ID_APPS\020\314\010\022\031\n\024MSG_I" +
-      "D_DOWNLOAD_ICON\020\315\010\022\032\n\025MSG_ID_QUERY_CONTA" +
-      "CTS\020\316\010*\240\001\n\013MessageCode\022\016\n\nSYS_NORMAL\020\001\022\022" +
-      "\n\rErr_Not_Known\020\350\007\022\030\n\023Err_Money_NotEnoug",
-      "h\020\351\007\022\030\n\023Err_Power_NotEnough\020\352\007\022\035\n\030Err_Ba" +
-      "ttleSoul_NotEnough\020\353\007\022\032\n\025Err_Diamond_Not" +
-      "Enough\020\354\007*5\n\rVersionStatus\022\014\n\010PROHIBIT\020\000" +
-      "\022\n\n\006EXPIRE\020\001\022\n\n\006NORMAL\020\002B/\n\034cn.acooo.one" +
-      "center.core.autoB\017OneCenterProtos"
+      "pps\"7\n\013SCQueryApps\022(\n\004apps\030\001 \003(\0132\032.acooo" +
+      ".onecenter.AppDetail\"{\n\tAppDetail\022\014\n\004ico",
+      "n\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\022\023" +
+      "\n\013packageName\030\004 \001(\t\022\023\n\013packageSize\030\005 \001(\003" +
+      "\022\027\n\017publicSourceDir\030\006 \001(\t\")\n\005Phone\022\014\n\004im" +
+      "ei\030\001 \002(\t\022\022\n\ndeviceType\030\002 \001(\t\"0\n\007CSLogin\022" +
+      "%\n\005phone\030\001 \001(\0132\026.acooo.onecenter.Phone\"\027" +
+      "\n\007SCLogin\022\014\n\004code\030\001 \001(\005*i\n\013MessageType\022\021" +
+      "\n\014MSG_ID_LOGIN\020\350\007\022\020\n\013MSG_ID_APPS\020\314\010\022\031\n\024M" +
+      "SG_ID_DOWNLOAD_ICON\020\315\010\022\032\n\025MSG_ID_QUERY_C" +
+      "ONTACTS\020\316\010*\240\001\n\013MessageCode\022\016\n\nSYS_NORMAL" +
+      "\020\001\022\022\n\rErr_Not_Known\020\350\007\022\030\n\023Err_Money_NotE",
+      "nough\020\351\007\022\030\n\023Err_Power_NotEnough\020\352\007\022\035\n\030Er" +
+      "r_BattleSoul_NotEnough\020\353\007\022\032\n\025Err_Diamond" +
+      "_NotEnough\020\354\007*5\n\rVersionStatus\022\014\n\010PROHIB" +
+      "IT\020\000\022\n\n\006EXPIRE\020\001\022\n\n\006NORMAL\020\002B/\n\034cn.acooo" +
+      ".onecenter.core.autoB\017OneCenterProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7184,11 +7184,11 @@ public final class OneCenterProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCQueryApps_descriptor,
         new java.lang.String[] { "Apps", });
-    internal_static_acooo_onecenter_AppInfo_descriptor =
+    internal_static_acooo_onecenter_AppDetail_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_acooo_onecenter_AppInfo_fieldAccessorTable = new
+    internal_static_acooo_onecenter_AppDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_acooo_onecenter_AppInfo_descriptor,
+        internal_static_acooo_onecenter_AppDetail_descriptor,
         new java.lang.String[] { "Icon", "Name", "Version", "PackageName", "PackageSize", "PublicSourceDir", });
     internal_static_acooo_onecenter_Phone_descriptor =
       getDescriptor().getMessageTypes().get(8);

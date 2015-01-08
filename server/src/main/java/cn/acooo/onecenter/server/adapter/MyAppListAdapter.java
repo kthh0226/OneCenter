@@ -3,7 +3,9 @@ package cn.acooo.onecenter.server.adapter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.PackageInfo;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +19,11 @@ import com.google.protobuf.ByteString;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import cn.acooo.onecenter.core.auto.OneCenterProtos;
 import cn.acooo.onecenter.core.model.AppInfo;
 import cn.acooo.onecenter.core.utils.ImageUtil;
 import cn.acooo.onecenter.server.R;
@@ -30,6 +35,7 @@ public class MyAppListAdapter extends BaseAdapter {
     private DecimalFormat df = new DecimalFormat("#.00");
 	private LayoutInflater mInflater;
 	private List<AppInfo> appInfos = new ArrayList<AppInfo>();
+    private Set<String> packageNames = new HashSet<String>();
     public void putAppIcon(String packageName,ByteString byteString){
         for(AppInfo a : appInfos){
             if(a.getPackageName().equals(packageName)){
@@ -42,11 +48,15 @@ public class MyAppListAdapter extends BaseAdapter {
     public void clearAppItem(){
         this.appInfos.clear();
     }
-	public void addAppItem(AppInfo appInfo){
-		if(appInfo != null){
-			appInfos.add(appInfo);
-		}
+	public void addAppItem(OneCenterProtos.AppDetail appDetail,PackageInfo pInfo){
+        Log.i(TAG,""+packageNames.size());
+        if(!packageNames.contains(appDetail.getPackageName())){
+            appInfos.add(new AppInfo(appDetail,pInfo));
+            packageNames.add(appDetail.getPackageName());
+            this.notifyDataSetChanged();
+        }
 	}
+
 	public void setApps(List<AppInfo> appInfos){
 		this.appInfos = appInfos;
 	}
@@ -57,8 +67,7 @@ public class MyAppListAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
-		return appInfos.size();
+        return appInfos.size();
 	}
 
 	@Override

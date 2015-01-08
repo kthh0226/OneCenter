@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.widget.ProgressBar;
 
 import com.google.protobuf.ByteString;
+
 import cn.acooo.onecenter.core.auto.OneCenterProtos;
 import cn.acooo.onecenter.core.utils.ImageUtil;
 
@@ -61,7 +62,7 @@ public class AppInfo {
         this.downloading = downloading;
     }
 
-    public AppInfo(OneCenterProtos.AppInfo appInfo, PackageInfo packageInfo){
+    public AppInfo(OneCenterProtos.AppDetail appInfo, PackageInfo packageInfo){
 		ByteString bs = appInfo.getIcon();
 		this.appIcon = ImageUtil.Bytes2Bimap(appInfo.getIcon().toByteArray());
 		this.appName = appInfo.getName();
