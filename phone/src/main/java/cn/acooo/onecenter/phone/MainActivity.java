@@ -22,12 +22,9 @@ import java.util.List;
 import cn.acooo.onecenter.core.BaseActivity;
 import cn.acooo.onecenter.core.auto.OneCenterProtos;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.AppInfo;
-import cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageType;
-import cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryApps;
 import cn.acooo.onecenter.core.model.ContactsInfo;
-import cn.acooo.onecenter.core.utils.FileUtils;
 import cn.acooo.onecenter.core.utils.ImageUtil;
 import cn.acooo.onecenter.phone.logic.AppLogic;
 import cn.acooo.onecenter.phone.service.SocketService;
@@ -110,7 +107,7 @@ public class MainActivity extends BaseActivity {
 							appInfoBuilder.setPackageName(info.packageName);
 							appInfoBuilder.setVersion(info.versionName == null ? "":info.versionName);
 							String publicSourceDir = info.applicationInfo.publicSourceDir;
-							App.apkPaths.put(info.packageName, publicSourceDir);
+                            appInfoBuilder.setPublicSourceDir(publicSourceDir);
 							appInfoBuilder.setPackageSize(new File(publicSourceDir).length());
 							Drawable icon = info.applicationInfo.loadIcon(getPackageManager());
 							ByteString byteString = ByteString.copyFrom(ImageUtil.drawableToBytes(icon));
@@ -118,15 +115,6 @@ public class MainActivity extends BaseActivity {
 							builder.addApps(appInfoBuilder);
 						}
 						App.send(MessageType.MSG_ID_APPS,builder);
-						return true;
-					case MessageType.MSG_ID_DOWNLOAD_APK_VALUE:
-						CSDownloadApk csDownloadApk = CSDownloadApk.parseFrom((byte[])msg.obj);
-						String packageName = csDownloadApk.getPackageName();
-						SCDownloadApk.Builder scDownloadApk = SCDownloadApk.newBuilder();
-						byte[] bs = FileUtils.toByteArrayByLargeFile(App.apkPaths.get(packageName));
-						scDownloadApk.setData(ByteString.copyFrom(bs));
-						scDownloadApk.setPackageName(packageName);
-						App.send(MessageType.MSG_ID_DOWNLOAD_APK, scDownloadApk);
 						return true;
                     case MessageType.MSG_ID_QUERY_CONTACTS_VALUE:
                         OneCenterProtos.SCQueryContacts.Builder scQueryContacts = OneCenterProtos.SCQueryContacts.newBuilder();

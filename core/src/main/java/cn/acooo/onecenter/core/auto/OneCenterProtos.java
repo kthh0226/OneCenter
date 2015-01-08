@@ -34,21 +34,13 @@ public final class OneCenterProtos {
      */
     MSG_ID_APPS(1, 1100),
     /**
-     * <code>MSG_ID_DOWNLOAD_APK = 1101;</code>
-     *
-     * <pre>
-     *下载apk
-     * </pre>
-     */
-    MSG_ID_DOWNLOAD_APK(2, 1101),
-    /**
      * <code>MSG_ID_QUERY_CONTACTS = 1102;</code>
      *
      * <pre>
-     *查询联系人
+     *MSG_ID_DOWNLOAD_APK = 1101;//下载apk
      * </pre>
      */
-    MSG_ID_QUERY_CONTACTS(3, 1102),
+    MSG_ID_QUERY_CONTACTS(2, 1102),
     ;
 
     /**
@@ -68,18 +60,10 @@ public final class OneCenterProtos {
      */
     public static final int MSG_ID_APPS_VALUE = 1100;
     /**
-     * <code>MSG_ID_DOWNLOAD_APK = 1101;</code>
-     *
-     * <pre>
-     *下载apk
-     * </pre>
-     */
-    public static final int MSG_ID_DOWNLOAD_APK_VALUE = 1101;
-    /**
      * <code>MSG_ID_QUERY_CONTACTS = 1102;</code>
      *
      * <pre>
-     *查询联系人
+     *MSG_ID_DOWNLOAD_APK = 1101;//下载apk
      * </pre>
      */
     public static final int MSG_ID_QUERY_CONTACTS_VALUE = 1102;
@@ -91,7 +75,6 @@ public final class OneCenterProtos {
       switch (value) {
         case 1000: return MSG_ID_LOGIN;
         case 1100: return MSG_ID_APPS;
-        case 1101: return MSG_ID_DOWNLOAD_APK;
         case 1102: return MSG_ID_QUERY_CONTACTS;
         default: return null;
       }
@@ -2274,1039 +2257,6 @@ public final class OneCenterProtos {
     // @@protoc_insertion_point(class_scope:acooo.onecenter.SCQueryContacts)
   }
 
-  public interface CSDownloadApkOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSDownloadApk)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    boolean hasPackageName();
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    java.lang.String getPackageName();
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getPackageNameBytes();
-  }
-  /**
-   * Protobuf type {@code acooo.onecenter.CSDownloadApk}
-   */
-  public static final class CSDownloadApk extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSDownloadApk)
-      CSDownloadApkOrBuilder {
-    // Use CSDownloadApk.newBuilder() to construct.
-    private CSDownloadApk(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private CSDownloadApk(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final CSDownloadApk defaultInstance;
-    public static CSDownloadApk getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public CSDownloadApk getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CSDownloadApk(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              packageName_ = bs;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSDownloadApk_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSDownloadApk_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<CSDownloadApk> PARSER =
-        new com.google.protobuf.AbstractParser<CSDownloadApk>() {
-      public CSDownloadApk parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CSDownloadApk(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CSDownloadApk> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int PACKAGENAME_FIELD_NUMBER = 1;
-    private java.lang.Object packageName_;
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    public boolean hasPackageName() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    public java.lang.String getPackageName() {
-      java.lang.Object ref = packageName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          packageName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPackageNameBytes() {
-      java.lang.Object ref = packageName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        packageName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private void initFields() {
-      packageName_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getPackageNameBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getPackageNameBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code acooo.onecenter.CSDownloadApk}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSDownloadApk)
-        cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApkOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSDownloadApk_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSDownloadApk_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk.Builder.class);
-      }
-
-      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        packageName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSDownloadApk_descriptor;
-      }
-
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk getDefaultInstanceForType() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk.getDefaultInstance();
-      }
-
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk build() {
-        cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk buildPartial() {
-        cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.packageName_ = packageName_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk) {
-          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk other) {
-        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk.getDefaultInstance()) return this;
-        if (other.hasPackageName()) {
-          bitField0_ |= 0x00000001;
-          packageName_ = other.packageName_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSDownloadApk) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object packageName_ = "";
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public boolean hasPackageName() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public java.lang.String getPackageName() {
-        java.lang.Object ref = packageName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            packageName_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPackageNameBytes() {
-        java.lang.Object ref = packageName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          packageName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public Builder setPackageName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        packageName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public Builder clearPackageName() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        packageName_ = getDefaultInstance().getPackageName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public Builder setPackageNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        packageName_ = value;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSDownloadApk)
-    }
-
-    static {
-      defaultInstance = new CSDownloadApk(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSDownloadApk)
-  }
-
-  public interface SCDownloadApkOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCDownloadApk)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    boolean hasPackageName();
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    java.lang.String getPackageName();
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getPackageNameBytes();
-
-    /**
-     * <code>optional bytes data = 2;</code>
-     */
-    boolean hasData();
-    /**
-     * <code>optional bytes data = 2;</code>
-     */
-    com.google.protobuf.ByteString getData();
-  }
-  /**
-   * Protobuf type {@code acooo.onecenter.SCDownloadApk}
-   */
-  public static final class SCDownloadApk extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCDownloadApk)
-      SCDownloadApkOrBuilder {
-    // Use SCDownloadApk.newBuilder() to construct.
-    private SCDownloadApk(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private SCDownloadApk(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final SCDownloadApk defaultInstance;
-    public static SCDownloadApk getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public SCDownloadApk getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SCDownloadApk(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              packageName_ = bs;
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              data_ = input.readBytes();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCDownloadApk_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCDownloadApk_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<SCDownloadApk> PARSER =
-        new com.google.protobuf.AbstractParser<SCDownloadApk>() {
-      public SCDownloadApk parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SCDownloadApk(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SCDownloadApk> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int PACKAGENAME_FIELD_NUMBER = 1;
-    private java.lang.Object packageName_;
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    public boolean hasPackageName() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    public java.lang.String getPackageName() {
-      java.lang.Object ref = packageName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          packageName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string packageName = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPackageNameBytes() {
-      java.lang.Object ref = packageName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        packageName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DATA_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString data_;
-    /**
-     * <code>optional bytes data = 2;</code>
-     */
-    public boolean hasData() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional bytes data = 2;</code>
-     */
-    public com.google.protobuf.ByteString getData() {
-      return data_;
-    }
-
-    private void initFields() {
-      packageName_ = "";
-      data_ = com.google.protobuf.ByteString.EMPTY;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getPackageNameBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, data_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getPackageNameBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, data_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code acooo.onecenter.SCDownloadApk}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCDownloadApk)
-        cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApkOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCDownloadApk_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCDownloadApk_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk.Builder.class);
-      }
-
-      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        packageName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        data_ = com.google.protobuf.ByteString.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCDownloadApk_descriptor;
-      }
-
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk getDefaultInstanceForType() {
-        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk.getDefaultInstance();
-      }
-
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk build() {
-        cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk buildPartial() {
-        cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.packageName_ = packageName_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.data_ = data_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk) {
-          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk other) {
-        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk.getDefaultInstance()) return this;
-        if (other.hasPackageName()) {
-          bitField0_ |= 0x00000001;
-          packageName_ = other.packageName_;
-          onChanged();
-        }
-        if (other.hasData()) {
-          setData(other.getData());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCDownloadApk) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object packageName_ = "";
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public boolean hasPackageName() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public java.lang.String getPackageName() {
-        java.lang.Object ref = packageName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            packageName_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPackageNameBytes() {
-        java.lang.Object ref = packageName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          packageName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public Builder setPackageName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        packageName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public Builder clearPackageName() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        packageName_ = getDefaultInstance().getPackageName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string packageName = 1;</code>
-       */
-      public Builder setPackageNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        packageName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>optional bytes data = 2;</code>
-       */
-      public boolean hasData() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional bytes data = 2;</code>
-       */
-      public com.google.protobuf.ByteString getData() {
-        return data_;
-      }
-      /**
-       * <code>optional bytes data = 2;</code>
-       */
-      public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        data_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bytes data = 2;</code>
-       */
-      public Builder clearData() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        data_ = getDefaultInstance().getData();
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCDownloadApk)
-    }
-
-    static {
-      defaultInstance = new SCDownloadApk(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCDownloadApk)
-  }
-
   public interface ImageInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:acooo.onecenter.ImageInfo)
       com.google.protobuf.MessageOrBuilder {
@@ -5424,6 +4374,32 @@ public final class OneCenterProtos {
      * <code>optional int64 packageSize = 5;</code>
      */
     long getPackageSize();
+
+    /**
+     * <code>optional string publicSourceDir = 6;</code>
+     *
+     * <pre>
+     *APK下载路径
+     * </pre>
+     */
+    boolean hasPublicSourceDir();
+    /**
+     * <code>optional string publicSourceDir = 6;</code>
+     *
+     * <pre>
+     *APK下载路径
+     * </pre>
+     */
+    java.lang.String getPublicSourceDir();
+    /**
+     * <code>optional string publicSourceDir = 6;</code>
+     *
+     * <pre>
+     *APK下载路径
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPublicSourceDirBytes();
   }
   /**
    * Protobuf type {@code acooo.onecenter.AppInfo}
@@ -5503,6 +4479,12 @@ public final class OneCenterProtos {
             case 40: {
               bitField0_ |= 0x00000010;
               packageSize_ = input.readInt64();
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              publicSourceDir_ = bs;
               break;
             }
           }
@@ -5701,12 +4683,67 @@ public final class OneCenterProtos {
       return packageSize_;
     }
 
+    public static final int PUBLICSOURCEDIR_FIELD_NUMBER = 6;
+    private java.lang.Object publicSourceDir_;
+    /**
+     * <code>optional string publicSourceDir = 6;</code>
+     *
+     * <pre>
+     *APK下载路径
+     * </pre>
+     */
+    public boolean hasPublicSourceDir() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string publicSourceDir = 6;</code>
+     *
+     * <pre>
+     *APK下载路径
+     * </pre>
+     */
+    public java.lang.String getPublicSourceDir() {
+      java.lang.Object ref = publicSourceDir_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          publicSourceDir_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string publicSourceDir = 6;</code>
+     *
+     * <pre>
+     *APK下载路径
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPublicSourceDirBytes() {
+      java.lang.Object ref = publicSourceDir_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publicSourceDir_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       icon_ = com.google.protobuf.ByteString.EMPTY;
       name_ = "";
       version_ = "";
       packageName_ = "";
       packageSize_ = 0L;
+      publicSourceDir_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5736,6 +4773,9 @@ public final class OneCenterProtos {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeInt64(5, packageSize_);
       }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getPublicSourceDirBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5764,6 +4804,10 @@ public final class OneCenterProtos {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, packageSize_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getPublicSourceDirBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5892,6 +4936,8 @@ public final class OneCenterProtos {
         bitField0_ = (bitField0_ & ~0x00000008);
         packageSize_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000010);
+        publicSourceDir_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -5940,6 +4986,10 @@ public final class OneCenterProtos {
           to_bitField0_ |= 0x00000010;
         }
         result.packageSize_ = packageSize_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.publicSourceDir_ = publicSourceDir_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -5976,6 +5026,11 @@ public final class OneCenterProtos {
         }
         if (other.hasPackageSize()) {
           setPackageSize(other.getPackageSize());
+        }
+        if (other.hasPublicSourceDir()) {
+          bitField0_ |= 0x00000020;
+          publicSourceDir_ = other.publicSourceDir_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -6295,6 +5350,106 @@ public final class OneCenterProtos {
       public Builder clearPackageSize() {
         bitField0_ = (bitField0_ & ~0x00000010);
         packageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object publicSourceDir_ = "";
+      /**
+       * <code>optional string publicSourceDir = 6;</code>
+       *
+       * <pre>
+       *APK下载路径
+       * </pre>
+       */
+      public boolean hasPublicSourceDir() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string publicSourceDir = 6;</code>
+       *
+       * <pre>
+       *APK下载路径
+       * </pre>
+       */
+      public java.lang.String getPublicSourceDir() {
+        java.lang.Object ref = publicSourceDir_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            publicSourceDir_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string publicSourceDir = 6;</code>
+       *
+       * <pre>
+       *APK下载路径
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPublicSourceDirBytes() {
+        java.lang.Object ref = publicSourceDir_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publicSourceDir_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string publicSourceDir = 6;</code>
+       *
+       * <pre>
+       *APK下载路径
+       * </pre>
+       */
+      public Builder setPublicSourceDir(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        publicSourceDir_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string publicSourceDir = 6;</code>
+       *
+       * <pre>
+       *APK下载路径
+       * </pre>
+       */
+      public Builder clearPublicSourceDir() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        publicSourceDir_ = getDefaultInstance().getPublicSourceDir();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string publicSourceDir = 6;</code>
+       *
+       * <pre>
+       *APK下载路径
+       * </pre>
+       */
+      public Builder setPublicSourceDirBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        publicSourceDir_ = value;
         onChanged();
         return this;
       }
@@ -7884,16 +7039,6 @@ public final class OneCenterProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_acooo_onecenter_SCQueryContacts_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_acooo_onecenter_CSDownloadApk_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_acooo_onecenter_CSDownloadApk_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_acooo_onecenter_SCDownloadApk_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_acooo_onecenter_SCDownloadApk_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_acooo_onecenter_ImageInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -7947,28 +7092,26 @@ public final class OneCenterProtos {
       "number\030\003 \001(\t\022\014\n\004type\030\004 \001(\005\022\014\n\004icon\030\005 \001(\014" +
       "\"\021\n\017CSQueryContacts\"?\n\017SCQueryContacts\022," +
       "\n\005infos\030\001 \003(\0132\035.acooo.onecenter.Contacts" +
-      "Info\"$\n\rCSDownloadApk\022\023\n\013packageName\030\001 \001" +
-      "(\t\"2\n\rSCDownloadApk\022\023\n\013packageName\030\001 \001(\t" +
-      "\022\014\n\004data\030\002 \001(\014\"(\n\tImageInfo\022\014\n\004name\030\001 \001(" +
-      "\t\022\r\n\005image\030\002 \001(\014\"<\n\013SCPushImage\022-\n\timage" +
-      "Info\030\001 \001(\0132\032.acooo.onecenter.ImageInfo\"\r",
-      "\n\013CSQueryApps\"5\n\013SCQueryApps\022&\n\004apps\030\001 \003" +
-      "(\0132\030.acooo.onecenter.AppInfo\"`\n\007AppInfo\022" +
-      "\014\n\004icon\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003" +
-      " \001(\t\022\023\n\013packageName\030\004 \001(\t\022\023\n\013packageSize" +
-      "\030\005 \001(\003\")\n\005Phone\022\014\n\004imei\030\001 \002(\t\022\022\n\ndeviceT" +
-      "ype\030\002 \001(\t\"0\n\007CSLogin\022%\n\005phone\030\001 \001(\0132\026.ac" +
-      "ooo.onecenter.Phone\"\027\n\007SCLogin\022\014\n\004code\030\001" +
-      " \001(\005*h\n\013MessageType\022\021\n\014MSG_ID_LOGIN\020\350\007\022\020" +
-      "\n\013MSG_ID_APPS\020\314\010\022\030\n\023MSG_ID_DOWNLOAD_APK\020" +
-      "\315\010\022\032\n\025MSG_ID_QUERY_CONTACTS\020\316\010*\240\001\n\013Messa",
-      "geCode\022\016\n\nSYS_NORMAL\020\001\022\022\n\rErr_Not_Known\020" +
-      "\350\007\022\030\n\023Err_Money_NotEnough\020\351\007\022\030\n\023Err_Powe" +
-      "r_NotEnough\020\352\007\022\035\n\030Err_BattleSoul_NotEnou" +
-      "gh\020\353\007\022\032\n\025Err_Diamond_NotEnough\020\354\007*5\n\rVer" +
-      "sionStatus\022\014\n\010PROHIBIT\020\000\022\n\n\006EXPIRE\020\001\022\n\n\006" +
-      "NORMAL\020\002B/\n\034cn.acooo.onecenter.core.auto" +
-      "B\017OneCenterProtos"
+      "Info\"(\n\tImageInfo\022\014\n\004name\030\001 \001(\t\022\r\n\005image" +
+      "\030\002 \001(\014\"<\n\013SCPushImage\022-\n\timageInfo\030\001 \001(\013" +
+      "2\032.acooo.onecenter.ImageInfo\"\r\n\013CSQueryA" +
+      "pps\"5\n\013SCQueryApps\022&\n\004apps\030\001 \003(\0132\030.acooo" +
+      ".onecenter.AppInfo\"y\n\007AppInfo\022\014\n\004icon\030\001 ",
+      "\001(\014\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\022\023\n\013pa" +
+      "ckageName\030\004 \001(\t\022\023\n\013packageSize\030\005 \001(\003\022\027\n\017" +
+      "publicSourceDir\030\006 \001(\t\")\n\005Phone\022\014\n\004imei\030\001" +
+      " \002(\t\022\022\n\ndeviceType\030\002 \001(\t\"0\n\007CSLogin\022%\n\005p" +
+      "hone\030\001 \001(\0132\026.acooo.onecenter.Phone\"\027\n\007SC" +
+      "Login\022\014\n\004code\030\001 \001(\005*N\n\013MessageType\022\021\n\014MS" +
+      "G_ID_LOGIN\020\350\007\022\020\n\013MSG_ID_APPS\020\314\010\022\032\n\025MSG_I" +
+      "D_QUERY_CONTACTS\020\316\010*\240\001\n\013MessageCode\022\016\n\nS" +
+      "YS_NORMAL\020\001\022\022\n\rErr_Not_Known\020\350\007\022\030\n\023Err_M" +
+      "oney_NotEnough\020\351\007\022\030\n\023Err_Power_NotEnough",
+      "\020\352\007\022\035\n\030Err_BattleSoul_NotEnough\020\353\007\022\032\n\025Er" +
+      "r_Diamond_NotEnough\020\354\007*5\n\rVersionStatus\022" +
+      "\014\n\010PROHIBIT\020\000\022\n\n\006EXPIRE\020\001\022\n\n\006NORMAL\020\002B/\n" +
+      "\034cn.acooo.onecenter.core.autoB\017OneCenter" +
+      "Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8000,62 +7143,50 @@ public final class OneCenterProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCQueryContacts_descriptor,
         new java.lang.String[] { "Infos", });
-    internal_static_acooo_onecenter_CSDownloadApk_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_acooo_onecenter_CSDownloadApk_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_acooo_onecenter_CSDownloadApk_descriptor,
-        new java.lang.String[] { "PackageName", });
-    internal_static_acooo_onecenter_SCDownloadApk_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_acooo_onecenter_SCDownloadApk_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_acooo_onecenter_SCDownloadApk_descriptor,
-        new java.lang.String[] { "PackageName", "Data", });
     internal_static_acooo_onecenter_ImageInfo_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_acooo_onecenter_ImageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_ImageInfo_descriptor,
         new java.lang.String[] { "Name", "Image", });
     internal_static_acooo_onecenter_SCPushImage_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_acooo_onecenter_SCPushImage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCPushImage_descriptor,
         new java.lang.String[] { "ImageInfo", });
     internal_static_acooo_onecenter_CSQueryApps_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_acooo_onecenter_CSQueryApps_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_CSQueryApps_descriptor,
         new java.lang.String[] { });
     internal_static_acooo_onecenter_SCQueryApps_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_acooo_onecenter_SCQueryApps_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCQueryApps_descriptor,
         new java.lang.String[] { "Apps", });
     internal_static_acooo_onecenter_AppInfo_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_acooo_onecenter_AppInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_AppInfo_descriptor,
-        new java.lang.String[] { "Icon", "Name", "Version", "PackageName", "PackageSize", });
+        new java.lang.String[] { "Icon", "Name", "Version", "PackageName", "PackageSize", "PublicSourceDir", });
     internal_static_acooo_onecenter_Phone_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_acooo_onecenter_Phone_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_Phone_descriptor,
         new java.lang.String[] { "Imei", "DeviceType", });
     internal_static_acooo_onecenter_CSLogin_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_acooo_onecenter_CSLogin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_CSLogin_descriptor,
         new java.lang.String[] { "Phone", });
     internal_static_acooo_onecenter_SCLogin_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_acooo_onecenter_SCLogin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCLogin_descriptor,

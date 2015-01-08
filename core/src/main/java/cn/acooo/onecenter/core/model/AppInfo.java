@@ -2,6 +2,8 @@ package cn.acooo.onecenter.core.model;
 
 import android.content.pm.PackageInfo;
 import android.graphics.Bitmap;
+import android.widget.ProgressBar;
+
 import com.google.protobuf.ByteString;
 import cn.acooo.onecenter.core.auto.OneCenterProtos;
 import cn.acooo.onecenter.core.utils.ImageUtil;
@@ -19,12 +21,36 @@ public class AppInfo {
 	private String packageName;
 	private boolean downloading = false;
     private Long curProgress = 0L;
+    private String publicSourceDir;
+    private ProgressBar progressBar;
+
+    public ProgressBar getProgressBar() {
+        return progressBar;
+    }
+
+    public void setProgressBar(ProgressBar progressBar) {
+        this.progressBar = progressBar;
+    }
+
+    public void setAppSize(Long appSize) {
+        this.appSize = appSize;
+    }
+
+    public String getPublicSourceDir() {
+        return publicSourceDir;
+    }
+
+    public void setPublicSourceDir(String publicSourceDir) {
+        this.publicSourceDir = publicSourceDir;
+    }
+
     public Long getCurProgress() {
         return curProgress;
     }
 
     public void setCurProgress(Long curProgress) {
         this.curProgress = curProgress;
+        this.progressBar.setProgress(curProgress.intValue());
     }
 
     public boolean isDownloading() {
@@ -43,6 +69,7 @@ public class AppInfo {
 		this.appVersion = appInfo.getVersion();
 		this.appLocalVersion = packageInfo == null ? "未安装":packageInfo.versionName;
 		this.packageName = appInfo.getPackageName();
+        this.publicSourceDir = appInfo.getPublicSourceDir();
 	}
 	
 	public String getPackageName() {
@@ -90,11 +117,13 @@ public class AppInfo {
         return "AppInfo{" +
                 "appIcon=" + appIcon +
                 ", appName='" + appName + '\'' +
-                ", appSize='" + appSize + '\'' +
+                ", appSize=" + appSize +
                 ", appVersion='" + appVersion + '\'' +
                 ", appLocalVersion='" + appLocalVersion + '\'' +
                 ", packageName='" + packageName + '\'' +
                 ", downloading=" + downloading +
+                ", curProgress=" + curProgress +
+                ", publicSourceDir='" + publicSourceDir + '\'' +
                 '}';
     }
 }

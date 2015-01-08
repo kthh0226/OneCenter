@@ -3,6 +3,7 @@ package cn.acooo.onecenter.server.adapter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,9 +25,9 @@ import cn.acooo.onecenter.server.async.DownloadAppTask;
 public class MyAppListAdapter extends BaseAdapter {
 	public static final String TAG = "ONE";
     private DecimalFormat df = new DecimalFormat("#.00");
-
 	private LayoutInflater mInflater;
 	private List<AppInfo> appInfos = new ArrayList<AppInfo>();
+
     public void clearAppItem(){
         this.appInfos.clear();
     }
@@ -51,6 +52,7 @@ public class MyAppListAdapter extends BaseAdapter {
 
 	@Override
 	public Object getItem(int position) {
+
 		return appInfos.get(position);
 	}
 
@@ -89,10 +91,9 @@ public class MyAppListAdapter extends BaseAdapter {
             holder.progressBar.setVisibility(View.GONE);
             holder.btn.setVisibility(View.VISIBLE);
         }
-
+        ai.setProgressBar(holder.progressBar);
 		holder.appIcon.setImageBitmap(ai.getAppIcon());
 		holder.appName.setText(ai.getAppName());
-
 		holder.appSize.setText(df.format(ai.getAppSize()/1024/1024)+"M");
 		holder.appVersion.setText(ai.getAppVersion());
 		holder.appLocalVersion.setText(ai.getAppLocalVersion());
@@ -100,10 +101,9 @@ public class MyAppListAdapter extends BaseAdapter {
 			@Override
 			public void onClick(View v) {
                 AppInfo appInfo = appInfos.get(position);
-                DownloadAppTask task = new DownloadAppTask(MyAppListAdapter.this,appInfo);
-                task.execute(appInfo.getPackageName());
+                DownloadAppTask task = new DownloadAppTask(MyAppListAdapter.this,appInfo,v);
+                task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,appInfo.getPackageName());
                 appInfo.setDownloading(true);
-
                 MyAppListAdapter.this.notifyDataSetChanged();
 
             }
@@ -127,6 +127,5 @@ public class MyAppListAdapter extends BaseAdapter {
     public interface CallBacks{
         public void addAppItem(AppInfo appInfo);
     }
-
 
 }

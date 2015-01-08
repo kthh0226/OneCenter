@@ -212,7 +212,7 @@ public class FileUtils {
         FileOutputStream fout = new FileOutputStream(file);
         try {
             int l = -1;
-            byte[] tmp = new byte[1024];
+            byte[] tmp = new byte[1024 * 1024];
             while ((l = in.read(tmp)) != -1) {
                 fout.write(tmp, 0, l);
                 // 注意这里如果用OutputStream.write(buff)的话，图片会失真，大家可以试试

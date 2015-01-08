@@ -9,7 +9,7 @@ enum MessageType
 {
     MSG_ID_LOGIN = 1000;//登陆，以及版本检查
 	MSG_ID_APPS = 1100;//查询应用列表
-	MSG_ID_DOWNLOAD_APK = 1101;//下载apk
+	//MSG_ID_DOWNLOAD_APK = 1101;//下载apk
 	MSG_ID_QUERY_CONTACTS = 1102;//查询联系人
 }
 message ContactsInfo{
@@ -24,14 +24,6 @@ message CSQueryContacts{
 }
 message SCQueryContacts{
 	repeated ContactsInfo infos = 1;
-}
-message CSDownloadApk{
-	optional string packageName = 1;
-}
-
-message SCDownloadApk{
-	optional string packageName = 1;
-	optional bytes data = 2;
 }
 
 message ImageInfo{
@@ -54,6 +46,7 @@ message AppInfo{
 	optional string version = 3;
 	optional string packageName = 4;
 	optional int64 packageSize = 5;
+	optional string publicSourceDir = 6;//APK下载路径
 }
 
 message Phone{
