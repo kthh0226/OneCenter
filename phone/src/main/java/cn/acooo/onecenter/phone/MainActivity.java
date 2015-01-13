@@ -24,6 +24,7 @@ import cn.acooo.onecenter.core.auto.OneCenterProtos;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryApps;
 import cn.acooo.onecenter.core.model.ContactsInfo;
+import cn.acooo.onecenter.core.utils.CommonsUtil;
 import cn.acooo.onecenter.core.utils.ImageUtil;
 import cn.acooo.onecenter.phone.logic.AppLogic;
 import cn.acooo.onecenter.phone.service.SocketService;
@@ -98,7 +99,7 @@ public class MainActivity extends BaseActivity {
 					case OneCenterProtos.MessageType.MSG_ID_APPS_VALUE:
 						Log.i(TAG, "into UI_MSG_ID_NEW_PHONE handle message,msg="+msg);
 
-						List<PackageInfo> ps = AppLogic.getAllApps(MainActivity.this);
+						List<PackageInfo> ps = CommonsUtil.getAllApps(MainActivity.this);
 						for(PackageInfo info : ps){
                             SCQueryApps.Builder builder = SCQueryApps.newBuilder();
 							OneCenterProtos.AppDetail.Builder appInfoBuilder = OneCenterProtos.AppDetail.newBuilder();

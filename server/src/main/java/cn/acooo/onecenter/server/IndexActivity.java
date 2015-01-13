@@ -75,7 +75,7 @@ public class IndexActivity extends BaseActivity {
 				
 			}
 		});
-		
+
 		if(!App.serverServiceIsRun){
 			Intent intent = new Intent(this, ServerService.class);
 			super.startService(intent);

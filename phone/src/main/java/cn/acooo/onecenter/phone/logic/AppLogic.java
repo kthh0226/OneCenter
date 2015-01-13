@@ -3,10 +3,7 @@ package cn.acooo.onecenter.phone.logic;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteException;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.provider.ContactsContract;
@@ -14,9 +11,7 @@ import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.util.Log;
 
 import java.io.InputStream;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import cn.acooo.onecenter.core.model.ContactsInfo;
@@ -29,98 +24,6 @@ public class AppLogic {
 	public static AppLogic getInstance(){
 		return appLogic;
 	}
-	/** 
-	 * 查询手机内非系统应用 
-	 * @param context 
-	 * @return 
-	 */  
-	public static List<PackageInfo> getAllApps(Context context) {  
-	    List<PackageInfo> apps = new ArrayList<PackageInfo>();  
-	    PackageManager pManager = context.getPackageManager();  
-	    //获取手机内所有应用  
-	    List<PackageInfo> paklist = pManager.getInstalledPackages(0);  
-	    for (int i = 0; i < paklist.size(); i++) {  
-	        PackageInfo pak = (PackageInfo) paklist.get(i);  
-	        //判断是否为非系统预装的应用程序  
-	        if ((pak.applicationInfo.flags & pak.applicationInfo.FLAG_SYSTEM) <= 0) {  
-	            // customs applications  
-	            apps.add(pak);  
-	        }  
-	    }  
-	    return apps;  
-	}
-
-    public String getSmsInPhone(Context context)
-    {
-        final String SMS_URI_ALL = "content://sms/";
-        final String SMS_URI_INBOX = "content://sms/inbox";
-        final String SMS_URI_SEND = "content://sms/sent";
-        final String SMS_URI_DRAFT = "content://sms/draft";
-
-        StringBuilder smsBuilder = new StringBuilder();
-        Cursor cur = null;
-        try{
-            ContentResolver cr = context.getContentResolver();
-            String[] projection = new String[]{"_id", "address", "person",
-                    "body", "date", "type"};
-            Uri uri = Uri.parse(SMS_URI_ALL);
-            cur = cr.query(uri, projection, null, null, "date desc");
-
-            if (cur.moveToFirst()) {
-                String name;
-                String phoneNumber;
-                String smsbody;
-                String date;
-                String type;
-
-                int nameColumn = cur.getColumnIndex("person");
-                int phoneNumberColumn = cur.getColumnIndex("address");
-                int smsbodyColumn = cur.getColumnIndex("body");
-                int dateColumn = cur.getColumnIndex("date");
-                int typeColumn = cur.getColumnIndex("type");
-
-                do{
-                    name = cur.getString(nameColumn);
-                    phoneNumber = cur.getString(phoneNumberColumn);
-                    smsbody = cur.getString(smsbodyColumn);
-
-                    SimpleDateFormat dateFormat = new SimpleDateFormat(
-                            "yyyy-MM-dd hh:mm:ss");
-
-                    Date d = new Date(Long.parseLong(cur.getString(dateColumn)));
-                    date = dateFormat.format(d);
-
-                    int typeId = cur.getInt(typeColumn);
-                    if(typeId == 1){
-                        type = "接收";
-                    } else if(typeId == 2){
-                        type = "发送";
-                    } else {
-                        type = "";
-                    }
-
-                    smsBuilder.append("[");
-                    smsBuilder.append(name+",");
-                    smsBuilder.append(phoneNumber+",");
-                    smsBuilder.append(smsbody+",");
-                    smsBuilder.append(date+",");
-                    smsBuilder.append(type);
-                    smsBuilder.append("] ");
-                    if(smsbody == null) smsbody = "";
-                }while(cur.moveToNext());
-            } else {
-                smsBuilder.append("no result!");
-            }
-
-            smsBuilder.append("getSmsInPhone has executed!");
-        } catch(SQLiteException ex) {
-
-            Log.e("SQLiteException in getSmsInPhone", ex.getMessage());
-        }finally {
-            cur.close();
-        }
-        return smsBuilder.toString();
-    }
 
     /**
      * 获取全部的联系人
