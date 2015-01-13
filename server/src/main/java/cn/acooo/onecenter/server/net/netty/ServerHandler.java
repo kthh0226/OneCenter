@@ -63,12 +63,6 @@ public class ServerHandler extends SimpleChannelInboundHandler<KMessage> {
 	}
 
 	@Override
-	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-		Log.i(App.TAG, "into channelReadComplete");
-        super.channelReadComplete(ctx);
-	}
-
-	@Override
 	public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
 		super.channelRegistered(ctx);
 		Log.i(App.TAG, "into server channelRegistered");
