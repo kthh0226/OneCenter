@@ -47,7 +47,7 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
 				try{
 					switch(msg.what){
 					case MessageType.MSG_ID_APPS_VALUE:{
-                        MyAppListAdapter myAppListAdapter = (MyAppListAdapter)appDetail.getListAdapter();
+                        MyAppListAdapter myAppListAdapter = appDetail.getMyAppListAdapter();
                         SCQueryApps builder = SCQueryApps.parseFrom((byte[])msg.obj);
                         Map<String,PackageInfo> ms = CommonsUtil.getAllAppsByMap(MyPhoneActivity.this);
                         for(OneCenterProtos.AppDetail app : builder.getAppsList()){
