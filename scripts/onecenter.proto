@@ -70,8 +70,12 @@ enum MessageCode
 	Err_Diamond_NotEnough=1004;//
 	
 }
-enum VersionStatus{
-	PROHIBIT = 0;//禁止
-	EXPIRE = 1;//过期
-	NORMAL = 2;//正常
+enum UDPType{
+	SEARCH_ONEBOARD = 1;
+	IS_ONEBOARD = 2;
+	IS_PHONE = 3;
 }
+message UDPMessage{
+	required UDPType type = 1;
+}
+

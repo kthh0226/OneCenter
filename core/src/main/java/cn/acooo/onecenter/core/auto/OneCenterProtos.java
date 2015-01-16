@@ -301,82 +301,58 @@ public final class OneCenterProtos {
   }
 
   /**
-   * Protobuf enum {@code acooo.onecenter.VersionStatus}
+   * Protobuf enum {@code acooo.onecenter.UDPType}
    */
-  public enum VersionStatus
+  public enum UDPType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>PROHIBIT = 0;</code>
-     *
-     * <pre>
-     *禁止
-     * </pre>
+     * <code>SEARCH_ONEBOARD = 1;</code>
      */
-    PROHIBIT(0, 0),
+    SEARCH_ONEBOARD(0, 1),
     /**
-     * <code>EXPIRE = 1;</code>
-     *
-     * <pre>
-     *过期
-     * </pre>
+     * <code>IS_ONEBOARD = 2;</code>
      */
-    EXPIRE(1, 1),
+    IS_ONEBOARD(1, 2),
     /**
-     * <code>NORMAL = 2;</code>
-     *
-     * <pre>
-     *正常
-     * </pre>
+     * <code>IS_PHONE = 3;</code>
      */
-    NORMAL(2, 2),
+    IS_PHONE(2, 3),
     ;
 
     /**
-     * <code>PROHIBIT = 0;</code>
-     *
-     * <pre>
-     *禁止
-     * </pre>
+     * <code>SEARCH_ONEBOARD = 1;</code>
      */
-    public static final int PROHIBIT_VALUE = 0;
+    public static final int SEARCH_ONEBOARD_VALUE = 1;
     /**
-     * <code>EXPIRE = 1;</code>
-     *
-     * <pre>
-     *过期
-     * </pre>
+     * <code>IS_ONEBOARD = 2;</code>
      */
-    public static final int EXPIRE_VALUE = 1;
+    public static final int IS_ONEBOARD_VALUE = 2;
     /**
-     * <code>NORMAL = 2;</code>
-     *
-     * <pre>
-     *正常
-     * </pre>
+     * <code>IS_PHONE = 3;</code>
      */
-    public static final int NORMAL_VALUE = 2;
+    public static final int IS_PHONE_VALUE = 3;
 
 
     public final int getNumber() { return value; }
 
-    public static VersionStatus valueOf(int value) {
+    public static UDPType valueOf(int value) {
       switch (value) {
-        case 0: return PROHIBIT;
-        case 1: return EXPIRE;
-        case 2: return NORMAL;
+        case 1: return SEARCH_ONEBOARD;
+        case 2: return IS_ONEBOARD;
+        case 3: return IS_PHONE;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<VersionStatus>
+    public static com.google.protobuf.Internal.EnumLiteMap<UDPType>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<VersionStatus>
+    private static com.google.protobuf.Internal.EnumLiteMap<UDPType>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<VersionStatus>() {
-            public VersionStatus findValueByNumber(int number) {
-              return VersionStatus.valueOf(number);
+          new com.google.protobuf.Internal.EnumLiteMap<UDPType>() {
+            public UDPType findValueByNumber(int number) {
+              return UDPType.valueOf(number);
             }
           };
 
@@ -393,9 +369,9 @@ public final class OneCenterProtos {
       return cn.acooo.onecenter.core.auto.OneCenterProtos.getDescriptor().getEnumTypes().get(2);
     }
 
-    private static final VersionStatus[] VALUES = values();
+    private static final UDPType[] VALUES = values();
 
-    public static VersionStatus valueOf(
+    public static UDPType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -407,12 +383,12 @@ public final class OneCenterProtos {
     private final int index;
     private final int value;
 
-    private VersionStatus(int index, int value) {
+    private UDPType(int index, int value) {
       this.index = index;
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:acooo.onecenter.VersionStatus)
+    // @@protoc_insertion_point(enum_scope:acooo.onecenter.UDPType)
   }
 
   public interface ContactsInfoOrBuilder extends
@@ -7040,6 +7016,420 @@ public final class OneCenterProtos {
     // @@protoc_insertion_point(class_scope:acooo.onecenter.SCLogin)
   }
 
+  public interface UDPMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.UDPMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .acooo.onecenter.UDPType type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required .acooo.onecenter.UDPType type = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType getType();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.UDPMessage}
+   */
+  public static final class UDPMessage extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.UDPMessage)
+      UDPMessageOrBuilder {
+    // Use UDPMessage.newBuilder() to construct.
+    private UDPMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private UDPMessage(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final UDPMessage defaultInstance;
+    public static UDPMessage getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public UDPMessage getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UDPMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType value = cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                type_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_UDPMessage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_UDPMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage.class, cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<UDPMessage> PARSER =
+        new com.google.protobuf.AbstractParser<UDPMessage>() {
+      public UDPMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UDPMessage(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UDPMessage> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType type_;
+    /**
+     * <code>required .acooo.onecenter.UDPType type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .acooo.onecenter.UDPType type = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType getType() {
+      return type_;
+    }
+
+    private void initFields() {
+      type_ = cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType.SEARCH_ONEBOARD;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, type_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.UDPMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.UDPMessage)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_UDPMessage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_UDPMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage.class, cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        type_ = cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType.SEARCH_ONEBOARD;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_UDPMessage_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage result = new cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.UDPMessage) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType type_ = cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType.SEARCH_ONEBOARD;
+      /**
+       * <code>required .acooo.onecenter.UDPType type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .acooo.onecenter.UDPType type = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType getType() {
+        return type_;
+      }
+      /**
+       * <code>required .acooo.onecenter.UDPType type = 1;</code>
+       */
+      public Builder setType(cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .acooo.onecenter.UDPType type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = cn.acooo.onecenter.core.auto.OneCenterProtos.UDPType.SEARCH_ONEBOARD;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.UDPMessage)
+    }
+
+    static {
+      defaultInstance = new UDPMessage(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.UDPMessage)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_acooo_onecenter_ContactsInfo_descriptor;
   private static
@@ -7095,6 +7485,11 @@ public final class OneCenterProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_acooo_onecenter_SCLogin_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_UDPMessage_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_UDPMessage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7119,16 +7514,18 @@ public final class OneCenterProtos {
       "\022\027\n\017publicSourceDir\030\006 \001(\t\")\n\005Phone\022\014\n\004im" +
       "ei\030\001 \002(\t\022\022\n\ndeviceType\030\002 \001(\t\"0\n\007CSLogin\022" +
       "%\n\005phone\030\001 \001(\0132\026.acooo.onecenter.Phone\"\027" +
-      "\n\007SCLogin\022\014\n\004code\030\001 \001(\005*i\n\013MessageType\022\021" +
-      "\n\014MSG_ID_LOGIN\020\350\007\022\020\n\013MSG_ID_APPS\020\314\010\022\031\n\024M" +
-      "SG_ID_DOWNLOAD_ICON\020\315\010\022\032\n\025MSG_ID_QUERY_C" +
-      "ONTACTS\020\316\010*\240\001\n\013MessageCode\022\016\n\nSYS_NORMAL" +
-      "\020\001\022\022\n\rErr_Not_Known\020\350\007\022\030\n\023Err_Money_NotE",
-      "nough\020\351\007\022\030\n\023Err_Power_NotEnough\020\352\007\022\035\n\030Er" +
-      "r_BattleSoul_NotEnough\020\353\007\022\032\n\025Err_Diamond" +
-      "_NotEnough\020\354\007*5\n\rVersionStatus\022\014\n\010PROHIB" +
-      "IT\020\000\022\n\n\006EXPIRE\020\001\022\n\n\006NORMAL\020\002B/\n\034cn.acooo" +
-      ".onecenter.core.autoB\017OneCenterProtos"
+      "\n\007SCLogin\022\014\n\004code\030\001 \001(\005\"4\n\nUDPMessage\022&\n" +
+      "\004type\030\001 \002(\0162\030.acooo.onecenter.UDPType*i\n" +
+      "\013MessageType\022\021\n\014MSG_ID_LOGIN\020\350\007\022\020\n\013MSG_I" +
+      "D_APPS\020\314\010\022\031\n\024MSG_ID_DOWNLOAD_ICON\020\315\010\022\032\n\025" +
+      "MSG_ID_QUERY_CONTACTS\020\316\010*\240\001\n\013MessageCode",
+      "\022\016\n\nSYS_NORMAL\020\001\022\022\n\rErr_Not_Known\020\350\007\022\030\n\023" +
+      "Err_Money_NotEnough\020\351\007\022\030\n\023Err_Power_NotE" +
+      "nough\020\352\007\022\035\n\030Err_BattleSoul_NotEnough\020\353\007\022" +
+      "\032\n\025Err_Diamond_NotEnough\020\354\007*=\n\007UDPType\022\023" +
+      "\n\017SEARCH_ONEBOARD\020\001\022\017\n\013IS_ONEBOARD\020\002\022\014\n\010" +
+      "IS_PHONE\020\003B/\n\034cn.acooo.onecenter.core.au" +
+      "toB\017OneCenterProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7208,6 +7605,12 @@ public final class OneCenterProtos {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCLogin_descriptor,
         new java.lang.String[] { "Code", });
+    internal_static_acooo_onecenter_UDPMessage_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_acooo_onecenter_UDPMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_UDPMessage_descriptor,
+        new java.lang.String[] { "Type", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

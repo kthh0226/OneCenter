@@ -32,6 +32,7 @@ public class IndexActivity extends BaseActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
 		Log.i(TAG, "into index activity oncreate===========================");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.index);

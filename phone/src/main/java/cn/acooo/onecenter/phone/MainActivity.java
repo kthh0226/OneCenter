@@ -26,6 +26,7 @@ import cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryApps;
 import cn.acooo.onecenter.core.model.ContactsInfo;
 import cn.acooo.onecenter.core.utils.CommonsUtil;
 import cn.acooo.onecenter.core.utils.ImageUtil;
+import cn.acooo.onecenter.core.utils.UDPUtils;
 import cn.acooo.onecenter.phone.logic.AppLogic;
 import cn.acooo.onecenter.phone.service.SocketService;
 
@@ -71,6 +72,28 @@ public class MainActivity extends BaseActivity {
 				}
 			}
 		});
+
+        Button scanButton = (Button)findViewById(R.id.scan);
+        scanButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG,"scan starting...");
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        UDPUtils.send(UDPUtils.SEARCH_ONEBOARD,9998);
+                    }
+                }).start();
+            }
+        });
+
+        Button cancelScanButton = (Button)findViewById(R.id.cancelScan);
+        cancelScanButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG,"cancelScan...");
+            }
+        });
 	}
 	
 	@Override

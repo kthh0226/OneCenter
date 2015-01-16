@@ -12,7 +12,7 @@ public abstract class BaseActivity extends Activity {
         this.initHandler();
     }
 
-	protected String TAG = "ONE";
+	public static String TAG = "ONE";
 	/**
 	 * 连接成功
 	 */
