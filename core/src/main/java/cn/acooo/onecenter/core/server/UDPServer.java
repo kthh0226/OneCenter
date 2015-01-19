@@ -54,7 +54,7 @@ public class UDPServer implements Runnable{
                             break;
                         }
                         case IS_ONEBOARD:{
-                            //Log.i()
+                            Log.i(BaseActivity.TAG,"scan new oneBoard,ip="+dp.getAddress());
                             break;
                         }
                         case IS_PHONE:{

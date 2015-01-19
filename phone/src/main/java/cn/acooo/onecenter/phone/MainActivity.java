@@ -81,7 +81,7 @@ public class MainActivity extends BaseActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        UDPUtils.send(UDPUtils.SEARCH_ONEBOARD,9998);
+                        UDPUtils.send(OneCenterProtos.UDPType.SEARCH_ONEBOARD,null,9998);
                     }
                 }).start();
             }

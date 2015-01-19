@@ -7,6 +7,7 @@ import android.os.IBinder;
 import android.util.Log;
 
 import cn.acooo.onecenter.core.BaseActivity;
+import cn.acooo.onecenter.core.server.UDPServer;
 import cn.acooo.onecenter.phone.App;
 import cn.acooo.onecenter.core.server.HttpServer;
 
@@ -16,6 +17,7 @@ public class SocketService extends Service{
 	public final static String KEY_PORT = "port";
 	private final static String TAG = "SocketService";
 	private IBinder binder = new SocketService.MyBind();
+    private UDPServer udpServer;
 
 	@Override
 	public void onCreate() {
@@ -44,6 +46,13 @@ public class SocketService extends Service{
             t.start();
             App.jettyServer = httpServer.getServer();
         }
+        //启动udpServer
+        udpServer = new UDPServer();
+        udpServer.setIsRun(true);
+        Thread udpServerThread = new Thread(udpServer);
+        udpServerThread.setDaemon(true);
+        udpServerThread.start();
+
 		return Service.START_STICKY;
 	}
 
@@ -63,7 +72,7 @@ public class SocketService extends Service{
                Log.e(TAG,"jetty http server stop error",e);
             }
         }
-		super.onDestroy();
+		udpServer.setIsRun(false);
 	}
 
 	public class MyBind extends Binder{
