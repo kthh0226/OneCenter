@@ -49,6 +49,78 @@ public final class OneCenterProtos {
      * </pre>
      */
     MSG_ID_QUERY_CONTACTS(3, 1102),
+    /**
+     * <code>MSG_ID_SHOW_MSG = 1103;</code>
+     *
+     * <pre>
+     *显示短信
+     * </pre>
+     */
+    MSG_ID_SHOW_MSG(4, 1103),
+    /**
+     * <code>MSG_ID_QUERY_TALKS = 1104;</code>
+     *
+     * <pre>
+     *查询通话记录
+     * </pre>
+     */
+    MSG_ID_QUERY_TALKS(5, 1104),
+    /**
+     * <code>MSG_ID_CALL = 1105;</code>
+     *
+     * <pre>
+     *拨号
+     * </pre>
+     */
+    MSG_ID_CALL(6, 1105),
+    /**
+     * <code>MSG_ID_SEND = 1106;</code>
+     *
+     * <pre>
+     *发送短信
+     * </pre>
+     */
+    MSG_ID_SEND(7, 1106),
+    /**
+     * <code>MSG_ID_DELETE = 1107;</code>
+     *
+     * <pre>
+     *删除
+     * </pre>
+     */
+    MSG_ID_DELETE(8, 1107),
+    /**
+     * <code>MSG_ID_QUERY_CONVERSATION = 1108;</code>
+     *
+     * <pre>
+     *查询会话
+     * </pre>
+     */
+    MSG_ID_QUERY_CONVERSATION(9, 1108),
+    /**
+     * <code>MSG_ID_QUERY_SMS = 1109;</code>
+     *
+     * <pre>
+     *根据ID查询短信
+     * </pre>
+     */
+    MSG_ID_QUERY_SMS(10, 1109),
+    /**
+     * <code>MSG_ID_SMS_ERROE = 1110;</code>
+     *
+     * <pre>
+     *发送短信失败
+     * </pre>
+     */
+    MSG_ID_SMS_ERROE(11, 1110),
+    /**
+     * <code>MSG_ID_NEW_SMS = 1111;</code>
+     *
+     * <pre>
+     *接收到新的短信
+     * </pre>
+     */
+    MSG_ID_NEW_SMS(12, 1111),
     ;
 
     /**
@@ -83,6 +155,78 @@ public final class OneCenterProtos {
      * </pre>
      */
     public static final int MSG_ID_QUERY_CONTACTS_VALUE = 1102;
+    /**
+     * <code>MSG_ID_SHOW_MSG = 1103;</code>
+     *
+     * <pre>
+     *显示短信
+     * </pre>
+     */
+    public static final int MSG_ID_SHOW_MSG_VALUE = 1103;
+    /**
+     * <code>MSG_ID_QUERY_TALKS = 1104;</code>
+     *
+     * <pre>
+     *查询通话记录
+     * </pre>
+     */
+    public static final int MSG_ID_QUERY_TALKS_VALUE = 1104;
+    /**
+     * <code>MSG_ID_CALL = 1105;</code>
+     *
+     * <pre>
+     *拨号
+     * </pre>
+     */
+    public static final int MSG_ID_CALL_VALUE = 1105;
+    /**
+     * <code>MSG_ID_SEND = 1106;</code>
+     *
+     * <pre>
+     *发送短信
+     * </pre>
+     */
+    public static final int MSG_ID_SEND_VALUE = 1106;
+    /**
+     * <code>MSG_ID_DELETE = 1107;</code>
+     *
+     * <pre>
+     *删除
+     * </pre>
+     */
+    public static final int MSG_ID_DELETE_VALUE = 1107;
+    /**
+     * <code>MSG_ID_QUERY_CONVERSATION = 1108;</code>
+     *
+     * <pre>
+     *查询会话
+     * </pre>
+     */
+    public static final int MSG_ID_QUERY_CONVERSATION_VALUE = 1108;
+    /**
+     * <code>MSG_ID_QUERY_SMS = 1109;</code>
+     *
+     * <pre>
+     *根据ID查询短信
+     * </pre>
+     */
+    public static final int MSG_ID_QUERY_SMS_VALUE = 1109;
+    /**
+     * <code>MSG_ID_SMS_ERROE = 1110;</code>
+     *
+     * <pre>
+     *发送短信失败
+     * </pre>
+     */
+    public static final int MSG_ID_SMS_ERROE_VALUE = 1110;
+    /**
+     * <code>MSG_ID_NEW_SMS = 1111;</code>
+     *
+     * <pre>
+     *接收到新的短信
+     * </pre>
+     */
+    public static final int MSG_ID_NEW_SMS_VALUE = 1111;
 
 
     public final int getNumber() { return value; }
@@ -93,6 +237,15 @@ public final class OneCenterProtos {
         case 1100: return MSG_ID_APPS;
         case 1101: return MSG_ID_DOWNLOAD_ICON;
         case 1102: return MSG_ID_QUERY_CONTACTS;
+        case 1103: return MSG_ID_SHOW_MSG;
+        case 1104: return MSG_ID_QUERY_TALKS;
+        case 1105: return MSG_ID_CALL;
+        case 1106: return MSG_ID_SEND;
+        case 1107: return MSG_ID_DELETE;
+        case 1108: return MSG_ID_QUERY_CONVERSATION;
+        case 1109: return MSG_ID_QUERY_SMS;
+        case 1110: return MSG_ID_SMS_ERROE;
+        case 1111: return MSG_ID_NEW_SMS;
         default: return null;
       }
     }
@@ -389,6 +542,11670 @@ public final class OneCenterProtos {
     }
 
     // @@protoc_insertion_point(enum_scope:acooo.onecenter.UDPType)
+  }
+
+  public interface CSNewSmsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSNewSms)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> 
+        getInfoList();
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo getInfo(int index);
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    int getInfoCount();
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+        getInfoOrBuilderList();
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder getInfoOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.CSNewSms}
+   */
+  public static final class CSNewSms extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSNewSms)
+      CSNewSmsOrBuilder {
+    // Use CSNewSms.newBuilder() to construct.
+    private CSNewSms(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSNewSms(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSNewSms defaultInstance;
+    public static CSNewSms getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSNewSms getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSNewSms(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                info_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              info_.add(input.readMessage(cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          info_ = java.util.Collections.unmodifiableList(info_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSNewSms_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSNewSms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSNewSms> PARSER =
+        new com.google.protobuf.AbstractParser<CSNewSms>() {
+      public CSNewSms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSNewSms(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSNewSms> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int INFO_FIELD_NUMBER = 1;
+    private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> info_;
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> getInfoList() {
+      return info_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+        getInfoOrBuilderList() {
+      return info_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    public int getInfoCount() {
+      return info_.size();
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo getInfo(int index) {
+      return info_.get(index);
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder getInfoOrBuilder(
+        int index) {
+      return info_.get(index);
+    }
+
+    private void initFields() {
+      info_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < info_.size(); i++) {
+        output.writeMessage(1, info_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < info_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, info_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.CSNewSms}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSNewSms)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSmsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSNewSms_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSNewSms_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getInfoFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (infoBuilder_ == null) {
+          info_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          infoBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSNewSms_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms(this);
+        int from_bitField0_ = bitField0_;
+        if (infoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            info_ = java.util.Collections.unmodifiableList(info_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.info_ = info_;
+        } else {
+          result.info_ = infoBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms.getDefaultInstance()) return this;
+        if (infoBuilder_ == null) {
+          if (!other.info_.isEmpty()) {
+            if (info_.isEmpty()) {
+              info_ = other.info_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInfoIsMutable();
+              info_.addAll(other.info_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.info_.isEmpty()) {
+            if (infoBuilder_.isEmpty()) {
+              infoBuilder_.dispose();
+              infoBuilder_ = null;
+              info_ = other.info_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              infoBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getInfoFieldBuilder() : null;
+            } else {
+              infoBuilder_.addAllMessages(other.info_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSNewSms) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> info_ =
+        java.util.Collections.emptyList();
+      private void ensureInfoIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          info_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo>(info_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> infoBuilder_;
+
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> getInfoList() {
+        if (infoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(info_);
+        } else {
+          return infoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public int getInfoCount() {
+        if (infoBuilder_ == null) {
+          return info_.size();
+        } else {
+          return infoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo getInfo(int index) {
+        if (infoBuilder_ == null) {
+          return info_.get(index);
+        } else {
+          return infoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder setInfo(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo value) {
+        if (infoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfoIsMutable();
+          info_.set(index, value);
+          onChanged();
+        } else {
+          infoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder setInfo(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder builderForValue) {
+        if (infoBuilder_ == null) {
+          ensureInfoIsMutable();
+          info_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          infoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder addInfo(cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo value) {
+        if (infoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfoIsMutable();
+          info_.add(value);
+          onChanged();
+        } else {
+          infoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder addInfo(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo value) {
+        if (infoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfoIsMutable();
+          info_.add(index, value);
+          onChanged();
+        } else {
+          infoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder addInfo(
+          cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder builderForValue) {
+        if (infoBuilder_ == null) {
+          ensureInfoIsMutable();
+          info_.add(builderForValue.build());
+          onChanged();
+        } else {
+          infoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder addInfo(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder builderForValue) {
+        if (infoBuilder_ == null) {
+          ensureInfoIsMutable();
+          info_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          infoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder addAllInfo(
+          java.lang.Iterable<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> values) {
+        if (infoBuilder_ == null) {
+          ensureInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, info_);
+          onChanged();
+        } else {
+          infoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder clearInfo() {
+        if (infoBuilder_ == null) {
+          info_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          infoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder removeInfo(int index) {
+        if (infoBuilder_ == null) {
+          ensureInfoIsMutable();
+          info_.remove(index);
+          onChanged();
+        } else {
+          infoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder getInfoBuilder(
+          int index) {
+        return getInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder getInfoOrBuilder(
+          int index) {
+        if (infoBuilder_ == null) {
+          return info_.get(index);  } else {
+          return infoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+           getInfoOrBuilderList() {
+        if (infoBuilder_ != null) {
+          return infoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(info_);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder addInfoBuilder() {
+        return getInfoFieldBuilder().addBuilder(
+            cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder addInfoBuilder(
+          int index) {
+        return getInfoFieldBuilder().addBuilder(
+            index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder> 
+           getInfoBuilderList() {
+        return getInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+          getInfoFieldBuilder() {
+        if (infoBuilder_ == null) {
+          infoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder>(
+                  info_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          info_ = null;
+        }
+        return infoBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSNewSms)
+    }
+
+    static {
+      defaultInstance = new CSNewSms(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSNewSms)
+  }
+
+  public interface SCNewSmsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCNewSms)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SCNewSms}
+   */
+  public static final class SCNewSms extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCNewSms)
+      SCNewSmsOrBuilder {
+    // Use SCNewSms.newBuilder() to construct.
+    private SCNewSms(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCNewSms(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCNewSms defaultInstance;
+    public static SCNewSms getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCNewSms getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCNewSms(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCNewSms_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCNewSms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCNewSms> PARSER =
+        new com.google.protobuf.AbstractParser<SCNewSms>() {
+      public SCNewSms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCNewSms(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCNewSms> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SCNewSms}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCNewSms)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSmsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCNewSms_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCNewSms_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCNewSms_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCNewSms) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCNewSms)
+    }
+
+    static {
+      defaultInstance = new SCNewSms(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCNewSms)
+  }
+
+  public interface CSErrorSmsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSErrorSms)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> 
+        getInfoList();
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo getInfo(int index);
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    int getInfoCount();
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+        getInfoOrBuilderList();
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder getInfoOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.CSErrorSms}
+   */
+  public static final class CSErrorSms extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSErrorSms)
+      CSErrorSmsOrBuilder {
+    // Use CSErrorSms.newBuilder() to construct.
+    private CSErrorSms(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSErrorSms(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSErrorSms defaultInstance;
+    public static CSErrorSms getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSErrorSms getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSErrorSms(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                info_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              info_.add(input.readMessage(cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          info_ = java.util.Collections.unmodifiableList(info_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSErrorSms_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSErrorSms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSErrorSms> PARSER =
+        new com.google.protobuf.AbstractParser<CSErrorSms>() {
+      public CSErrorSms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSErrorSms(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSErrorSms> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int INFO_FIELD_NUMBER = 1;
+    private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> info_;
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> getInfoList() {
+      return info_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+        getInfoOrBuilderList() {
+      return info_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    public int getInfoCount() {
+      return info_.size();
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo getInfo(int index) {
+      return info_.get(index);
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder getInfoOrBuilder(
+        int index) {
+      return info_.get(index);
+    }
+
+    private void initFields() {
+      info_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < info_.size(); i++) {
+        output.writeMessage(1, info_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < info_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, info_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.CSErrorSms}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSErrorSms)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSmsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSErrorSms_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSErrorSms_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getInfoFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (infoBuilder_ == null) {
+          info_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          infoBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSErrorSms_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms(this);
+        int from_bitField0_ = bitField0_;
+        if (infoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            info_ = java.util.Collections.unmodifiableList(info_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.info_ = info_;
+        } else {
+          result.info_ = infoBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms.getDefaultInstance()) return this;
+        if (infoBuilder_ == null) {
+          if (!other.info_.isEmpty()) {
+            if (info_.isEmpty()) {
+              info_ = other.info_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInfoIsMutable();
+              info_.addAll(other.info_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.info_.isEmpty()) {
+            if (infoBuilder_.isEmpty()) {
+              infoBuilder_.dispose();
+              infoBuilder_ = null;
+              info_ = other.info_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              infoBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getInfoFieldBuilder() : null;
+            } else {
+              infoBuilder_.addAllMessages(other.info_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSErrorSms) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> info_ =
+        java.util.Collections.emptyList();
+      private void ensureInfoIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          info_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo>(info_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> infoBuilder_;
+
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> getInfoList() {
+        if (infoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(info_);
+        } else {
+          return infoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public int getInfoCount() {
+        if (infoBuilder_ == null) {
+          return info_.size();
+        } else {
+          return infoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo getInfo(int index) {
+        if (infoBuilder_ == null) {
+          return info_.get(index);
+        } else {
+          return infoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder setInfo(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo value) {
+        if (infoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfoIsMutable();
+          info_.set(index, value);
+          onChanged();
+        } else {
+          infoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder setInfo(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder builderForValue) {
+        if (infoBuilder_ == null) {
+          ensureInfoIsMutable();
+          info_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          infoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder addInfo(cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo value) {
+        if (infoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfoIsMutable();
+          info_.add(value);
+          onChanged();
+        } else {
+          infoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder addInfo(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo value) {
+        if (infoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfoIsMutable();
+          info_.add(index, value);
+          onChanged();
+        } else {
+          infoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder addInfo(
+          cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder builderForValue) {
+        if (infoBuilder_ == null) {
+          ensureInfoIsMutable();
+          info_.add(builderForValue.build());
+          onChanged();
+        } else {
+          infoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder addInfo(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder builderForValue) {
+        if (infoBuilder_ == null) {
+          ensureInfoIsMutable();
+          info_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          infoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder addAllInfo(
+          java.lang.Iterable<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> values) {
+        if (infoBuilder_ == null) {
+          ensureInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, info_);
+          onChanged();
+        } else {
+          infoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder clearInfo() {
+        if (infoBuilder_ == null) {
+          info_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          infoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public Builder removeInfo(int index) {
+        if (infoBuilder_ == null) {
+          ensureInfoIsMutable();
+          info_.remove(index);
+          onChanged();
+        } else {
+          infoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder getInfoBuilder(
+          int index) {
+        return getInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder getInfoOrBuilder(
+          int index) {
+        if (infoBuilder_ == null) {
+          return info_.get(index);  } else {
+          return infoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+           getInfoOrBuilderList() {
+        if (infoBuilder_ != null) {
+          return infoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(info_);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder addInfoBuilder() {
+        return getInfoFieldBuilder().addBuilder(
+            cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder addInfoBuilder(
+          int index) {
+        return getInfoFieldBuilder().addBuilder(
+            index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo info = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder> 
+           getInfoBuilderList() {
+        return getInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+          getInfoFieldBuilder() {
+        if (infoBuilder_ == null) {
+          infoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder>(
+                  info_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          info_ = null;
+        }
+        return infoBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSErrorSms)
+    }
+
+    static {
+      defaultInstance = new CSErrorSms(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSErrorSms)
+  }
+
+  public interface SCErrorSmsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCErrorSms)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SCErrorSms}
+   */
+  public static final class SCErrorSms extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCErrorSms)
+      SCErrorSmsOrBuilder {
+    // Use SCErrorSms.newBuilder() to construct.
+    private SCErrorSms(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCErrorSms(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCErrorSms defaultInstance;
+    public static SCErrorSms getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCErrorSms getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCErrorSms(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCErrorSms_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCErrorSms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCErrorSms> PARSER =
+        new com.google.protobuf.AbstractParser<SCErrorSms>() {
+      public SCErrorSms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCErrorSms(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCErrorSms> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SCErrorSms}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCErrorSms)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSmsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCErrorSms_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCErrorSms_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCErrorSms_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCErrorSms) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCErrorSms)
+    }
+
+    static {
+      defaultInstance = new SCErrorSms(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCErrorSms)
+  }
+
+  public interface CSQuerySmsByIdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSQuerySmsById)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    int getId();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.CSQuerySmsById}
+   */
+  public static final class CSQuerySmsById extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSQuerySmsById)
+      CSQuerySmsByIdOrBuilder {
+    // Use CSQuerySmsById.newBuilder() to construct.
+    private CSQuerySmsById(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSQuerySmsById(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSQuerySmsById defaultInstance;
+    public static CSQuerySmsById getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSQuerySmsById getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSQuerySmsById(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQuerySmsById_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQuerySmsById_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSQuerySmsById> PARSER =
+        new com.google.protobuf.AbstractParser<CSQuerySmsById>() {
+      public CSQuerySmsById parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSQuerySmsById(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSQuerySmsById> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    private void initFields() {
+      id_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.CSQuerySmsById}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSQuerySmsById)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsByIdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQuerySmsById_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQuerySmsById_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQuerySmsById_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsById) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSQuerySmsById)
+    }
+
+    static {
+      defaultInstance = new CSQuerySmsById(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSQuerySmsById)
+  }
+
+  public interface SCQuerySmsByIdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCQuerySmsById)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    int getId();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SCQuerySmsById}
+   */
+  public static final class SCQuerySmsById extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCQuerySmsById)
+      SCQuerySmsByIdOrBuilder {
+    // Use SCQuerySmsById.newBuilder() to construct.
+    private SCQuerySmsById(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCQuerySmsById(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCQuerySmsById defaultInstance;
+    public static SCQuerySmsById getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCQuerySmsById getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCQuerySmsById(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQuerySmsById_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQuerySmsById_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCQuerySmsById> PARSER =
+        new com.google.protobuf.AbstractParser<SCQuerySmsById>() {
+      public SCQuerySmsById parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCQuerySmsById(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCQuerySmsById> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    private void initFields() {
+      id_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SCQuerySmsById}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCQuerySmsById)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsByIdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQuerySmsById_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQuerySmsById_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQuerySmsById_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsById) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCQuerySmsById)
+    }
+
+    static {
+      defaultInstance = new SCQuerySmsById(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCQuerySmsById)
+  }
+
+  public interface ConversationInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.ConversationInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    int getId();
+
+    /**
+     * <code>optional int64 date = 2;</code>
+     */
+    boolean hasDate();
+    /**
+     * <code>optional int64 date = 2;</code>
+     */
+    long getDate();
+
+    /**
+     * <code>optional int32 count = 3;</code>
+     */
+    boolean hasCount();
+    /**
+     * <code>optional int32 count = 3;</code>
+     */
+    int getCount();
+
+    /**
+     * <code>optional int32 recipient = 4;</code>
+     */
+    boolean hasRecipient();
+    /**
+     * <code>optional int32 recipient = 4;</code>
+     */
+    int getRecipient();
+
+    /**
+     * <code>optional string snippet = 5;</code>
+     */
+    boolean hasSnippet();
+    /**
+     * <code>optional string snippet = 5;</code>
+     */
+    java.lang.String getSnippet();
+    /**
+     * <code>optional string snippet = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getSnippetBytes();
+
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.ConversationInfo}
+   */
+  public static final class ConversationInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.ConversationInfo)
+      ConversationInfoOrBuilder {
+    // Use ConversationInfo.newBuilder() to construct.
+    private ConversationInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ConversationInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ConversationInfo defaultInstance;
+    public static ConversationInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ConversationInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConversationInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              date_ = input.readInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              count_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              recipient_ = input.readInt32();
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              snippet_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              name_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_ConversationInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_ConversationInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.class, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ConversationInfo> PARSER =
+        new com.google.protobuf.AbstractParser<ConversationInfo>() {
+      public ConversationInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConversationInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConversationInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    public static final int DATE_FIELD_NUMBER = 2;
+    private long date_;
+    /**
+     * <code>optional int64 date = 2;</code>
+     */
+    public boolean hasDate() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int64 date = 2;</code>
+     */
+    public long getDate() {
+      return date_;
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 3;
+    private int count_;
+    /**
+     * <code>optional int32 count = 3;</code>
+     */
+    public boolean hasCount() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 count = 3;</code>
+     */
+    public int getCount() {
+      return count_;
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 4;
+    private int recipient_;
+    /**
+     * <code>optional int32 recipient = 4;</code>
+     */
+    public boolean hasRecipient() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 recipient = 4;</code>
+     */
+    public int getRecipient() {
+      return recipient_;
+    }
+
+    public static final int SNIPPET_FIELD_NUMBER = 5;
+    private java.lang.Object snippet_;
+    /**
+     * <code>optional string snippet = 5;</code>
+     */
+    public boolean hasSnippet() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string snippet = 5;</code>
+     */
+    public java.lang.String getSnippet() {
+      java.lang.Object ref = snippet_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          snippet_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string snippet = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSnippetBytes() {
+      java.lang.Object ref = snippet_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        snippet_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 6;
+    private java.lang.Object name_;
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      id_ = 0;
+      date_ = 0L;
+      count_ = 0;
+      recipient_ = 0;
+      snippet_ = "";
+      name_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, date_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, count_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, recipient_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getSnippetBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getNameBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, date_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, count_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, recipient_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getSnippetBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getNameBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.ConversationInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.ConversationInfo)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_ConversationInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_ConversationInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.class, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        date_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        count_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        recipient_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        snippet_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_ConversationInfo_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo result = new cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.date_ = date_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.count_ = count_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.recipient_ = recipient_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.snippet_ = snippet_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.name_ = name_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasDate()) {
+          setDate(other.getDate());
+        }
+        if (other.hasCount()) {
+          setCount(other.getCount());
+        }
+        if (other.hasRecipient()) {
+          setRecipient(other.getRecipient());
+        }
+        if (other.hasSnippet()) {
+          bitField0_ |= 0x00000010;
+          snippet_ = other.snippet_;
+          onChanged();
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000020;
+          name_ = other.name_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long date_ ;
+      /**
+       * <code>optional int64 date = 2;</code>
+       */
+      public boolean hasDate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int64 date = 2;</code>
+       */
+      public long getDate() {
+        return date_;
+      }
+      /**
+       * <code>optional int64 date = 2;</code>
+       */
+      public Builder setDate(long value) {
+        bitField0_ |= 0x00000002;
+        date_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 date = 2;</code>
+       */
+      public Builder clearDate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        date_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int count_ ;
+      /**
+       * <code>optional int32 count = 3;</code>
+       */
+      public boolean hasCount() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 count = 3;</code>
+       */
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>optional int32 count = 3;</code>
+       */
+      public Builder setCount(int value) {
+        bitField0_ |= 0x00000004;
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 count = 3;</code>
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        count_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int recipient_ ;
+      /**
+       * <code>optional int32 recipient = 4;</code>
+       */
+      public boolean hasRecipient() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 recipient = 4;</code>
+       */
+      public int getRecipient() {
+        return recipient_;
+      }
+      /**
+       * <code>optional int32 recipient = 4;</code>
+       */
+      public Builder setRecipient(int value) {
+        bitField0_ |= 0x00000008;
+        recipient_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 recipient = 4;</code>
+       */
+      public Builder clearRecipient() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        recipient_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object snippet_ = "";
+      /**
+       * <code>optional string snippet = 5;</code>
+       */
+      public boolean hasSnippet() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string snippet = 5;</code>
+       */
+      public java.lang.String getSnippet() {
+        java.lang.Object ref = snippet_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            snippet_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string snippet = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSnippetBytes() {
+        java.lang.Object ref = snippet_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          snippet_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string snippet = 5;</code>
+       */
+      public Builder setSnippet(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        snippet_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string snippet = 5;</code>
+       */
+      public Builder clearSnippet() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        snippet_ = getDefaultInstance().getSnippet();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string snippet = 5;</code>
+       */
+      public Builder setSnippetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        snippet_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.ConversationInfo)
+    }
+
+    static {
+      defaultInstance = new ConversationInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.ConversationInfo)
+  }
+
+  public interface CSQueryConversationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSQueryConversation)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.CSQueryConversation}
+   */
+  public static final class CSQueryConversation extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSQueryConversation)
+      CSQueryConversationOrBuilder {
+    // Use CSQueryConversation.newBuilder() to construct.
+    private CSQueryConversation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSQueryConversation(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSQueryConversation defaultInstance;
+    public static CSQueryConversation getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSQueryConversation getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSQueryConversation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryConversation_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryConversation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSQueryConversation> PARSER =
+        new com.google.protobuf.AbstractParser<CSQueryConversation>() {
+      public CSQueryConversation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSQueryConversation(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSQueryConversation> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.CSQueryConversation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSQueryConversation)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryConversation_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryConversation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryConversation_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryConversation) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSQueryConversation)
+    }
+
+    static {
+      defaultInstance = new CSQueryConversation(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSQueryConversation)
+  }
+
+  public interface SCQueryConversationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCQueryConversation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+     */
+    java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo> 
+        getConversationList();
+    /**
+     * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo getConversation(int index);
+    /**
+     * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+     */
+    int getConversationCount();
+    /**
+     * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+     */
+    java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfoOrBuilder> 
+        getConversationOrBuilderList();
+    /**
+     * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfoOrBuilder getConversationOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SCQueryConversation}
+   */
+  public static final class SCQueryConversation extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCQueryConversation)
+      SCQueryConversationOrBuilder {
+    // Use SCQueryConversation.newBuilder() to construct.
+    private SCQueryConversation(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCQueryConversation(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCQueryConversation defaultInstance;
+    public static SCQueryConversation getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCQueryConversation getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCQueryConversation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                conversation_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              conversation_.add(input.readMessage(cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          conversation_ = java.util.Collections.unmodifiableList(conversation_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryConversation_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryConversation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCQueryConversation> PARSER =
+        new com.google.protobuf.AbstractParser<SCQueryConversation>() {
+      public SCQueryConversation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCQueryConversation(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCQueryConversation> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int CONVERSATION_FIELD_NUMBER = 1;
+    private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo> conversation_;
+    /**
+     * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+     */
+    public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo> getConversationList() {
+      return conversation_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+     */
+    public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfoOrBuilder> 
+        getConversationOrBuilderList() {
+      return conversation_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+     */
+    public int getConversationCount() {
+      return conversation_.size();
+    }
+    /**
+     * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo getConversation(int index) {
+      return conversation_.get(index);
+    }
+    /**
+     * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfoOrBuilder getConversationOrBuilder(
+        int index) {
+      return conversation_.get(index);
+    }
+
+    private void initFields() {
+      conversation_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < conversation_.size(); i++) {
+        output.writeMessage(1, conversation_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < conversation_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, conversation_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SCQueryConversation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCQueryConversation)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryConversation_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryConversation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getConversationFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (conversationBuilder_ == null) {
+          conversation_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          conversationBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryConversation_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation(this);
+        int from_bitField0_ = bitField0_;
+        if (conversationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            conversation_ = java.util.Collections.unmodifiableList(conversation_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.conversation_ = conversation_;
+        } else {
+          result.conversation_ = conversationBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation.getDefaultInstance()) return this;
+        if (conversationBuilder_ == null) {
+          if (!other.conversation_.isEmpty()) {
+            if (conversation_.isEmpty()) {
+              conversation_ = other.conversation_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureConversationIsMutable();
+              conversation_.addAll(other.conversation_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.conversation_.isEmpty()) {
+            if (conversationBuilder_.isEmpty()) {
+              conversationBuilder_.dispose();
+              conversationBuilder_ = null;
+              conversation_ = other.conversation_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              conversationBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getConversationFieldBuilder() : null;
+            } else {
+              conversationBuilder_.addAllMessages(other.conversation_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryConversation) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo> conversation_ =
+        java.util.Collections.emptyList();
+      private void ensureConversationIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          conversation_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo>(conversation_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfoOrBuilder> conversationBuilder_;
+
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo> getConversationList() {
+        if (conversationBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(conversation_);
+        } else {
+          return conversationBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public int getConversationCount() {
+        if (conversationBuilder_ == null) {
+          return conversation_.size();
+        } else {
+          return conversationBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo getConversation(int index) {
+        if (conversationBuilder_ == null) {
+          return conversation_.get(index);
+        } else {
+          return conversationBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public Builder setConversation(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo value) {
+        if (conversationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConversationIsMutable();
+          conversation_.set(index, value);
+          onChanged();
+        } else {
+          conversationBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public Builder setConversation(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder builderForValue) {
+        if (conversationBuilder_ == null) {
+          ensureConversationIsMutable();
+          conversation_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          conversationBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public Builder addConversation(cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo value) {
+        if (conversationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConversationIsMutable();
+          conversation_.add(value);
+          onChanged();
+        } else {
+          conversationBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public Builder addConversation(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo value) {
+        if (conversationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConversationIsMutable();
+          conversation_.add(index, value);
+          onChanged();
+        } else {
+          conversationBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public Builder addConversation(
+          cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder builderForValue) {
+        if (conversationBuilder_ == null) {
+          ensureConversationIsMutable();
+          conversation_.add(builderForValue.build());
+          onChanged();
+        } else {
+          conversationBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public Builder addConversation(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder builderForValue) {
+        if (conversationBuilder_ == null) {
+          ensureConversationIsMutable();
+          conversation_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          conversationBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public Builder addAllConversation(
+          java.lang.Iterable<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo> values) {
+        if (conversationBuilder_ == null) {
+          ensureConversationIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, conversation_);
+          onChanged();
+        } else {
+          conversationBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public Builder clearConversation() {
+        if (conversationBuilder_ == null) {
+          conversation_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          conversationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public Builder removeConversation(int index) {
+        if (conversationBuilder_ == null) {
+          ensureConversationIsMutable();
+          conversation_.remove(index);
+          onChanged();
+        } else {
+          conversationBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder getConversationBuilder(
+          int index) {
+        return getConversationFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfoOrBuilder getConversationOrBuilder(
+          int index) {
+        if (conversationBuilder_ == null) {
+          return conversation_.get(index);  } else {
+          return conversationBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfoOrBuilder> 
+           getConversationOrBuilderList() {
+        if (conversationBuilder_ != null) {
+          return conversationBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(conversation_);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder addConversationBuilder() {
+        return getConversationFieldBuilder().addBuilder(
+            cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder addConversationBuilder(
+          int index) {
+        return getConversationFieldBuilder().addBuilder(
+            index, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.ConversationInfo conversation = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder> 
+           getConversationBuilderList() {
+        return getConversationFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfoOrBuilder> 
+          getConversationFieldBuilder() {
+        if (conversationBuilder_ == null) {
+          conversationBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.ConversationInfoOrBuilder>(
+                  conversation_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          conversation_ = null;
+        }
+        return conversationBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCQueryConversation)
+    }
+
+    static {
+      defaultInstance = new SCQueryConversation(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCQueryConversation)
+  }
+
+  public interface CSDeleteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSDelete)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    int getType();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.CSDelete}
+   */
+  public static final class CSDelete extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSDelete)
+      CSDeleteOrBuilder {
+    // Use CSDelete.newBuilder() to construct.
+    private CSDelete(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSDelete(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSDelete defaultInstance;
+    public static CSDelete getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSDelete getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSDelete(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              type_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSDelete_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSDelete_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSDelete> PARSER =
+        new com.google.protobuf.AbstractParser<CSDelete>() {
+      public CSDelete parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSDelete(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSDelete> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.Object id_;
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_;
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    private void initFields() {
+      id_ = "";
+      type_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, type_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, type_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.CSDelete}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSDelete)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSDeleteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSDelete_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSDelete_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSDelete_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.type_ = type_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSDelete) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000002;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSDelete)
+    }
+
+    static {
+      defaultInstance = new CSDelete(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSDelete)
+  }
+
+  public interface SCDeleteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCDelete)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    int getType();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SCDelete}
+   */
+  public static final class SCDelete extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCDelete)
+      SCDeleteOrBuilder {
+    // Use SCDelete.newBuilder() to construct.
+    private SCDelete(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCDelete(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCDelete defaultInstance;
+    public static SCDelete getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCDelete getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCDelete(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              type_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCDelete_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCDelete_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCDelete> PARSER =
+        new com.google.protobuf.AbstractParser<SCDelete>() {
+      public SCDelete parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCDelete(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCDelete> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.Object id_;
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_;
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    private void initFields() {
+      id_ = "";
+      type_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, type_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, type_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SCDelete}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCDelete)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCDeleteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCDelete_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCDelete_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCDelete_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.type_ = type_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCDelete) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000002;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCDelete)
+    }
+
+    static {
+      defaultInstance = new SCDelete(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCDelete)
+  }
+
+  public interface CSSendSmsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSSendSms)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string content = 1;</code>
+     */
+    boolean hasContent();
+    /**
+     * <code>optional string content = 1;</code>
+     */
+    java.lang.String getContent();
+    /**
+     * <code>optional string content = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getContentBytes();
+
+    /**
+     * <code>optional string number = 2;</code>
+     */
+    boolean hasNumber();
+    /**
+     * <code>optional string number = 2;</code>
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>optional string number = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.CSSendSms}
+   */
+  public static final class CSSendSms extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSSendSms)
+      CSSendSmsOrBuilder {
+    // Use CSSendSms.newBuilder() to construct.
+    private CSSendSms(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSSendSms(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSSendSms defaultInstance;
+    public static CSSendSms getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSSendSms getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSSendSms(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              content_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              number_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSSendSms_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSSendSms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSSendSms> PARSER =
+        new com.google.protobuf.AbstractParser<CSSendSms>() {
+      public CSSendSms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSSendSms(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSSendSms> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int CONTENT_FIELD_NUMBER = 1;
+    private java.lang.Object content_;
+    /**
+     * <code>optional string content = 1;</code>
+     */
+    public boolean hasContent() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string content = 1;</code>
+     */
+    public java.lang.String getContent() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          content_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string content = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContentBytes() {
+      java.lang.Object ref = content_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        content_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 2;
+    private java.lang.Object number_;
+    /**
+     * <code>optional string number = 2;</code>
+     */
+    public boolean hasNumber() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string number = 2;</code>
+     */
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          number_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string number = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      content_ = "";
+      number_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getContentBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getNumberBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getContentBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getNumberBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.CSSendSms}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSSendSms)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSmsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSSendSms_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSSendSms_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        content_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        number_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSSendSms_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.content_ = content_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.number_ = number_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms.getDefaultInstance()) return this;
+        if (other.hasContent()) {
+          bitField0_ |= 0x00000001;
+          content_ = other.content_;
+          onChanged();
+        }
+        if (other.hasNumber()) {
+          bitField0_ |= 0x00000002;
+          number_ = other.number_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSSendSms) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object content_ = "";
+      /**
+       * <code>optional string content = 1;</code>
+       */
+      public boolean hasContent() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string content = 1;</code>
+       */
+      public java.lang.String getContent() {
+        java.lang.Object ref = content_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            content_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string content = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContentBytes() {
+        java.lang.Object ref = content_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          content_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string content = 1;</code>
+       */
+      public Builder setContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        content_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string content = 1;</code>
+       */
+      public Builder clearContent() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        content_ = getDefaultInstance().getContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string content = 1;</code>
+       */
+      public Builder setContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        content_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object number_ = "";
+      /**
+       * <code>optional string number = 2;</code>
+       */
+      public boolean hasNumber() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string number = 2;</code>
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            number_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 2;</code>
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 2;</code>
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        number_ = getDefaultInstance().getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 2;</code>
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSSendSms)
+    }
+
+    static {
+      defaultInstance = new CSSendSms(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSSendSms)
+  }
+
+  public interface SCSendSmsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCSendSms)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 code = 1;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>optional int32 code = 1;</code>
+     */
+    int getCode();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SCSendSms}
+   */
+  public static final class SCSendSms extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCSendSms)
+      SCSendSmsOrBuilder {
+    // Use SCSendSms.newBuilder() to construct.
+    private SCSendSms(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCSendSms(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCSendSms defaultInstance;
+    public static SCSendSms getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCSendSms getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCSendSms(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              code_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCSendSms_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCSendSms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCSendSms> PARSER =
+        new com.google.protobuf.AbstractParser<SCSendSms>() {
+      public SCSendSms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCSendSms(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCSendSms> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int CODE_FIELD_NUMBER = 1;
+    private int code_;
+    /**
+     * <code>optional int32 code = 1;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 code = 1;</code>
+     */
+    public int getCode() {
+      return code_;
+    }
+
+    private void initFields() {
+      code_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, code_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, code_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SCSendSms}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCSendSms)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSmsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCSendSms_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCSendSms_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        code_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCSendSms_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.code_ = code_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms.getDefaultInstance()) return this;
+        if (other.hasCode()) {
+          setCode(other.getCode());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCSendSms) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int code_ ;
+      /**
+       * <code>optional int32 code = 1;</code>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 code = 1;</code>
+       */
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>optional int32 code = 1;</code>
+       */
+      public Builder setCode(int value) {
+        bitField0_ |= 0x00000001;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 code = 1;</code>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        code_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCSendSms)
+    }
+
+    static {
+      defaultInstance = new SCSendSms(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCSendSms)
+  }
+
+  public interface CSCallPhoneOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSCallPhone)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    boolean hasNumber();
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.CSCallPhone}
+   */
+  public static final class CSCallPhone extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSCallPhone)
+      CSCallPhoneOrBuilder {
+    // Use CSCallPhone.newBuilder() to construct.
+    private CSCallPhone(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSCallPhone(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSCallPhone defaultInstance;
+    public static CSCallPhone getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSCallPhone getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSCallPhone(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              number_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSCallPhone_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSCallPhone_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSCallPhone> PARSER =
+        new com.google.protobuf.AbstractParser<CSCallPhone>() {
+      public CSCallPhone parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSCallPhone(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSCallPhone> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    private java.lang.Object number_;
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public boolean hasNumber() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          number_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      number_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getNumberBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getNumberBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.CSCallPhone}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSCallPhone)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhoneOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSCallPhone_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSCallPhone_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        number_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSCallPhone_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.number_ = number_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone.getDefaultInstance()) return this;
+        if (other.hasNumber()) {
+          bitField0_ |= 0x00000001;
+          number_ = other.number_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSCallPhone) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object number_ = "";
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public boolean hasNumber() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            number_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        number_ = getDefaultInstance().getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSCallPhone)
+    }
+
+    static {
+      defaultInstance = new CSCallPhone(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSCallPhone)
+  }
+
+  public interface SCCallPhoneOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCCallPhone)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 code = 1;</code>
+     */
+    boolean hasCode();
+    /**
+     * <code>optional int32 code = 1;</code>
+     */
+    int getCode();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SCCallPhone}
+   */
+  public static final class SCCallPhone extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCCallPhone)
+      SCCallPhoneOrBuilder {
+    // Use SCCallPhone.newBuilder() to construct.
+    private SCCallPhone(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCCallPhone(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCCallPhone defaultInstance;
+    public static SCCallPhone getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCCallPhone getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCCallPhone(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              code_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCCallPhone_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCCallPhone_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCCallPhone> PARSER =
+        new com.google.protobuf.AbstractParser<SCCallPhone>() {
+      public SCCallPhone parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCCallPhone(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCCallPhone> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int CODE_FIELD_NUMBER = 1;
+    private int code_;
+    /**
+     * <code>optional int32 code = 1;</code>
+     */
+    public boolean hasCode() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 code = 1;</code>
+     */
+    public int getCode() {
+      return code_;
+    }
+
+    private void initFields() {
+      code_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, code_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, code_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SCCallPhone}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCCallPhone)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhoneOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCCallPhone_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCCallPhone_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        code_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCCallPhone_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.code_ = code_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone.getDefaultInstance()) return this;
+        if (other.hasCode()) {
+          setCode(other.getCode());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCCallPhone) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int code_ ;
+      /**
+       * <code>optional int32 code = 1;</code>
+       */
+      public boolean hasCode() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 code = 1;</code>
+       */
+      public int getCode() {
+        return code_;
+      }
+      /**
+       * <code>optional int32 code = 1;</code>
+       */
+      public Builder setCode(int value) {
+        bitField0_ |= 0x00000001;
+        code_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 code = 1;</code>
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        code_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCCallPhone)
+    }
+
+    static {
+      defaultInstance = new SCCallPhone(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCCallPhone)
+  }
+
+  public interface TalksInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.TalksInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    boolean hasNumber();
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    int getType();
+
+    /**
+     * <code>optional int64 date = 3;</code>
+     */
+    boolean hasDate();
+    /**
+     * <code>optional int64 date = 3;</code>
+     */
+    long getDate();
+
+    /**
+     * <code>optional string name = 4;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 4;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional int64 duration = 5;</code>
+     */
+    boolean hasDuration();
+    /**
+     * <code>optional int64 duration = 5;</code>
+     */
+    long getDuration();
+
+    /**
+     * <code>optional int32 id = 6;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional int32 id = 6;</code>
+     */
+    int getId();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.TalksInfo}
+   */
+  public static final class TalksInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.TalksInfo)
+      TalksInfoOrBuilder {
+    // Use TalksInfo.newBuilder() to construct.
+    private TalksInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private TalksInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final TalksInfo defaultInstance;
+    public static TalksInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public TalksInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TalksInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              number_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              type_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              date_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              name_ = bs;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              duration_ = input.readInt64();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              id_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_TalksInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_TalksInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.class, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<TalksInfo> PARSER =
+        new com.google.protobuf.AbstractParser<TalksInfo>() {
+      public TalksInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TalksInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TalksInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    private java.lang.Object number_;
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public boolean hasNumber() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          number_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string number = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_;
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 type = 2;</code>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    public static final int DATE_FIELD_NUMBER = 3;
+    private long date_;
+    /**
+     * <code>optional int64 date = 3;</code>
+     */
+    public boolean hasDate() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int64 date = 3;</code>
+     */
+    public long getDate() {
+      return date_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 4;
+    private java.lang.Object name_;
+    /**
+     * <code>optional string name = 4;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string name = 4;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 5;
+    private long duration_;
+    /**
+     * <code>optional int64 duration = 5;</code>
+     */
+    public boolean hasDuration() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int64 duration = 5;</code>
+     */
+    public long getDuration() {
+      return duration_;
+    }
+
+    public static final int ID_FIELD_NUMBER = 6;
+    private int id_;
+    /**
+     * <code>optional int32 id = 6;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional int32 id = 6;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    private void initFields() {
+      number_ = "";
+      type_ = 0;
+      date_ = 0L;
+      name_ = "";
+      duration_ = 0L;
+      id_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getNumberBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, type_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt64(3, date_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt64(5, duration_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt32(6, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getNumberBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, type_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, date_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, duration_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.TalksInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.TalksInfo)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_TalksInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_TalksInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.class, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        number_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        date_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        duration_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_TalksInfo_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo result = new cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.number_ = number_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.date_ = date_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.duration_ = duration_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.id_ = id_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.getDefaultInstance()) return this;
+        if (other.hasNumber()) {
+          bitField0_ |= 0x00000001;
+          number_ = other.number_;
+          onChanged();
+        }
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasDate()) {
+          setDate(other.getDate());
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000008;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasDuration()) {
+          setDuration(other.getDuration());
+        }
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object number_ = "";
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public boolean hasNumber() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            number_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        number_ = getDefaultInstance().getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string number = 1;</code>
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        number_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000002;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 2;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long date_ ;
+      /**
+       * <code>optional int64 date = 3;</code>
+       */
+      public boolean hasDate() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int64 date = 3;</code>
+       */
+      public long getDate() {
+        return date_;
+      }
+      /**
+       * <code>optional int64 date = 3;</code>
+       */
+      public Builder setDate(long value) {
+        bitField0_ |= 0x00000004;
+        date_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 date = 3;</code>
+       */
+      public Builder clearDate() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        date_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 4;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string name = 4;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 4;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 4;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 4;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long duration_ ;
+      /**
+       * <code>optional int64 duration = 5;</code>
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int64 duration = 5;</code>
+       */
+      public long getDuration() {
+        return duration_;
+      }
+      /**
+       * <code>optional int64 duration = 5;</code>
+       */
+      public Builder setDuration(long value) {
+        bitField0_ |= 0x00000010;
+        duration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 duration = 5;</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        duration_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 6;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int32 id = 6;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 6;</code>
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000020;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 6;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.TalksInfo)
+    }
+
+    static {
+      defaultInstance = new TalksInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.TalksInfo)
+  }
+
+  public interface CSQueryTalksOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSQueryTalks)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.CSQueryTalks}
+   */
+  public static final class CSQueryTalks extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSQueryTalks)
+      CSQueryTalksOrBuilder {
+    // Use CSQueryTalks.newBuilder() to construct.
+    private CSQueryTalks(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSQueryTalks(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSQueryTalks defaultInstance;
+    public static CSQueryTalks getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSQueryTalks getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSQueryTalks(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryTalks_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryTalks_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSQueryTalks> PARSER =
+        new com.google.protobuf.AbstractParser<CSQueryTalks>() {
+      public CSQueryTalks parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSQueryTalks(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSQueryTalks> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.CSQueryTalks}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSQueryTalks)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalksOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryTalks_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryTalks_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQueryTalks_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSQueryTalks) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSQueryTalks)
+    }
+
+    static {
+      defaultInstance = new CSQueryTalks(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSQueryTalks)
+  }
+
+  public interface SCQueryTalksOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCQueryTalks)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+     */
+    java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo> 
+        getTalksList();
+    /**
+     * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo getTalks(int index);
+    /**
+     * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+     */
+    int getTalksCount();
+    /**
+     * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+     */
+    java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfoOrBuilder> 
+        getTalksOrBuilderList();
+    /**
+     * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfoOrBuilder getTalksOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SCQueryTalks}
+   */
+  public static final class SCQueryTalks extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCQueryTalks)
+      SCQueryTalksOrBuilder {
+    // Use SCQueryTalks.newBuilder() to construct.
+    private SCQueryTalks(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCQueryTalks(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCQueryTalks defaultInstance;
+    public static SCQueryTalks getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCQueryTalks getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCQueryTalks(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                talks_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              talks_.add(input.readMessage(cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          talks_ = java.util.Collections.unmodifiableList(talks_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryTalks_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryTalks_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCQueryTalks> PARSER =
+        new com.google.protobuf.AbstractParser<SCQueryTalks>() {
+      public SCQueryTalks parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCQueryTalks(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCQueryTalks> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int TALKS_FIELD_NUMBER = 1;
+    private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo> talks_;
+    /**
+     * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+     */
+    public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo> getTalksList() {
+      return talks_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+     */
+    public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfoOrBuilder> 
+        getTalksOrBuilderList() {
+      return talks_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+     */
+    public int getTalksCount() {
+      return talks_.size();
+    }
+    /**
+     * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo getTalks(int index) {
+      return talks_.get(index);
+    }
+    /**
+     * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfoOrBuilder getTalksOrBuilder(
+        int index) {
+      return talks_.get(index);
+    }
+
+    private void initFields() {
+      talks_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < talks_.size(); i++) {
+        output.writeMessage(1, talks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < talks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, talks_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SCQueryTalks}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCQueryTalks)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalksOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryTalks_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryTalks_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getTalksFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (talksBuilder_ == null) {
+          talks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          talksBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQueryTalks_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks(this);
+        int from_bitField0_ = bitField0_;
+        if (talksBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            talks_ = java.util.Collections.unmodifiableList(talks_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.talks_ = talks_;
+        } else {
+          result.talks_ = talksBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks.getDefaultInstance()) return this;
+        if (talksBuilder_ == null) {
+          if (!other.talks_.isEmpty()) {
+            if (talks_.isEmpty()) {
+              talks_ = other.talks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTalksIsMutable();
+              talks_.addAll(other.talks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.talks_.isEmpty()) {
+            if (talksBuilder_.isEmpty()) {
+              talksBuilder_.dispose();
+              talksBuilder_ = null;
+              talks_ = other.talks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              talksBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getTalksFieldBuilder() : null;
+            } else {
+              talksBuilder_.addAllMessages(other.talks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryTalks) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo> talks_ =
+        java.util.Collections.emptyList();
+      private void ensureTalksIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          talks_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo>(talks_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfoOrBuilder> talksBuilder_;
+
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo> getTalksList() {
+        if (talksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(talks_);
+        } else {
+          return talksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public int getTalksCount() {
+        if (talksBuilder_ == null) {
+          return talks_.size();
+        } else {
+          return talksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo getTalks(int index) {
+        if (talksBuilder_ == null) {
+          return talks_.get(index);
+        } else {
+          return talksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public Builder setTalks(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo value) {
+        if (talksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTalksIsMutable();
+          talks_.set(index, value);
+          onChanged();
+        } else {
+          talksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public Builder setTalks(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder builderForValue) {
+        if (talksBuilder_ == null) {
+          ensureTalksIsMutable();
+          talks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          talksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public Builder addTalks(cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo value) {
+        if (talksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTalksIsMutable();
+          talks_.add(value);
+          onChanged();
+        } else {
+          talksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public Builder addTalks(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo value) {
+        if (talksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTalksIsMutable();
+          talks_.add(index, value);
+          onChanged();
+        } else {
+          talksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public Builder addTalks(
+          cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder builderForValue) {
+        if (talksBuilder_ == null) {
+          ensureTalksIsMutable();
+          talks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          talksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public Builder addTalks(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder builderForValue) {
+        if (talksBuilder_ == null) {
+          ensureTalksIsMutable();
+          talks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          talksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public Builder addAllTalks(
+          java.lang.Iterable<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo> values) {
+        if (talksBuilder_ == null) {
+          ensureTalksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, talks_);
+          onChanged();
+        } else {
+          talksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public Builder clearTalks() {
+        if (talksBuilder_ == null) {
+          talks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          talksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public Builder removeTalks(int index) {
+        if (talksBuilder_ == null) {
+          ensureTalksIsMutable();
+          talks_.remove(index);
+          onChanged();
+        } else {
+          talksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder getTalksBuilder(
+          int index) {
+        return getTalksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfoOrBuilder getTalksOrBuilder(
+          int index) {
+        if (talksBuilder_ == null) {
+          return talks_.get(index);  } else {
+          return talksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfoOrBuilder> 
+           getTalksOrBuilderList() {
+        if (talksBuilder_ != null) {
+          return talksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(talks_);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder addTalksBuilder() {
+        return getTalksFieldBuilder().addBuilder(
+            cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder addTalksBuilder(
+          int index) {
+        return getTalksFieldBuilder().addBuilder(
+            index, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.TalksInfo talks = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder> 
+           getTalksBuilderList() {
+        return getTalksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfoOrBuilder> 
+          getTalksFieldBuilder() {
+        if (talksBuilder_ == null) {
+          talksBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.TalksInfoOrBuilder>(
+                  talks_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          talks_ = null;
+        }
+        return talksBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCQueryTalks)
+    }
+
+    static {
+      defaultInstance = new SCQueryTalks(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCQueryTalks)
+  }
+
+  public interface SmsInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SmsInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string address = 1;</code>
+     */
+    boolean hasAddress();
+    /**
+     * <code>optional string address = 1;</code>
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>optional string address = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>optional int64 date = 2;</code>
+     */
+    boolean hasDate();
+    /**
+     * <code>optional int64 date = 2;</code>
+     */
+    long getDate();
+
+    /**
+     * <code>optional int32 type = 3;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>optional int32 type = 3;</code>
+     */
+    int getType();
+
+    /**
+     * <code>optional string body = 4;</code>
+     */
+    boolean hasBody();
+    /**
+     * <code>optional string body = 4;</code>
+     */
+    java.lang.String getBody();
+    /**
+     * <code>optional string body = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getBodyBytes();
+
+    /**
+     * <code>optional int32 id = 5;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional int32 id = 5;</code>
+     */
+    int getId();
+
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SmsInfo}
+   */
+  public static final class SmsInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SmsInfo)
+      SmsInfoOrBuilder {
+    // Use SmsInfo.newBuilder() to construct.
+    private SmsInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SmsInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SmsInfo defaultInstance;
+    public static SmsInfo getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SmsInfo getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SmsInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              address_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              date_ = input.readInt64();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              type_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              body_ = bs;
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              id_ = input.readInt32();
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              name_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SmsInfo_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SmsInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SmsInfo> PARSER =
+        new com.google.protobuf.AbstractParser<SmsInfo>() {
+      public SmsInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SmsInfo(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SmsInfo> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private java.lang.Object address_;
+    /**
+     * <code>optional string address = 1;</code>
+     */
+    public boolean hasAddress() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string address = 1;</code>
+     */
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          address_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string address = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATE_FIELD_NUMBER = 2;
+    private long date_;
+    /**
+     * <code>optional int64 date = 2;</code>
+     */
+    public boolean hasDate() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int64 date = 2;</code>
+     */
+    public long getDate() {
+      return date_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private int type_;
+    /**
+     * <code>optional int32 type = 3;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 type = 3;</code>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    public static final int BODY_FIELD_NUMBER = 4;
+    private java.lang.Object body_;
+    /**
+     * <code>optional string body = 4;</code>
+     */
+    public boolean hasBody() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional string body = 4;</code>
+     */
+    public java.lang.String getBody() {
+      java.lang.Object ref = body_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          body_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string body = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBodyBytes() {
+      java.lang.Object ref = body_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        body_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 5;
+    private int id_;
+    /**
+     * <code>optional int32 id = 5;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 id = 5;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 6;
+    private java.lang.Object name_;
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      address_ = "";
+      date_ = 0L;
+      type_ = 0;
+      body_ = "";
+      id_ = 0;
+      name_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getAddressBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, date_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, type_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getBodyBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, id_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBytes(6, getNameBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getAddressBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, date_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, type_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getBodyBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, id_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getNameBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SmsInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SmsInfo)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SmsInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SmsInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        address_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        date_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        body_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SmsInfo_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.address_ = address_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.date_ = date_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.body_ = body_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.name_ = name_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.getDefaultInstance()) return this;
+        if (other.hasAddress()) {
+          bitField0_ |= 0x00000001;
+          address_ = other.address_;
+          onChanged();
+        }
+        if (other.hasDate()) {
+          setDate(other.getDate());
+        }
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasBody()) {
+          bitField0_ |= 0x00000008;
+          body_ = other.body_;
+          onChanged();
+        }
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000020;
+          name_ = other.name_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>optional string address = 1;</code>
+       */
+      public boolean hasAddress() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string address = 1;</code>
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            address_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string address = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string address = 1;</code>
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address = 1;</code>
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address = 1;</code>
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        address_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long date_ ;
+      /**
+       * <code>optional int64 date = 2;</code>
+       */
+      public boolean hasDate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int64 date = 2;</code>
+       */
+      public long getDate() {
+        return date_;
+      }
+      /**
+       * <code>optional int64 date = 2;</code>
+       */
+      public Builder setDate(long value) {
+        bitField0_ |= 0x00000002;
+        date_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 date = 2;</code>
+       */
+      public Builder clearDate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        date_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 3;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 type = 3;</code>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 3;</code>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000004;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 3;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object body_ = "";
+      /**
+       * <code>optional string body = 4;</code>
+       */
+      public boolean hasBody() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string body = 4;</code>
+       */
+      public java.lang.String getBody() {
+        java.lang.Object ref = body_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            body_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string body = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBodyBytes() {
+        java.lang.Object ref = body_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          body_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string body = 4;</code>
+       */
+      public Builder setBody(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        body_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string body = 4;</code>
+       */
+      public Builder clearBody() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        body_ = getDefaultInstance().getBody();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string body = 4;</code>
+       */
+      public Builder setBodyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        body_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 5;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 id = 5;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 5;</code>
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000010;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 5;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 6;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SmsInfo)
+    }
+
+    static {
+      defaultInstance = new SmsInfo(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SmsInfo)
+  }
+
+  public interface CSQuerySmsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.CSQuerySms)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.CSQuerySms}
+   */
+  public static final class CSQuerySms extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.CSQuerySms)
+      CSQuerySmsOrBuilder {
+    // Use CSQuerySms.newBuilder() to construct.
+    private CSQuerySms(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSQuerySms(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSQuerySms defaultInstance;
+    public static CSQuerySms getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSQuerySms getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSQuerySms(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQuerySms_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQuerySms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSQuerySms> PARSER =
+        new com.google.protobuf.AbstractParser<CSQuerySms>() {
+      public CSQuerySms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSQuerySms(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSQuerySms> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.CSQuerySms}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.CSQuerySms)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySmsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQuerySms_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQuerySms_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_CSQuerySms_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms result = new cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.CSQuerySms) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.CSQuerySms)
+    }
+
+    static {
+      defaultInstance = new CSQuerySms(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.CSQuerySms)
+  }
+
+  public interface SCQuerySmsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:acooo.onecenter.SCQuerySms)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+     */
+    java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> 
+        getInfosList();
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo getInfos(int index);
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+     */
+    int getInfosCount();
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+     */
+    java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+        getInfosOrBuilderList();
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+     */
+    cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder getInfosOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code acooo.onecenter.SCQuerySms}
+   */
+  public static final class SCQuerySms extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:acooo.onecenter.SCQuerySms)
+      SCQuerySmsOrBuilder {
+    // Use SCQuerySms.newBuilder() to construct.
+    private SCQuerySms(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private SCQuerySms(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final SCQuerySms defaultInstance;
+    public static SCQuerySms getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public SCQuerySms getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SCQuerySms(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                infos_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              infos_.add(input.readMessage(cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          infos_ = java.util.Collections.unmodifiableList(infos_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQuerySms_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQuerySms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<SCQuerySms> PARSER =
+        new com.google.protobuf.AbstractParser<SCQuerySms>() {
+      public SCQuerySms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SCQuerySms(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SCQuerySms> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int INFOS_FIELD_NUMBER = 1;
+    private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> infos_;
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+     */
+    public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> getInfosList() {
+      return infos_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+     */
+    public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+        getInfosOrBuilderList() {
+      return infos_;
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+     */
+    public int getInfosCount() {
+      return infos_.size();
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo getInfos(int index) {
+      return infos_.get(index);
+    }
+    /**
+     * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+     */
+    public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder getInfosOrBuilder(
+        int index) {
+      return infos_.get(index);
+    }
+
+    private void initFields() {
+      infos_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < infos_.size(); i++) {
+        output.writeMessage(1, infos_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < infos_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, infos_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code acooo.onecenter.SCQuerySms}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:acooo.onecenter.SCQuerySms)
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySmsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQuerySms_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQuerySms_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms.class, cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms.Builder.class);
+      }
+
+      // Construct using cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getInfosFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (infosBuilder_ == null) {
+          infos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          infosBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.internal_static_acooo_onecenter_SCQuerySms_descriptor;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms getDefaultInstanceForType() {
+        return cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms.getDefaultInstance();
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms build() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms buildPartial() {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms result = new cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms(this);
+        int from_bitField0_ = bitField0_;
+        if (infosBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            infos_ = java.util.Collections.unmodifiableList(infos_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.infos_ = infos_;
+        } else {
+          result.infos_ = infosBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms) {
+          return mergeFrom((cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms other) {
+        if (other == cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms.getDefaultInstance()) return this;
+        if (infosBuilder_ == null) {
+          if (!other.infos_.isEmpty()) {
+            if (infos_.isEmpty()) {
+              infos_ = other.infos_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureInfosIsMutable();
+              infos_.addAll(other.infos_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.infos_.isEmpty()) {
+            if (infosBuilder_.isEmpty()) {
+              infosBuilder_.dispose();
+              infosBuilder_ = null;
+              infos_ = other.infos_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              infosBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getInfosFieldBuilder() : null;
+            } else {
+              infosBuilder_.addAllMessages(other.infos_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cn.acooo.onecenter.core.auto.OneCenterProtos.SCQuerySms) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> infos_ =
+        java.util.Collections.emptyList();
+      private void ensureInfosIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          infos_ = new java.util.ArrayList<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo>(infos_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> infosBuilder_;
+
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> getInfosList() {
+        if (infosBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(infos_);
+        } else {
+          return infosBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public int getInfosCount() {
+        if (infosBuilder_ == null) {
+          return infos_.size();
+        } else {
+          return infosBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo getInfos(int index) {
+        if (infosBuilder_ == null) {
+          return infos_.get(index);
+        } else {
+          return infosBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public Builder setInfos(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo value) {
+        if (infosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfosIsMutable();
+          infos_.set(index, value);
+          onChanged();
+        } else {
+          infosBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public Builder setInfos(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder builderForValue) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          infosBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public Builder addInfos(cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo value) {
+        if (infosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfosIsMutable();
+          infos_.add(value);
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public Builder addInfos(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo value) {
+        if (infosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInfosIsMutable();
+          infos_.add(index, value);
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public Builder addInfos(
+          cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder builderForValue) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.add(builderForValue.build());
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public Builder addInfos(
+          int index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder builderForValue) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          infosBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public Builder addAllInfos(
+          java.lang.Iterable<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo> values) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, infos_);
+          onChanged();
+        } else {
+          infosBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public Builder clearInfos() {
+        if (infosBuilder_ == null) {
+          infos_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          infosBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public Builder removeInfos(int index) {
+        if (infosBuilder_ == null) {
+          ensureInfosIsMutable();
+          infos_.remove(index);
+          onChanged();
+        } else {
+          infosBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder getInfosBuilder(
+          int index) {
+        return getInfosFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder getInfosOrBuilder(
+          int index) {
+        if (infosBuilder_ == null) {
+          return infos_.get(index);  } else {
+          return infosBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public java.util.List<? extends cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+           getInfosOrBuilderList() {
+        if (infosBuilder_ != null) {
+          return infosBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(infos_);
+        }
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder addInfosBuilder() {
+        return getInfosFieldBuilder().addBuilder(
+            cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder addInfosBuilder(
+          int index) {
+        return getInfosFieldBuilder().addBuilder(
+            index, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .acooo.onecenter.SmsInfo infos = 1;</code>
+       */
+      public java.util.List<cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder> 
+           getInfosBuilderList() {
+        return getInfosFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder> 
+          getInfosFieldBuilder() {
+        if (infosBuilder_ == null) {
+          infosBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfo.Builder, cn.acooo.onecenter.core.auto.OneCenterProtos.SmsInfoOrBuilder>(
+                  infos_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          infos_ = null;
+        }
+        return infosBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:acooo.onecenter.SCQuerySms)
+    }
+
+    static {
+      defaultInstance = new SCQuerySms(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:acooo.onecenter.SCQuerySms)
   }
 
   public interface ContactsInfoOrBuilder extends
@@ -7431,6 +19248,111 @@ public final class OneCenterProtos {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_CSNewSms_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_CSNewSms_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SCNewSms_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SCNewSms_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_CSErrorSms_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_CSErrorSms_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SCErrorSms_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SCErrorSms_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_CSQuerySmsById_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_CSQuerySmsById_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SCQuerySmsById_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SCQuerySmsById_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_ConversationInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_ConversationInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_CSQueryConversation_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_CSQueryConversation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SCQueryConversation_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SCQueryConversation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_CSDelete_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_CSDelete_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SCDelete_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SCDelete_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_CSSendSms_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_CSSendSms_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SCSendSms_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SCSendSms_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_CSCallPhone_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_CSCallPhone_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SCCallPhone_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SCCallPhone_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_TalksInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_TalksInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_CSQueryTalks_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_CSQueryTalks_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SCQueryTalks_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SCQueryTalks_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SmsInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SmsInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_CSQuerySms_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_CSQuerySms_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_acooo_onecenter_SCQuerySms_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_acooo_onecenter_SCQuerySms_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_acooo_onecenter_ContactsInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -7499,33 +19421,62 @@ public final class OneCenterProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017onecenter.proto\022\017acooo.onecenter\"T\n\014Co" +
-      "ntactsInfo\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\016\n\006" +
-      "number\030\003 \001(\t\022\014\n\004type\030\004 \001(\005\022\014\n\004icon\030\005 \001(\014" +
-      "\"\021\n\017CSQueryContacts\"?\n\017SCQueryContacts\022," +
-      "\n\005infos\030\001 \003(\0132\035.acooo.onecenter.Contacts" +
-      "Info\"(\n\tImageInfo\022\014\n\004name\030\001 \001(\t\022\r\n\005image" +
-      "\030\002 \001(\014\"<\n\013SCPushImage\022-\n\timageInfo\030\001 \001(\013" +
-      "2\032.acooo.onecenter.ImageInfo\"\r\n\013CSQueryA" +
-      "pps\"7\n\013SCQueryApps\022(\n\004apps\030\001 \003(\0132\032.acooo" +
-      ".onecenter.AppDetail\"{\n\tAppDetail\022\014\n\004ico",
-      "n\030\001 \001(\014\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\022\023" +
-      "\n\013packageName\030\004 \001(\t\022\023\n\013packageSize\030\005 \001(\003" +
-      "\022\027\n\017publicSourceDir\030\006 \001(\t\")\n\005Phone\022\014\n\004im" +
-      "ei\030\001 \002(\t\022\022\n\ndeviceType\030\002 \001(\t\"0\n\007CSLogin\022" +
-      "%\n\005phone\030\001 \001(\0132\026.acooo.onecenter.Phone\"\027" +
-      "\n\007SCLogin\022\014\n\004code\030\001 \001(\005\"4\n\nUDPMessage\022&\n" +
-      "\004type\030\001 \002(\0162\030.acooo.onecenter.UDPType*i\n" +
-      "\013MessageType\022\021\n\014MSG_ID_LOGIN\020\350\007\022\020\n\013MSG_I" +
-      "D_APPS\020\314\010\022\031\n\024MSG_ID_DOWNLOAD_ICON\020\315\010\022\032\n\025" +
-      "MSG_ID_QUERY_CONTACTS\020\316\010*\240\001\n\013MessageCode",
-      "\022\016\n\nSYS_NORMAL\020\001\022\022\n\rErr_Not_Known\020\350\007\022\030\n\023" +
-      "Err_Money_NotEnough\020\351\007\022\030\n\023Err_Power_NotE" +
-      "nough\020\352\007\022\035\n\030Err_BattleSoul_NotEnough\020\353\007\022" +
-      "\032\n\025Err_Diamond_NotEnough\020\354\007*=\n\007UDPType\022\023" +
-      "\n\017SEARCH_ONEBOARD\020\001\022\017\n\013IS_ONEBOARD\020\002\022\014\n\010" +
-      "IS_PHONE\020\003B/\n\034cn.acooo.onecenter.core.au" +
-      "toB\017OneCenterProtos"
+      "\n\017onecenter.proto\022\017acooo.onecenter\"2\n\010CS" +
+      "NewSms\022&\n\004info\030\001 \003(\0132\030.acooo.onecenter.S" +
+      "msInfo\"\n\n\010SCNewSms\"4\n\nCSErrorSms\022&\n\004info" +
+      "\030\001 \003(\0132\030.acooo.onecenter.SmsInfo\"\014\n\nSCEr" +
+      "rorSms\"\034\n\016CSQuerySmsById\022\n\n\002id\030\001 \001(\005\"\034\n\016" +
+      "SCQuerySmsById\022\n\n\002id\030\001 \001(\005\"m\n\020Conversati" +
+      "onInfo\022\n\n\002id\030\001 \001(\005\022\014\n\004date\030\002 \001(\003\022\r\n\005coun" +
+      "t\030\003 \001(\005\022\021\n\trecipient\030\004 \001(\005\022\017\n\007snippet\030\005 " +
+      "\001(\t\022\014\n\004name\030\006 \001(\t\"\025\n\023CSQueryConversation" +
+      "\"N\n\023SCQueryConversation\0227\n\014conversation\030",
+      "\001 \003(\0132!.acooo.onecenter.ConversationInfo" +
+      "\"$\n\010CSDelete\022\n\n\002id\030\001 \001(\t\022\014\n\004type\030\002 \001(\005\"$" +
+      "\n\010SCDelete\022\n\n\002id\030\001 \001(\t\022\014\n\004type\030\002 \001(\005\",\n\t" +
+      "CSSendSms\022\017\n\007content\030\001 \001(\t\022\016\n\006number\030\002 \001" +
+      "(\t\"\031\n\tSCSendSms\022\014\n\004code\030\001 \001(\005\"\035\n\013CSCallP" +
+      "hone\022\016\n\006number\030\001 \001(\t\"\033\n\013SCCallPhone\022\014\n\004c" +
+      "ode\030\001 \001(\005\"c\n\tTalksInfo\022\016\n\006number\030\001 \001(\t\022\014" +
+      "\n\004type\030\002 \001(\005\022\014\n\004date\030\003 \001(\003\022\014\n\004name\030\004 \001(\t" +
+      "\022\020\n\010duration\030\005 \001(\003\022\n\n\002id\030\006 \001(\005\"\016\n\014CSQuer" +
+      "yTalks\"9\n\014SCQueryTalks\022)\n\005talks\030\001 \003(\0132\032.",
+      "acooo.onecenter.TalksInfo\"^\n\007SmsInfo\022\017\n\007" +
+      "address\030\001 \001(\t\022\014\n\004date\030\002 \001(\003\022\014\n\004type\030\003 \001(" +
+      "\005\022\014\n\004body\030\004 \001(\t\022\n\n\002id\030\005 \001(\005\022\014\n\004name\030\006 \001(" +
+      "\t\"\014\n\nCSQuerySms\"5\n\nSCQuerySms\022\'\n\005infos\030\001" +
+      " \003(\0132\030.acooo.onecenter.SmsInfo\"T\n\014Contac" +
+      "tsInfo\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\016\n\006numb" +
+      "er\030\003 \001(\t\022\014\n\004type\030\004 \001(\005\022\014\n\004icon\030\005 \001(\014\"\021\n\017" +
+      "CSQueryContacts\"?\n\017SCQueryContacts\022,\n\005in" +
+      "fos\030\001 \003(\0132\035.acooo.onecenter.ContactsInfo" +
+      "\"(\n\tImageInfo\022\014\n\004name\030\001 \001(\t\022\r\n\005image\030\002 \001",
+      "(\014\"<\n\013SCPushImage\022-\n\timageInfo\030\001 \001(\0132\032.a" +
+      "cooo.onecenter.ImageInfo\"\r\n\013CSQueryApps\"" +
+      "7\n\013SCQueryApps\022(\n\004apps\030\001 \003(\0132\032.acooo.one" +
+      "center.AppDetail\"{\n\tAppDetail\022\014\n\004icon\030\001 " +
+      "\001(\014\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\022\023\n\013pa" +
+      "ckageName\030\004 \001(\t\022\023\n\013packageSize\030\005 \001(\003\022\027\n\017" +
+      "publicSourceDir\030\006 \001(\t\")\n\005Phone\022\014\n\004imei\030\001" +
+      " \002(\t\022\022\n\ndeviceType\030\002 \001(\t\"0\n\007CSLogin\022%\n\005p" +
+      "hone\030\001 \001(\0132\026.acooo.onecenter.Phone\"\027\n\007SC" +
+      "Login\022\014\n\004code\030\001 \001(\005\"4\n\nUDPMessage\022&\n\004typ",
+      "e\030\001 \002(\0162\030.acooo.onecenter.UDPType*\263\002\n\013Me" +
+      "ssageType\022\021\n\014MSG_ID_LOGIN\020\350\007\022\020\n\013MSG_ID_A" +
+      "PPS\020\314\010\022\031\n\024MSG_ID_DOWNLOAD_ICON\020\315\010\022\032\n\025MSG" +
+      "_ID_QUERY_CONTACTS\020\316\010\022\024\n\017MSG_ID_SHOW_MSG" +
+      "\020\317\010\022\027\n\022MSG_ID_QUERY_TALKS\020\320\010\022\020\n\013MSG_ID_C" +
+      "ALL\020\321\010\022\020\n\013MSG_ID_SEND\020\322\010\022\022\n\rMSG_ID_DELET" +
+      "E\020\323\010\022\036\n\031MSG_ID_QUERY_CONVERSATION\020\324\010\022\025\n\020" +
+      "MSG_ID_QUERY_SMS\020\325\010\022\025\n\020MSG_ID_SMS_ERROE\020" +
+      "\326\010\022\023\n\016MSG_ID_NEW_SMS\020\327\010*\240\001\n\013MessageCode\022" +
+      "\016\n\nSYS_NORMAL\020\001\022\022\n\rErr_Not_Known\020\350\007\022\030\n\023E",
+      "rr_Money_NotEnough\020\351\007\022\030\n\023Err_Power_NotEn" +
+      "ough\020\352\007\022\035\n\030Err_BattleSoul_NotEnough\020\353\007\022\032" +
+      "\n\025Err_Diamond_NotEnough\020\354\007*=\n\007UDPType\022\023\n" +
+      "\017SEARCH_ONEBOARD\020\001\022\017\n\013IS_ONEBOARD\020\002\022\014\n\010I" +
+      "S_PHONE\020\003B/\n\034cn.acooo.onecenter.core.aut" +
+      "oB\017OneCenterProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7539,74 +19490,200 @@ public final class OneCenterProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_acooo_onecenter_ContactsInfo_descriptor =
+    internal_static_acooo_onecenter_CSNewSms_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_acooo_onecenter_CSNewSms_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_CSNewSms_descriptor,
+        new java.lang.String[] { "Info", });
+    internal_static_acooo_onecenter_SCNewSms_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_acooo_onecenter_SCNewSms_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SCNewSms_descriptor,
+        new java.lang.String[] { });
+    internal_static_acooo_onecenter_CSErrorSms_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_acooo_onecenter_CSErrorSms_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_CSErrorSms_descriptor,
+        new java.lang.String[] { "Info", });
+    internal_static_acooo_onecenter_SCErrorSms_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_acooo_onecenter_SCErrorSms_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SCErrorSms_descriptor,
+        new java.lang.String[] { });
+    internal_static_acooo_onecenter_CSQuerySmsById_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_acooo_onecenter_CSQuerySmsById_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_CSQuerySmsById_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_acooo_onecenter_SCQuerySmsById_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_acooo_onecenter_SCQuerySmsById_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SCQuerySmsById_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_acooo_onecenter_ConversationInfo_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_acooo_onecenter_ConversationInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_ConversationInfo_descriptor,
+        new java.lang.String[] { "Id", "Date", "Count", "Recipient", "Snippet", "Name", });
+    internal_static_acooo_onecenter_CSQueryConversation_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_acooo_onecenter_CSQueryConversation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_CSQueryConversation_descriptor,
+        new java.lang.String[] { });
+    internal_static_acooo_onecenter_SCQueryConversation_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_acooo_onecenter_SCQueryConversation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SCQueryConversation_descriptor,
+        new java.lang.String[] { "Conversation", });
+    internal_static_acooo_onecenter_CSDelete_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_acooo_onecenter_CSDelete_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_CSDelete_descriptor,
+        new java.lang.String[] { "Id", "Type", });
+    internal_static_acooo_onecenter_SCDelete_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_acooo_onecenter_SCDelete_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SCDelete_descriptor,
+        new java.lang.String[] { "Id", "Type", });
+    internal_static_acooo_onecenter_CSSendSms_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_acooo_onecenter_CSSendSms_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_CSSendSms_descriptor,
+        new java.lang.String[] { "Content", "Number", });
+    internal_static_acooo_onecenter_SCSendSms_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_acooo_onecenter_SCSendSms_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SCSendSms_descriptor,
+        new java.lang.String[] { "Code", });
+    internal_static_acooo_onecenter_CSCallPhone_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_acooo_onecenter_CSCallPhone_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_CSCallPhone_descriptor,
+        new java.lang.String[] { "Number", });
+    internal_static_acooo_onecenter_SCCallPhone_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_acooo_onecenter_SCCallPhone_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SCCallPhone_descriptor,
+        new java.lang.String[] { "Code", });
+    internal_static_acooo_onecenter_TalksInfo_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_acooo_onecenter_TalksInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_TalksInfo_descriptor,
+        new java.lang.String[] { "Number", "Type", "Date", "Name", "Duration", "Id", });
+    internal_static_acooo_onecenter_CSQueryTalks_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_acooo_onecenter_CSQueryTalks_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_CSQueryTalks_descriptor,
+        new java.lang.String[] { });
+    internal_static_acooo_onecenter_SCQueryTalks_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_acooo_onecenter_SCQueryTalks_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SCQueryTalks_descriptor,
+        new java.lang.String[] { "Talks", });
+    internal_static_acooo_onecenter_SmsInfo_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_acooo_onecenter_SmsInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SmsInfo_descriptor,
+        new java.lang.String[] { "Address", "Date", "Type", "Body", "Id", "Name", });
+    internal_static_acooo_onecenter_CSQuerySms_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_acooo_onecenter_CSQuerySms_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_CSQuerySms_descriptor,
+        new java.lang.String[] { });
+    internal_static_acooo_onecenter_SCQuerySms_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_acooo_onecenter_SCQuerySms_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_acooo_onecenter_SCQuerySms_descriptor,
+        new java.lang.String[] { "Infos", });
+    internal_static_acooo_onecenter_ContactsInfo_descriptor =
+      getDescriptor().getMessageTypes().get(21);
     internal_static_acooo_onecenter_ContactsInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_ContactsInfo_descriptor,
         new java.lang.String[] { "Id", "Name", "Number", "Type", "Icon", });
     internal_static_acooo_onecenter_CSQueryContacts_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_acooo_onecenter_CSQueryContacts_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_CSQueryContacts_descriptor,
         new java.lang.String[] { });
     internal_static_acooo_onecenter_SCQueryContacts_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_acooo_onecenter_SCQueryContacts_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCQueryContacts_descriptor,
         new java.lang.String[] { "Infos", });
     internal_static_acooo_onecenter_ImageInfo_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_acooo_onecenter_ImageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_ImageInfo_descriptor,
         new java.lang.String[] { "Name", "Image", });
     internal_static_acooo_onecenter_SCPushImage_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_acooo_onecenter_SCPushImage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCPushImage_descriptor,
         new java.lang.String[] { "ImageInfo", });
     internal_static_acooo_onecenter_CSQueryApps_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_acooo_onecenter_CSQueryApps_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_CSQueryApps_descriptor,
         new java.lang.String[] { });
     internal_static_acooo_onecenter_SCQueryApps_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_acooo_onecenter_SCQueryApps_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCQueryApps_descriptor,
         new java.lang.String[] { "Apps", });
     internal_static_acooo_onecenter_AppDetail_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_acooo_onecenter_AppDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_AppDetail_descriptor,
         new java.lang.String[] { "Icon", "Name", "Version", "PackageName", "PackageSize", "PublicSourceDir", });
     internal_static_acooo_onecenter_Phone_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_acooo_onecenter_Phone_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_Phone_descriptor,
         new java.lang.String[] { "Imei", "DeviceType", });
     internal_static_acooo_onecenter_CSLogin_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_acooo_onecenter_CSLogin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_CSLogin_descriptor,
         new java.lang.String[] { "Phone", });
     internal_static_acooo_onecenter_SCLogin_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_acooo_onecenter_SCLogin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_SCLogin_descriptor,
         new java.lang.String[] { "Code", });
     internal_static_acooo_onecenter_UDPMessage_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_acooo_onecenter_UDPMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_acooo_onecenter_UDPMessage_descriptor,
