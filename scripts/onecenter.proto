@@ -11,6 +11,98 @@ enum MessageType
 	MSG_ID_APPS = 1100;//查询应用列表
 	MSG_ID_DOWNLOAD_ICON = 1101;//下载icon
 	MSG_ID_QUERY_CONTACTS = 1102;//查询联系人
+	MSG_ID_SHOW_MSG = 1103;//显示短信
+	MSG_ID_QUERY_TALKS = 1104;//查询通话记录
+	MSG_ID_CALL = 1105;//拨号
+	MSG_ID_SEND = 1106;//发送短信
+	MSG_ID_DELETE = 1107;//删除
+	MSG_ID_QUERY_CONVERSATION = 1108;//查询会话
+	MSG_ID_QUERY_SMS = 1109;//根据ID查询短信
+	MSG_ID_SMS_ERROE = 1110;//发送短信失败
+	MSG_ID_NEW_SMS = 1111;//接收到新的短信
+} 
+message CSNewSms{
+	repeated SmsInfo info = 1;
+}
+message SCNewSms{
+	
+}
+
+message CSErrorSms{
+	repeated SmsInfo info = 1;
+}
+message SCErrorSms{
+	
+}
+message CSQuerySmsById{
+	optional int32 id = 1;
+}
+message SCQuerySmsById{
+	optional int32 id = 1;
+}
+message ConversationInfo{
+	optional int32 id = 1;
+	optional int64 date = 2;
+	optional int32 count = 3;
+	optional int32 recipient = 4;
+	optional string snippet = 5;
+	optional string name = 6;
+}
+message CSQueryConversation{
+	
+}
+message SCQueryConversation{
+	repeated ConversationInfo conversation = 1;
+}
+message CSDelete{
+	optional string id = 1;
+	optional int32 type = 2;
+}
+message SCDelete{
+	optional string id = 1;
+	optional int32 type = 2;
+}
+message CSSendSms{
+	optional string content = 1;
+	optional string number = 2;
+}
+message SCSendSms{
+	optional int32 code = 1;
+}
+message CSCallPhone{
+	optional string number = 1;
+}
+message SCCallPhone{
+	optional int32 code = 1;
+}
+
+message TalksInfo{
+	optional string number = 1;
+	optional int32 type = 2;
+	optional int64 date = 3;
+	optional string name = 4;
+	optional int64 duration = 5;
+	optional int32 id = 6;
+}
+message CSQueryTalks{
+
+}
+message SCQueryTalks{
+	repeated TalksInfo talks = 1;
+}
+message SmsInfo{
+	optional string address = 1;
+	optional int64 date = 2;
+	optional int32 type = 3;
+	optional string body = 4;
+	optional int32 id = 5;
+	optional string name = 6;
+}
+message CSQuerySms{
+	
+}
+message SCQuerySms{
+	repeated SmsInfo infos = 1;
 }
 message ContactsInfo{
 	optional int64 id = 1;

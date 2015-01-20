@@ -6,6 +6,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.util.Log;
@@ -14,7 +16,9 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.acooo.onecenter.core.auto.OneCenterProtos;
 import cn.acooo.onecenter.core.model.ContactsInfo;
+import cn.acooo.onecenter.phone.App;
 
 public class AppLogic {
 	private final static AppLogic appLogic = new AppLogic();
