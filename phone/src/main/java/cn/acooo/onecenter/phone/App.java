@@ -13,6 +13,7 @@ import java.util.Map;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageCode;
 import cn.acooo.onecenter.core.auto.OneCenterProtos.MessageType;
 import cn.acooo.onecenter.core.netty.KMessage;
+import cn.acooo.onecenter.phone.service.PhoneUdpServer;
 import io.netty.channel.ChannelHandlerContext;
 
 public class App extends Application {
@@ -22,7 +23,8 @@ public class App extends Application {
 	public static final String TAG = "ONE";
 	public static Handler handler;
     public static Server jettyServer;
-    //public static Map<String,ByteString> IconCache = new HashMap<String,ByteString>();
+    public static PhoneUdpServer phoneUdpServer;
+
 	/**
 	 * <packageName,publicSourceDir>
 	 */

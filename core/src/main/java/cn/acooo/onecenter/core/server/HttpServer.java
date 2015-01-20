@@ -1,4 +1,4 @@
-package cn.acooo.onecenter.phone.jetty;
+package cn.acooo.onecenter.core.server;
 
 import android.util.Log;
 
@@ -8,7 +8,8 @@ import org.eclipse.jetty.server.handler.DefaultHandler;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
-import cn.acooo.onecenter.phone.App;
+
+import cn.acooo.onecenter.core.BaseActivity;
 
 
 /**
@@ -16,6 +17,12 @@ import cn.acooo.onecenter.phone.App;
  */
 public class HttpServer implements Runnable {
     private int port = 9090;
+    private Server server;
+
+    public Server getServer() {
+        return server;
+    }
+
     public HttpServer(){
 
     }
@@ -26,7 +33,7 @@ public class HttpServer implements Runnable {
     @Override
     public void run() {
         try{
-            Server server = new Server();
+            server = new Server();
             SelectChannelConnector connector = new SelectChannelConnector();
             connector.setPort(port);
             server.addConnector(connector);
@@ -40,10 +47,9 @@ public class HttpServer implements Runnable {
             server.setHandler(handlers);
             server.start();
             Log.i("ONE","jetty server starting");
-            App.jettyServer = server;
             server.join();
         }catch (Exception e){
-            Log.e(App.TAG, "jetty start error", e);
+            Log.e(BaseActivity.TAG, "jetty start error", e);
         }
     }
 }

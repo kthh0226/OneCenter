@@ -7,17 +7,18 @@ import android.os.IBinder;
 import android.util.Log;
 
 import cn.acooo.onecenter.core.BaseActivity;
+import cn.acooo.onecenter.core.server.HttpServer;
 import cn.acooo.onecenter.phone.App;
-import cn.acooo.onecenter.phone.jetty.HttpServer;
 
 public class SocketService extends Service{
 	
 	public final static String KEY_IP = "ip";
 	public final static String KEY_PORT = "port";
 	private final static String TAG = "SocketService";
+    private final static int NETTY_PORT = 9999;
+    private final static int JETTY_PORT = 9090;
 	private IBinder binder = new SocketService.MyBind();
-	private Client client;
-	
+
 	@Override
 	public void onCreate() {
 		super.onCreate();
@@ -30,20 +31,23 @@ public class SocketService extends Service{
 		Log.i(TAG, "socketService is onStartCommand");
 		if(!App.socketIsRun){
 			String ip = intent.getStringExtra(KEY_IP);
-			int port = intent.getIntExtra(KEY_PORT,9999);
+			int port = intent.getIntExtra(KEY_PORT,NETTY_PORT);
 			Log.i(TAG, "connect server ip:"+ip+",port:"+port);
-			client = new Client(ip,port);
-			new Thread(client).start();
+			new Thread(new Client(ip,port)).start();
 		}else{
 			App.handler.sendEmptyMessage(BaseActivity.UI_MSG_ID_AREADY_CONNECTED);
 		}
         Log.i(TAG,"httpServer=="+App.jettyServer);
 		if(App.jettyServer == null || !App.jettyServer.isRunning()){
             Log.i(TAG,"jetty begin start");
-            Thread t = new Thread(new HttpServer(9090));
+            HttpServer httpServer = new HttpServer(JETTY_PORT);
+            Thread t = new Thread(httpServer);
             t.setDaemon(true);
             t.start();
+            App.jettyServer = httpServer.getServer();
         }
+
+
 		return Service.START_STICKY;
 	}
 
@@ -63,7 +67,6 @@ public class SocketService extends Service{
                Log.e(TAG,"jetty http server stop error",e);
             }
         }
-		super.onDestroy();
 	}
 
 	public class MyBind extends Binder{

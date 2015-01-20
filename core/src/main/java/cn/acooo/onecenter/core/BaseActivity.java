@@ -12,7 +12,7 @@ public abstract class BaseActivity extends Activity {
         this.initHandler();
     }
 
-	protected String TAG = "ONE";
+	public static String TAG = "ONE";
 	/**
 	 * 连接成功
 	 */
@@ -35,6 +35,12 @@ public abstract class BaseActivity extends Activity {
 	 * 有新的电话连接上
 	 */
 	public final static int UI_MSG_ID_NEW_PHONE = 5;
+
+    /**
+     * 发现新的OneBoard
+     */
+    public final static int UI_MSG_ID_NEW_ONEBOARD = 6;
+
 
 	protected Handler myHandler = new Handler(getActivityCallBack()) {
 		public void handleMessage(Message msg) {
