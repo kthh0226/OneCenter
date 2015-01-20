@@ -8,6 +8,12 @@
 	<uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_SMS"></uses-permission>
     <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"></uses-permission>
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -24,6 +30,12 @@
             </intent-filter>
         </activity>
         <service android:enabled="true" android:name=".service.SocketService" android:permission="cn.acooo.onecenter"></service>
+        <receiver android:name=".receiver.SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provier.Telephony.SMS_RECEIVED"/>
+                <action android:name="android.provier.Telephony.SMS_SEND"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
