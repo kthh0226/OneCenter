@@ -127,27 +127,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyPhoneActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MyPhoneActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3090" max-vertical-offset="4020">
-              <caret line="271" column="13" selection-start-line="271" selection-start-column="13" selection-end-line="271" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.78745645" vertical-offset="3403" max-vertical-offset="4035">
+              <caret line="304" column="25" selection-start-line="304" selection-start-column="25" selection-end-line="304" selection-end-column="25" />
               <folding>
-                <element signature="e#10855#10856#0" expanded="true" />
-                <element signature="e#10894#10895#0" expanded="true" />
-                <element signature="e#13945#14094#0" expanded="true" />
-                <element signature="e#14083#14084#0" expanded="true" />
-                <element signature="e#14132#15096#0" expanded="true" />
-                <element signature="e#15085#15086#0" expanded="true" />
+                <element signature="e#10892#10893#0" expanded="true" />
+                <element signature="e#10931#10932#0" expanded="true" />
+                <element signature="e#13982#14131#0" expanded="true" />
+                <element signature="e#14120#14121#0" expanded="true" />
+                <element signature="e#14169#15133#0" expanded="true" />
+                <element signature="e#15122#15123#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/phone/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8432056" vertical-offset="41" max-vertical-offset="705">
+            <state vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="705">
               <caret line="35" column="72" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="72" />
               <folding />
             </state>
@@ -1676,8 +1676,8 @@
         <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/receiver/SmsReceiver.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/model/SmsInfo.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/adapter/ListSmsAdapter.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneActivity.java" />
         <option value="$PROJECT_DIR$/phone/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneActivity.java" />
       </list>
     </option>
   </component>
@@ -2700,7 +2700,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="962" extended-state="1" />
+    <frame x="0" y="23" width="1680" height="962" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -3191,21 +3191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3090" max-vertical-offset="4020">
-          <caret line="271" column="13" selection-start-line="271" selection-start-column="13" selection-end-line="271" selection-end-column="13" />
-          <folding>
-            <element signature="e#10855#10856#0" expanded="true" />
-            <element signature="e#10894#10895#0" expanded="true" />
-            <element signature="e#13945#14094#0" expanded="true" />
-            <element signature="e#14083#14084#0" expanded="true" />
-            <element signature="e#14132#15096#0" expanded="true" />
-            <element signature="e#15085#15086#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/utils/MyContant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
@@ -3216,9 +3201,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/phone/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8432056" vertical-offset="41" max-vertical-offset="705">
+        <state vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="705">
           <caret line="35" column="72" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="72" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78745645" vertical-offset="3403" max-vertical-offset="4035">
+          <caret line="304" column="25" selection-start-line="304" selection-start-column="25" selection-end-line="304" selection-end-column="25" />
+          <folding>
+            <element signature="e#10892#10893#0" expanded="true" />
+            <element signature="e#10931#10932#0" expanded="true" />
+            <element signature="e#13982#14131#0" expanded="true" />
+            <element signature="e#14120#14121#0" expanded="true" />
+            <element signature="e#14169#15133#0" expanded="true" />
+            <element signature="e#15122#15123#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

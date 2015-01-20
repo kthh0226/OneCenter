@@ -143,6 +143,7 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
                             OneCenterProtos.SmsInfo newInfo = newSms.getInfo(0);
                             listSmsAdapter.addSms(new SmsInfo(newInfo));
                         }
+                        return true;
 
                     case MessageType.MSG_ID_DELETE_VALUE:
                         OneCenterProtos.SCDelete delete = OneCenterProtos.SCDelete.parseFrom((byte[])msg.obj);
