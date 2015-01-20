@@ -26,9 +26,9 @@ import cn.acooo.onecenter.core.auto.OneCenterProtos.SCQueryApps;
 import cn.acooo.onecenter.core.model.ContactsInfo;
 import cn.acooo.onecenter.core.utils.CommonsUtil;
 import cn.acooo.onecenter.core.utils.ImageUtil;
-import cn.acooo.onecenter.core.utils.UDPUtils;
 import cn.acooo.onecenter.phone.logic.AppLogic;
 import cn.acooo.onecenter.phone.service.SocketService;
+import cn.acooo.onecenter.phone.service.UDPService;
 
 public class MainActivity extends BaseActivity {
 	private EditText ip;
@@ -46,6 +46,12 @@ public class MainActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		Button connectButton = (Button) findViewById(R.id.connect);
+
+        if(App.phoneUdpServer == null || !App.phoneUdpServer.isRun()){
+            Intent udpServiceIntent = new Intent(this,UDPService.class);
+            startService(udpServiceIntent);
+        }
+
 		ip = (EditText)findViewById(R.id.ip);
 		port = (EditText)findViewById(R.id.port);
 		socketServiceIntent = new Intent(this,SocketService.class);
@@ -77,13 +83,7 @@ public class MainActivity extends BaseActivity {
         scanButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Log.i(TAG,"scan starting...");
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        UDPUtils.send(OneCenterProtos.UDPType.SEARCH_ONEBOARD,null,9998);
-                    }
-                }).start();
+                App.phoneUdpServer.scanOneBoard();
             }
         });
 
@@ -91,7 +91,7 @@ public class MainActivity extends BaseActivity {
         cancelScanButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Log.i(TAG,"cancelScan...");
+                App.phoneUdpServer.cancelScanOneBoard();
             }
         });
 	}
@@ -119,6 +119,10 @@ public class MainActivity extends BaseActivity {
 				try{
                     Log.d(TAG,msg.toString());
 					switch(msg.what){
+                    case BaseActivity.UI_MSG_ID_NEW_ONEBOARD:{
+                        ip.setText(App.phoneUdpServer.getRandomIP());
+                        return true;
+                        }
 					case OneCenterProtos.MessageType.MSG_ID_APPS_VALUE:
 						Log.i(TAG, "into UI_MSG_ID_NEW_PHONE handle message,msg="+msg);
 

@@ -6,6 +6,7 @@ import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 
+import cn.acooo.onecenter.core.BaseActivity;
 import cn.acooo.onecenter.core.auto.OneCenterProtos;
 
 /**
@@ -24,6 +25,7 @@ public class UDPUtils {
      * @param port
      */
     public static void send(OneCenterProtos.UDPType type,String ip,Integer port){
+
         if(ip == null){
             ip = BROADCAST_IP;
         }
@@ -38,8 +40,7 @@ public class UDPUtils {
             ms.setTimeToLive(4);
             OneCenterProtos.UDPMessage.Builder builder = OneCenterProtos.UDPMessage.newBuilder();
             builder.setType(type);
-
-            //将本机的IP（这里可以写动态获取的IP）地址放到数据包里，其实server端接收到数据包后也能获取到发包方的IP的
+            Log.i(BaseActivity.TAG,"send message="+builder);
             byte[] data = builder.build().toByteArray();
             InetAddress address = InetAddress.getByName(ip);
             DatagramPacket dataPacket = new DatagramPacket(data, data.length, address,port);

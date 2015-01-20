@@ -43,103 +43,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyPhoneActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneActivity.java">
+      <file leaf-file-name="UDPService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/UDPService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="993" max-vertical-offset="1425">
-              <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="555">
+              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OneCenterProtos.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/auto/OneCenterProtos.java">
+      <file leaf-file-name="BaseActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.5" vertical-offset="14220" max-vertical-offset="100965">
-              <caret line="166" column="7" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="1320">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="795">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhoneUdpServer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/PhoneUdpServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7345133" vertical-offset="861" max-vertical-offset="1200">
+              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding>
-                <element signature="e#0#255504#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#521#529#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerInitializer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/ServerInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/ServerHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1275">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="App.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/App.java">
+        <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-              <caret line="13" column="16" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpServer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/jetty/HttpServer.java">
+      <file leaf-file-name="UDPUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/utils/UDPUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="690">
-              <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="825">
+              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KMessage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/netty/KMessage.java">
+      <file leaf-file-name="TimeUnit.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///data/android-sdk/sources/android-21/java/util/concurrent/TimeUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4212" max-vertical-offset="4845">
+              <caret line="326" column="63" selection-start-line="326" selection-start-column="43" selection-end-line="326" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KMessageDecoder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/netty/KMessageDecoder.java">
+      <file leaf-file-name="ServerService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/service/ServerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+              <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KMessageEncoder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/netty/KMessageEncoder.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="2070">
+              <caret line="129" column="28" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
+              <folding>
+                <element signature="e#2808#2974#0" expanded="true" />
+                <element signature="e#2963#2964#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sender.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/netty/Sender.java">
+      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phone/src/main/res/layout/activity_main.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="23" />
+            <state vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="1455">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -1604,16 +1611,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/model/MyPhoneItem.java" />
-        <option value="$PROJECT_DIR$/server/src/main/res/layout/activity_phone_item_list.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/server/build.gradle" />
-        <option value="$PROJECT_DIR$/server/src/main/res/layout/phone_item.xml" />
-        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneItemListFragment.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneFeatureDetailsListFragment.java" />
-        <option value="$PROJECT_DIR$/server/src/main/res/layout/activity_phone.xml" />
-        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/model/AppItem.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/model/ContactsInfo.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/model/MyPhoneContent.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/model/PhoneMenus.java" />
         <option value="$PROJECT_DIR$/server/src/main/res/layout/contacts_item.xml" />
@@ -1621,7 +1618,6 @@
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/ViewHolder/ContactsViewHolder.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/model/ContactsInfo.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/model/AppItem.java" />
-        <option value="$PROJECT_DIR$/phone/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/adapter/ContactsAdapter.java" />
         <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/ClientHandler.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/utils/ImageUtil.java" />
@@ -1630,11 +1626,8 @@
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/Server.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/Server.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/jetty/HelloHandler.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/service/ServerService.java" />
         <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/jetty/HelloHandler.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/jetty/HttpServer.java" />
-        <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/jetty/HttpServer.java" />
-        <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/SocketService.java" />
         <option value="$PROJECT_DIR$/core/build.gradle" />
         <option value="$PROJECT_DIR$/server/src/main/res/layout/app_item.xml" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/ViewHolder/AppViewHolder.java" />
@@ -1644,22 +1637,37 @@
         <option value="$PROJECT_DIR$/server/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/App.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/async/DownloadAppTask.java" />
-        <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/App.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/model/AppInfo.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/adapter/MyAppListAdapter.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneActivity.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/ServerHandler.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/AppDetailListFragment.java" />
-        <option value="$PROJECT_DIR$/phone/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/IndexActivity.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/utils/CommonsUtil.java" />
         <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/logic/AppLogic.java" />
+        <option value="$PROJECT_DIR$/server/src/main/res/layout/app_list_viewholder.xml" />
+        <option value="$PROJECT_DIR$/server/src/main/res/layout/app_detail.xml" />
+        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/AppDetailListFragment.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneActivity.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/IndexActivity.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/udp/UDPServer.java" />
+        <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/jetty/HttpServer.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/server/HttpServer.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/service/ServerService.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/OneBoardUdpServer.java" />
+        <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/SocketService.java" />
+        <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/App.java" />
+        <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/UDPIntentService.java" />
+        <option value="$PROJECT_DIR$/phone/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/server/UDPServer.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/utils/UDPUtils.java" />
+        <option value="$PROJECT_DIR$/phone/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/BaseActivity.java" />
         <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/MainActivity.java" />
+        <option value="$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/PhoneUdpServer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="5" />
+    <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="777" />
   </component>
@@ -1759,7 +1767,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1769,21 +1777,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OneCenter" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1791,7 +1785,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1801,7 +1795,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1809,22 +1803,90 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="auto" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneCenter" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneCenter" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phone" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneCenter" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phone" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneCenter" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phone" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phone" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneCenter" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phone" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phone" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1853,6 +1915,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1866,13 +1938,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="android.project.structure.last.selected" value="core" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="options.lastSelected" value="editor.preferences.folding" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/server/src/main/java" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0034048e57065329" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.1.22:5555" />
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -2115,24 +2187,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
+    <frame x="5" y="24" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32754344" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21575847" sideWeight="0.50119334" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28441754" sideWeight="0.28513733" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27836612" sideWeight="0.33279485" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5308465" sideWeight="0.3460972" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5295008" sideWeight="0.34491116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28441754" sideWeight="0.7148627" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5308465" sideWeight="0.6531664" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44478065" sideWeight="0.66720515" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45234492" sideWeight="0.28594506" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23667206" sideWeight="0.4988067" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45767576" sideWeight="0.7349043" order="14" side_tool="true" content_ui="tabs" />
@@ -2145,8 +2218,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267776" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2167,52 +2239,65 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///data/android-sdk/sources/android-21/java/io/BufferedOutputStream.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/netty/KMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="2670">
-          <caret line="120" column="55" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/activity_phone.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="810">
-          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-          <folding>
-            <element signature="e#1052#1070#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-6.111111" vertical-offset="0" max-vertical-offset="405">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/receiver/BootReceiver.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/phone_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="675">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        <state vertical-scroll-proportion="-4.4444447" vertical-offset="0" max-vertical-offset="255">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/java/io/File.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/adapter/MyAppListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10607" max-vertical-offset="16575">
-          <caret line="782" column="18" selection-start-line="782" selection-start-column="18" selection-end-line="782" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1770">
+          <caret line="52" column="48" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneFeatureListFragment.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/app_detail.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1120" max-vertical-offset="2190">
-          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="555">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/widget/ListAdapter.java">
+    <entry file="file:///data/android-sdk/sources/android-21/android/app/ListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="690">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1920" max-vertical-offset="6600">
+          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///data/android-sdk/sources/android-21/android/view/LayoutInflater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5169" max-vertical-offset="14715">
+          <caret line="404" column="67" selection-start-line="404" selection-start-column="67" selection-end-line="404" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -2223,361 +2308,346 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/os/AsyncTask.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneFeatureListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.076923" vertical-offset="2591" max-vertical-offset="9645">
-          <caret line="199" column="60" selection-start-line="199" selection-start-column="60" selection-end-line="199" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2190">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/content/pm/PackageItemInfo.java">
+    <entry file="file:///data/android-sdk/sources/android-21/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1693" max-vertical-offset="4635">
-          <caret line="153" column="20" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone/src/main/res/drawable-hdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/2.6.1/cf47bfc6a10f85d14bc4c078a48d163b5903a291/protobuf-java-2.6.1-sources.jar!/com/google/protobuf/ByteString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14550">
-          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="445" max-vertical-offset="1290">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.0.24.Final/78895f66b88471d175d2404f27f469d6313260e2/netty-all-4.0.24.Final-sources.jar!/io/netty/channel/ChannelHandlerContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6058" max-vertical-offset="7155">
-          <caret line="442" column="18" selection-start-line="442" selection-start-column="18" selection-end-line="442" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/widget/Adapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2115">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/model/AppInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1365">
-          <caret line="64" column="11" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/os/Looper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1670" max-vertical-offset="4125">
-          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/database/DataSetObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="495">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/widget/BaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="870">
-          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.0.24.Final/78895f66b88471d175d2404f27f469d6313260e2/netty-all-4.0.24.Final-sources.jar!/io/netty/channel/ChannelInboundHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="953" max-vertical-offset="1695">
-          <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/activity_phone.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.2222223" vertical-offset="90" max-vertical-offset="405">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="11369" max-vertical-offset="18285">
+          <caret line="838" column="22" selection-start-line="838" selection-start-column="22" selection-end-line="838" selection-end-column="22" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/app_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.111111" vertical-offset="165" max-vertical-offset="840">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/contacts_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/app_list_viewholder.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/phone_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="309">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/my_phone.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/index.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="735">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/content/pm/PackageInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="707" max-vertical-offset="5025">
-          <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+        <state vertical-scroll-proportion="-14.814815" vertical-offset="230" max-vertical-offset="735">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phone/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/server/src/main/res/layout/app_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/async/DownloadAppTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1770">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/adapter/MyAppListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1770">
-          <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/content/ContextWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="482" max-vertical-offset="8235">
-          <caret line="88" column="15" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/AppDetailListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/os/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11205">
-          <caret line="112" column="11" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/app/ListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="6135">
-          <caret line="147" column="25" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///data/android-sdk/sources/android-21/android/content/pm/PackageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30480" max-vertical-offset="61515">
-          <caret line="2032" column="32" selection-start-line="2032" selection-start-column="32" selection-end-line="2032" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/utils/CommonsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/logic/AppLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="810">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="1725">
-          <caret line="111" column="63" selection-start-line="111" selection-start-column="63" selection-end-line="111" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/IndexActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1140">
-          <caret line="79" column="51" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/service/ServerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="855">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <caret line="43" column="45" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/jetty/HttpServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="690">
-          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
-          <folding />
+        <state vertical-scroll-proportion="-0.5555556" vertical-offset="0" max-vertical-offset="840">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/netty/KMessageDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="690">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/netty/KMessageEncoder.java">
+    <entry file="file:///data/android-sdk/sources/android-21/android/content/pm/PackageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="-98.11871" vertical-offset="49470" max-vertical-offset="60795">
+          <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/netty/Sender.java">
+    <entry file="file:///data/android-sdk/sources/android-21/java/net/DatagramSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="23" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3330" max-vertical-offset="10110">
+          <caret line="263" column="29" selection-start-line="263" selection-start-column="29" selection-end-line="263" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/App.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/adapter/PhonesAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="16" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/netty/KMessage.java">
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/model/PhoneClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/ServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1275">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="1275">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/auto/OneCenterProtos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="100378" max-vertical-offset="106455">
+          <caret line="7208" column="74" selection-start-line="7208" selection-start-column="74" selection-end-line="7208" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/ServerInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="360">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/receiver/BootReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="585">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/logic/AppLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1080">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/AppDetailListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="555">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/ClientInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///data/android-sdk/sources/android-21/java/net/DatagramPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1592" max-vertical-offset="4365">
+          <caret line="134" column="31" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/MyPhoneActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="993" max-vertical-offset="1425">
-          <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1425">
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/server/HttpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="750">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/ClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///data/android-sdk/sources/android-21/android/content/ContextWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5471" max-vertical-offset="8235">
+          <caret line="513" column="25" selection-start-line="513" selection-start-column="25" selection-end-line="513" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/IndexActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="543" max-vertical-offset="1155">
+          <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/auto/OneCenterProtos.java">
+    <entry file="file:///data/android-sdk/sources/android-21/android/app/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.5" vertical-offset="14220" max-vertical-offset="100965">
-          <caret line="166" column="7" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="7785" max-vertical-offset="10935">
+          <caret line="519" column="7" selection-start-line="519" selection-start-column="7" selection-end-line="519" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="540">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/SocketService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1065">
+          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="645">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/ChannelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="450">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/net/netty/OneBoardUdpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///data/android-sdk/sources/android-21/java/net/InetAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3882" max-vertical-offset="12405">
+          <caret line="303" column="30" selection-start-line="303" selection-start-column="30" selection-end-line="303" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/server/UDPServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1365">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
-            <element signature="e#0#255504#0" expanded="true" />
+            <element signature="e#3163#3164#0" expanded="true" />
+            <element signature="e#3229#3230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///data/android-sdk/sources/android-21/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="2805">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///data/android-sdk/sources/android-21/java/util/concurrent/TimeUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4212" max-vertical-offset="4845">
+          <caret line="326" column="63" selection-start-line="326" selection-start-column="43" selection-end-line="326" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/utils/UDPUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="825">
+          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="1455">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/UDPService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="555">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/cn/acooo/onecenter/core/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="1320">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="2070">
+          <caret line="129" column="28" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
+          <folding>
+            <element signature="e#2808#2974#0" expanded="true" />
+            <element signature="e#2963#2964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="795">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/cn/acooo/onecenter/server/service/ServerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone/src/main/java/cn/acooo/onecenter/phone/service/PhoneUdpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7345133" vertical-offset="861" max-vertical-offset="1200">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#521#529#0" expanded="true" />
           </folding>
         </state>
       </provider>

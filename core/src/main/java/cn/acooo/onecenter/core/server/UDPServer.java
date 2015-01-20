@@ -18,11 +18,20 @@ import cn.acooo.onecenter.core.utils.UDPUtils;
 public class UDPServer implements Runnable{
     private MulticastSocket ms;
     private boolean isRun = true;
+    public boolean isRun(){
+        return isRun;
+    }
     public void setIsRun(boolean v){
         this.isRun = v;
     }
     private int port = 9998;
-
+    public void setPort(int port){
+        this.port = port;
+    }
+    public int getPort(){
+        return port;
+    }
+    private final static String LOCALHOST = "localhost";
     public UDPServer(int port){
         this.port = port;
     }
@@ -40,21 +49,26 @@ public class UDPServer implements Runnable{
             DatagramPacket dp = new DatagramPacket(buf,1024);
             Log.i(BaseActivity.TAG,"udpServer is started...");
             while (isRun){
+
                 ms.receive(dp);
                 try{
-                    OneCenterProtos.UDPMessage message = OneCenterProtos.UDPMessage.parseFrom(dp.getData());
+                    byte[] data = new byte[dp.getLength()];
+                    for(int i =0; i< data.length; i++){
+                            data[i] = buf[i];
+                    }
+                    String clientIp = dp.getAddress().getHostAddress();
+                    Log.i(BaseActivity.TAG,"recive sender ip==="+clientIp);
+                    if(LOCALHOST.equals(clientIp)){
+                        continue;//不处理本机发出去的广播
+                    }
+                    OneCenterProtos.UDPMessage message = OneCenterProtos.UDPMessage.parseFrom(data);
                     switch (message.getType()){
                         case SEARCH_ONEBOARD:{
-                            String clientIp = dp.getAddress().getHostAddress();
-                            dp.setAddress(InetAddress.getByName(clientIp));
-                            OneCenterProtos.UDPMessage.Builder builder = OneCenterProtos.UDPMessage.newBuilder();
-                            builder.setType(OneCenterProtos.UDPType.IS_ONEBOARD);
-                            dp.setData(builder.build().toByteArray());
-                            ms.send(dp);
+                            searchedOneBoard(clientIp);
                             break;
                         }
                         case IS_ONEBOARD:{
-                            Log.i(BaseActivity.TAG,"scan new oneBoard,ip="+dp.getAddress());
+                            scanNewOneBoard(clientIp);
                             break;
                         }
                         case IS_PHONE:{
@@ -62,7 +76,7 @@ public class UDPServer implements Runnable{
                         }
                     }
                 }catch (InvalidProtocolBufferException e){
-                    Log.d(BaseActivity.TAG,"invalid package");
+                    Log.e(BaseActivity.TAG,"invalid package",e);
                     continue;
                 }
             }
@@ -72,5 +86,19 @@ public class UDPServer implements Runnable{
             ms.close();
             Log.i(BaseActivity.TAG,"udpServer is shutdown...");
         }
+    }
+
+    /**
+     * 自己是OneBoard，并且被发现了，调用本函数
+     */
+    public void searchedOneBoard(String clientIp){
+        Log.i(BaseActivity.TAG,"server recive udp packet,ip="+clientIp);
+    }
+    /**
+     * 当手机端扫描到新的oneboard，调用本函数
+     * @param ip
+     */
+    public void scanNewOneBoard(String ip){
+        Log.i(BaseActivity.TAG,"scan new oneBoard,ip="+ip);
     }
 }
