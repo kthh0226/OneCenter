@@ -17,7 +17,7 @@ import cn.acooo.onecenter.server.ViewHolder.ConversationItemHolder;
 /**
  * Created by ly580914 on 15/1/19.
  */
-public class ListSmsAdapter extends BaseAdapter{
+public class ListSmsAdapter extends MyBaseAdapter{
     private List<SmsInfo> datas;
     private Context context;
     public ListSmsAdapter(Context context){

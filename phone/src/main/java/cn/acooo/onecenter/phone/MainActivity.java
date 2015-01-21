@@ -1,7 +1,9 @@
 package cn.acooo.onecenter.phone;
 
+import android.app.PendingIntent;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -38,6 +40,7 @@ import cn.acooo.onecenter.core.utils.MyContant;
 import cn.acooo.onecenter.core.utils.SmsUtils;
 import cn.acooo.onecenter.core.utils.TalksUtils;
 import cn.acooo.onecenter.phone.logic.AppLogic;
+import cn.acooo.onecenter.phone.receiver.SmsReceiver;
 import cn.acooo.onecenter.phone.service.SocketService;
 import cn.acooo.onecenter.phone.service.UDPService;
 
@@ -45,6 +48,8 @@ public class MainActivity extends BaseActivity {
 	private EditText ip;
 	private EditText port;
 	private Intent socketServiceIntent;
+    private SmsReceiver smsReceiver;
+    private PendingIntent sendIntent;
 
 
     @Override
@@ -126,6 +131,9 @@ public class MainActivity extends BaseActivity {
                 App.phoneUdpServer.cancelScanOneBoard();
             }
         });
+
+        Intent sentIntent = new Intent(MyContant.SMS_SEND_ACTION);
+        sendIntent = PendingIntent.getBroadcast(MainActivity.this, 0, sentIntent, 0);
 	}
 	
 	@Override
@@ -157,10 +165,10 @@ public class MainActivity extends BaseActivity {
                         }
 					case OneCenterProtos.MessageType.MSG_ID_APPS_VALUE:
 						Log.i(TAG, "into UI_MSG_ID_NEW_PHONE handle message,msg="+msg);
-
+                        SCQueryApps.Builder builder = SCQueryApps.newBuilder();
 						List<PackageInfo> ps = CommonsUtil.getAllApps(MainActivity.this);
 						for(PackageInfo info : ps){
-                            SCQueryApps.Builder builder = SCQueryApps.newBuilder();
+
 							OneCenterProtos.AppDetail.Builder appInfoBuilder = OneCenterProtos.AppDetail.newBuilder();
 							appInfoBuilder.setName(info.applicationInfo.loadLabel(  
 						            getPackageManager()).toString());
@@ -173,15 +181,15 @@ public class MainActivity extends BaseActivity {
 							ByteString byteString = ByteString.copyFrom(ImageUtil.drawableToBytes(icon));
 							appInfoBuilder.setIcon(byteString);
 							builder.addApps(appInfoBuilder);
-                            App.send(MessageType.MSG_ID_APPS,builder);
 						}
+                        App.send(MessageType.MSG_ID_APPS,builder);
 
 						return true;
                     case MessageType.MSG_ID_QUERY_CONTACTS_VALUE:
                         List<ContactsInfo> contacts = AppLogic.getInstance().getAllContacts(MainActivity.this);
-
+                        OneCenterProtos.SCQueryContacts.Builder scQueryContacts = OneCenterProtos.SCQueryContacts.newBuilder();
                         for(ContactsInfo info : contacts){
-                            OneCenterProtos.SCQueryContacts.Builder scQueryContacts = OneCenterProtos.SCQueryContacts.newBuilder();
+
                             OneCenterProtos.ContactsInfo.Builder contactsInfo = OneCenterProtos.ContactsInfo.newBuilder();
                             contactsInfo.setId(info.getId());
                             contactsInfo.setName(info.getName());
@@ -191,15 +199,15 @@ public class MainActivity extends BaseActivity {
                                 contactsInfo.setIcon(ByteString.copyFrom(ImageUtil.Bitmap2Bytes(info.getIcon())));
                             }
                             scQueryContacts.addInfos(contactsInfo);
-                            App.send(MessageType.MSG_ID_QUERY_CONTACTS,scQueryContacts);
                         }
+                        App.send(MessageType.MSG_ID_QUERY_CONTACTS,scQueryContacts);
+                        return true;
 
-                        return  true;
                     case MessageType.MSG_ID_QUERY_CONVERSATION_VALUE:
                         List<ConversationInfo> conversationInfos = ConversationUtils.getAllConversation(MainActivity.this);
-
+                        OneCenterProtos.SCQueryConversation.Builder scqueryConv = OneCenterProtos.SCQueryConversation.newBuilder();
                         for (ConversationInfo info : conversationInfos){
-                           OneCenterProtos.SCQueryConversation.Builder scqueryConv = OneCenterProtos.SCQueryConversation.newBuilder();
+
                            OneCenterProtos.ConversationInfo.Builder convinfo = OneCenterProtos.ConversationInfo.newBuilder();
                            convinfo.setId(info.getId());
                            convinfo.setDate(info.getDate());
@@ -208,16 +216,17 @@ public class MainActivity extends BaseActivity {
                            convinfo.setSnippet(info.getSnippet());
                            convinfo.setRecipient(info.getRecipient());
                            scqueryConv.addConversation(convinfo);
-                           App.send(MessageType.MSG_ID_QUERY_CONVERSATION,scqueryConv);
                         }
+                        App.send(MessageType.MSG_ID_QUERY_CONVERSATION,scqueryConv);
                         return true;
+
                     case MessageType.MSG_ID_QUERY_SMS_VALUE:
                         OneCenterProtos.CSQuerySmsById querySms = OneCenterProtos.CSQuerySmsById.parseFrom((byte[])msg.obj);
                         Log.i("llllllllllllllllllllllllllll","id:"+ querySms.getId() );
                         List<SmsInfo> smsInfos = SmsUtils.getSmsById(MainActivity.this, querySms.getId());
                         Log.i("llllllllllllllllllllllllllll","size" + smsInfos.size());
+                        OneCenterProtos.SCQuerySms.Builder scquerysms = OneCenterProtos.SCQuerySms.newBuilder();
                          for (SmsInfo info : smsInfos){
-                            OneCenterProtos.SCQuerySms.Builder scquerysms = OneCenterProtos.SCQuerySms.newBuilder();
                             OneCenterProtos.SmsInfo.Builder smsinfo = OneCenterProtos.SmsInfo.newBuilder();
                             smsinfo.setDate(info.getDate());
                             smsinfo.setAddress(info.getAddress());
@@ -225,10 +234,10 @@ public class MainActivity extends BaseActivity {
                             smsinfo.setBody(info.getBody());
                             smsinfo.setName(info.getName() == null?"无名":info.getName());
                             scquerysms.addInfos(smsinfo);
-                            App.send(MessageType.MSG_ID_SHOW_MSG,scquerysms);
-                          }
 
-                            return true;
+                         }
+                         App.send(MessageType.MSG_ID_SHOW_MSG,scquerysms);
+                         return true;
 
 //                    case MessageType.MSG_ID_SHOW_MSG_VALUE:
 //                        List<SmsInfo> smsInfos2 = SmsUtils.getSms(MainActivity.this);
@@ -247,8 +256,8 @@ public class MainActivity extends BaseActivity {
 //                        return true;
                     case MessageType.MSG_ID_QUERY_TALKS_VALUE:
                         List<TalksInfo> talksInfos = TalksUtils.getTalksInfo(MainActivity.this);
+                        OneCenterProtos.SCQueryTalks.Builder scquerytalks = OneCenterProtos.SCQueryTalks.newBuilder();
                         for (TalksInfo info : talksInfos){
-                            OneCenterProtos.SCQueryTalks.Builder scquerytalks = OneCenterProtos.SCQueryTalks.newBuilder();
                             OneCenterProtos.TalksInfo.Builder talksInfo = OneCenterProtos.TalksInfo.newBuilder();
                             talksInfo.setDate(info.getDate());
                             talksInfo.setType(info.getType());
@@ -256,8 +265,8 @@ public class MainActivity extends BaseActivity {
                             talksInfo.setDuration(info.getDuration());
                             talksInfo.setName(info.getName() == null ? "" : info.getName());
                             scquerytalks.addTalks(talksInfo);
-                            App.send(MessageType.MSG_ID_QUERY_TALKS,scquerytalks);
                         }
+                        App.send(MessageType.MSG_ID_QUERY_TALKS,scquerytalks);
 
                         return true;
                     case MessageType.MSG_ID_CALL_VALUE:
@@ -269,9 +278,16 @@ public class MainActivity extends BaseActivity {
                         return true;
 
                     case MessageType.MSG_ID_SEND_VALUE:
+                        if (smsReceiver == null){
+                            IntentFilter filter = new IntentFilter();
+                            filter.addAction(MyContant.SMS_SEND_ACTION);
+                            filter.addAction(MyContant.SMS_RECEIVED);
+                            smsReceiver = new SmsReceiver();
+                            registerReceiver(smsReceiver, filter);
+                        }
                         OneCenterProtos.CSSendSms sendSms = OneCenterProtos.CSSendSms.parseFrom((byte[])msg.obj);
                         SmsManager smsManager = SmsManager.getDefault();
-                        smsManager.sendTextMessage(sendSms.getNumber(),null, sendSms.getContent(), null, null);
+                        smsManager.sendTextMessage(sendSms.getNumber(),null, sendSms.getContent(), sendIntent, null);
                         return true;
 
                     case MessageType.MSG_ID_DELETE_VALUE:
@@ -307,4 +323,13 @@ public class MainActivity extends BaseActivity {
             App.send(MessageType.MSG_ID_DELETE,builder);
         }
 	}
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (smsReceiver != null){
+            unregisterReceiver(smsReceiver);
+            smsReceiver = null;
+        }
+    }
 }

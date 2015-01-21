@@ -1,5 +1,6 @@
 package cn.acooo.onecenter.server;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -9,6 +10,7 @@ import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
 import android.provider.ContactsContract;
+import android.telephony.SmsManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
@@ -38,6 +40,8 @@ import cn.acooo.onecenter.core.model.TalksInfo;
 import cn.acooo.onecenter.core.utils.CommonsUtil;
 import cn.acooo.onecenter.core.utils.ConversationUtils;
 import cn.acooo.onecenter.core.utils.MyContant;
+import cn.acooo.onecenter.server.ViewHolder.EmptyFragment;
+import cn.acooo.onecenter.server.ViewHolder.LoadingFragment;
 import cn.acooo.onecenter.server.adapter.ContactsAdapter;
 import cn.acooo.onecenter.server.adapter.ConversationAdapter;
 import cn.acooo.onecenter.server.adapter.ListSmsAdapter;
@@ -59,6 +63,8 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
     private PopupWindow window;
     private TextView tv_sms;
     private Map<Integer, SmsInfo> cacheSms;
+    private Fragment page_loading;
+    private Fragment page_empty;
 
     private MyPhoneFeatureListFragment ff;
 	@Override
@@ -69,6 +75,8 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
         ff.setActivateOnItemClick(true);
         ff.getListView().setItemChecked(PhoneMenus.APPS.ordinal(),true);
         onItemSelected(PhoneMenus.APPS);
+        page_loading = new LoadingFragment();
+        page_empty = new EmptyFragment();
 	}
 
 	@Override
@@ -85,21 +93,32 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
                         for(OneCenterProtos.AppDetail app : builder.getAppsList()){
                             myAppListAdapter.addAppItem(app,ms.get(app.getPackageName()));
                         }
+                        getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, appDetail).commit();
                         return true;
                     }
                     case MessageType.MSG_ID_QUERY_CONTACTS_VALUE:
                         ContactsAdapter contactsAdapter = (ContactsAdapter)contactsDetail.getListAdapter();
                         SCQueryContacts scQueryContacts = SCQueryContacts.parseFrom((byte[])msg.obj);
-                        for(OneCenterProtos.ContactsInfo info : scQueryContacts.getInfosList()){
-                            contactsAdapter.addContacts(new ContactsInfo(info));
+                        if (scQueryContacts.getInfosList().size() == 0){
+                            getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, page_empty).commit();
+                        }else{
+                            for(OneCenterProtos.ContactsInfo info : scQueryContacts.getInfosList()){
+                                contactsAdapter.addContacts(new ContactsInfo(info));
+                            }
+                            getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, contactsDetail).commit();
                         }
                         return true;
                     case MessageType.MSG_ID_QUERY_CONVERSATION_VALUE:
                          ConversationAdapter conversationAdapter = (ConversationAdapter)conversationDetail.getListAdapter();
                          OneCenterProtos.SCQueryConversation scQueryConversation =OneCenterProtos.SCQueryConversation.parseFrom((byte[])msg.obj);
-                         for(OneCenterProtos.ConversationInfo info : scQueryConversation.getConversationList()){
-                             conversationAdapter.addConversation(new ConversationInfo(info));
-                         }
+                        if (scQueryConversation.getConversationList().size() == 0){
+                            getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, page_empty).commit();
+                        }else{
+                            for(OneCenterProtos.ConversationInfo info : scQueryConversation.getConversationList()){
+                                conversationAdapter.addConversation(new ConversationInfo(info));
+                            }
+                            getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, conversationDetail).commit();
+                        }
                         return true;
                     case MessageType.MSG_ID_SHOW_MSG_VALUE:
                         OneCenterProtos.SCQuerySms scQuerySms = OneCenterProtos.SCQuerySms.parseFrom((byte[])msg.obj);
@@ -116,8 +135,13 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
                     case MessageType.MSG_ID_QUERY_TALKS_VALUE:
                         TalksAdapter talksAdapter = (TalksAdapter)talksDetail.getListAdapter();
                         OneCenterProtos.SCQueryTalks scQueryTalks = OneCenterProtos.SCQueryTalks.parseFrom((byte[])msg.obj);
-                        for(OneCenterProtos.TalksInfo info : scQueryTalks.getTalksList()){
-                            talksAdapter.addTalks(new TalksInfo(info));
+                        if (scQueryTalks.getTalksList().size() == 0){
+                            getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, page_empty).commit();
+                        }else{
+                            for(OneCenterProtos.TalksInfo info : scQueryTalks.getTalksList()){
+                                talksAdapter.addTalks(new TalksInfo(info));
+                            }
+                            getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, talksDetail).commit();
                         }
                         return true;
                     case MessageType.MSG_ID_SMS_ERROE_VALUE:
@@ -219,33 +243,34 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
                 if(appDetail == null){
                     appDetail = new AppDetailListFragment();
                     App.selectedPhoneClient.send(MessageType.MSG_ID_APPS, OneCenterProtos.CSQueryApps.newBuilder());
+                    getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, page_loading).commit();
+                }else {
+                    getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, appDetail).commit();
                 }
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.phone_feature_detail_container, appDetail).commit();
                 break;
             case CONTACTS:
                 if (contactsDetail == null){
                     contactsDetail = new ContactsDetailListFragment();
                     App.selectedPhoneClient.send(MessageType.MSG_ID_QUERY_CONTACTS,OneCenterProtos.CSQueryContacts.newBuilder());
+                }else{
+                    getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, contactsDetail).commit();
                 }
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.phone_feature_detail_container, contactsDetail).commit();
                 break;
             case TALKS:
                 if (talksDetail == null){
                     talksDetail= new TalksListFragment();
                     App.selectedPhoneClient.send(MessageType.MSG_ID_QUERY_TALKS,OneCenterProtos.CSQueryTalks.newBuilder());
+                }else{
+                    getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, talksDetail).commit();
                 }
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.phone_feature_detail_container, talksDetail).commit();
                 break;
             case MESSAGE:
                 if (conversationDetail == null){
                     conversationDetail = new ConversationListFragment();
                     App.selectedPhoneClient.send(MessageType.MSG_ID_QUERY_CONVERSATION,OneCenterProtos.CSQueryConversation.newBuilder());
+                }else{
+                    getFragmentManager().beginTransaction().replace(R.id.phone_feature_detail_container, conversationDetail).commit();
                 }
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.phone_feature_detail_container, conversationDetail).commit();
                 break;
             default:
                 Log.e(TAG,"MyPhoneContent error,MyPhoneContent="+phones);
@@ -284,19 +309,24 @@ public class MyPhoneActivity extends BaseActivity implements MyPhoneFeatureListF
                     Toast.makeText(MyPhoneActivity.this,"短息内容不能为空",Toast.LENGTH_SHORT);
                     return;
                 }
-                OneCenterProtos.CSSendSms.Builder builder = OneCenterProtos.CSSendSms.newBuilder();
-                builder.setContent(smsBody);
-                builder.setNumber(address);
-                App.selectedPhoneClient.send(MessageType.MSG_ID_SEND,builder);
+                SmsManager smsManager = SmsManager.getDefault();
+                List<String> messages = smsManager.divideMessage(smsBody);
+                for (String message : messages){
+                    OneCenterProtos.CSSendSms.Builder builder = OneCenterProtos.CSSendSms.newBuilder();
+                    builder.setContent(message);
+                    builder.setNumber(address);
+                    App.selectedPhoneClient.send(MessageType.MSG_ID_SEND,builder);
 
-                SmsInfo info = new SmsInfo();
-                info.setAddress(address);
-                info.setBody(smsBody);
-                info.setType(2);
-                info.setDate(System.currentTimeMillis());
+                    SmsInfo info = new SmsInfo();
+                    info.setAddress(address);
+                    info.setBody(smsBody);
+                    info.setType(2);
+                    info.setDate(System.currentTimeMillis());
 
-                cacheSms.put(listSmsAdapter.getDatas().size(), info);
-                listSmsAdapter.addSms(info);
+                    cacheSms.put(listSmsAdapter.getDatas().size(), info);
+                    listSmsAdapter.addSms(info);
+                }
+
             }
         });
 

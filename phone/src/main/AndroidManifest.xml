@@ -32,12 +32,6 @@
         <service android:enabled="true" android:name=".service.SocketService" android:permission="cn.acooo.onecenter"></service>
 
         <service android:enabled="true" android:name=".service.UDPService" android:permission="cn.acooo.onecenter"></service>
-        <receiver android:name=".receiver.SmsReceiver">
-            <intent-filter>
-                <action android:name="android.provier.Telephony.SMS_RECEIVED"/>
-                <action android:name="android.provier.Telephony.SMS_SEND"/>
-            </intent-filter>
-        </receiver>
     </application>
 
 </manifest>
