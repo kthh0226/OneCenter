@@ -33,7 +33,7 @@ import cn.acooo.onecenter.server.ViewHolder.ContactsViewHolder;
 /**
  * Created by kthh on 14/12/30.
  */
-public class ContactsAdapter extends BaseAdapter {
+public class ContactsAdapter extends MyBaseAdapter {
     final MyPhoneActivity context;
 
     private LayoutInflater mInflater;
@@ -72,11 +72,12 @@ public class ContactsAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ContactsViewHolder holder = null;
+        final View view ;
         if (convertView == null) {
             holder = new ContactsViewHolder();
-            convertView = mInflater.inflate(R.layout.contacts_item, null);
+            view = mInflater.inflate(R.layout.contacts_item, null);
             holder.icon = (ImageView)convertView.findViewById(R.id.contacts_icon);
             holder.name = (TextView)convertView.findViewById(R.id.contacts_name);
             holder.number = (TextView)convertView.findViewById(R.id.contacts_number);
@@ -84,8 +85,9 @@ public class ContactsAdapter extends BaseAdapter {
             holder.bt_call = (Button)convertView.findViewById(R.id.bt_call);
             holder.bt_send = (Button)convertView.findViewById(R.id.bt_send_sms);
             holder.bt_delete = (Button)convertView.findViewById(R.id.bt_delete);
-            convertView.setTag(holder);
+            view.setTag(holder);
         }else {
+            view = convertView;
             holder = (ContactsViewHolder)convertView.getTag();
         }
 
@@ -116,6 +118,8 @@ public class ContactsAdapter extends BaseAdapter {
                 delete.setId(ai.getId()+"");
                 delete.setType(MyContant.DELETE_CONTACT);
                 App.selectedPhoneClient.send(OneCenterProtos.MessageType.MSG_ID_DELETE, delete);
+
+                AdapterAnimation.setAnimation(position,view,ContactsAdapter.this);
             }
         });
         return convertView;

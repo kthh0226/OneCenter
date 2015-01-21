@@ -11,8 +11,10 @@ public class MyContant {
     public static final String URI_CANTACTS = "content://contacts/people";
     public static final String URI_SMS = "content://sms";
     public static final String URI_LOG = "content://call_log/calls";
+    public static final String URI_CONVERSATION = "content://mms-sms/conversations";
+
     public static final String SMS_SEND_ACTION = "SMS_SEND_ACTION";
-    public static final String SMS_RECEIVED = "SMS_RECEIVED";
+    public static final String SMS_RECEIVED = "android.provier.Telephony.SMS_RECEIVED";
     
     public static final int SMS_ERROE = 4;
 }

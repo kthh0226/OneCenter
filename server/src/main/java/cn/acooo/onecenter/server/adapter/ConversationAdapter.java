@@ -5,10 +5,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -26,7 +29,7 @@ import cn.acooo.onecenter.server.ViewHolder.ConversationHolder;
 /**
  * Created by ly580914 on 15/1/15.
  */
-public class ConversationAdapter extends BaseAdapter{
+public class ConversationAdapter extends MyBaseAdapter{
     private LayoutInflater mLayoutInflater;
     private List<ConversationInfo> datas = new ArrayList<ConversationInfo>();
     public void clearData(){
@@ -62,20 +65,23 @@ public class ConversationAdapter extends BaseAdapter{
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
+        final View view;
         ConversationHolder holder;
         if (convertView == null){
+
             holder = new ConversationHolder();
-            convertView = mLayoutInflater.inflate(R.layout.conversation_item2,null);
+            view = mLayoutInflater.inflate(R.layout.conversation_item2,null);
             holder.tv_name = (TextView)convertView.findViewById(R.id.conversation_name);
             holder.tv_date = (TextView)convertView.findViewById(R.id.conversation_date);
             holder.tv_count = (TextView)convertView.findViewById(R.id.conversation_count);
             holder.tv_snippet = (TextView)convertView.findViewById(R.id.conversation_snippet);
             holder.bt_delete = (Button)convertView.findViewById(R.id.bt_delete);
             holder.bt_watch = (Button)convertView.findViewById(R.id.bt_watch);
-            convertView.setTag(holder);
+            view.setTag(holder);
         }
         else{
+            view =convertView;
             holder = (ConversationHolder)convertView.getTag();
         }
         final ConversationInfo info = datas.get(position);
@@ -90,6 +96,7 @@ public class ConversationAdapter extends BaseAdapter{
                 builder.setId(info.getId() + "");
                 builder.setType(MyContant.DELETE_SMS);
                 App.selectedPhoneClient.send(OneCenterProtos.MessageType.MSG_ID_DELETE, builder);
+                AdapterAnimation.setAnimation(position,view,ConversationAdapter.this);
             }
         });
         holder.bt_watch.setOnClickListener(new View.OnClickListener() {
@@ -98,8 +105,9 @@ public class ConversationAdapter extends BaseAdapter{
                 Log.i("llllllllllllllllllllllllllll", "查看点击了");
                 OneCenterProtos.CSQuerySmsById.Builder builder = OneCenterProtos.CSQuerySmsById.newBuilder();
                 builder.setId(info.getId());
-                App.selectedPhoneClient.send(OneCenterProtos.MessageType.MSG_ID_QUERY_SMS,builder);
+                App.selectedPhoneClient.send(OneCenterProtos.MessageType.MSG_ID_QUERY_SMS, builder);
             }
+
         });
 //        convertView.setOnClickListener(new View.OnClickListener() {
 //            @Override

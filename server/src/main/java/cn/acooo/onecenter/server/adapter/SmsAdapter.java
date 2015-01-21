@@ -22,7 +22,7 @@ import cn.acooo.onecenter.server.ViewHolder.SmsViewHolder;
 /**
  * Created by ly580914 on 15/1/15.
  */
-public class SmsAdapter extends BaseAdapter{
+public class SmsAdapter extends MyBaseAdapter{
     private LayoutInflater mLayoutInflater;
     private List<SmsInfo> datas = new ArrayList<SmsInfo>();
     public void clearData(){

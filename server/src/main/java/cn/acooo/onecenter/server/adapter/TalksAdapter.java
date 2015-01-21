@@ -22,7 +22,7 @@ import cn.acooo.onecenter.server.ViewHolder.TalksViewHolder;
 /**
  * Created by ly580914 on 15/1/15.
  */
-public class TalksAdapter extends BaseAdapter{
+public class TalksAdapter extends MyBaseAdapter{
     private LayoutInflater mLayoutInflater;
     private List<TalksInfo> datas = new ArrayList<TalksInfo>();
     public void clearData(){
@@ -58,20 +58,22 @@ public class TalksAdapter extends BaseAdapter{
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
+        final View view;
         TalksViewHolder holder;
         if (convertView == null){
             holder = new TalksViewHolder();
-            convertView = mLayoutInflater.inflate(R.layout.talks_item,null);
+            view = mLayoutInflater.inflate(R.layout.talks_item,null);
             holder.tv_number = (TextView)convertView.findViewById(R.id.talks_number);
             holder.tv_name = (TextView)convertView.findViewById(R.id.talks_name);
             holder.tv_date = (TextView)convertView.findViewById(R.id.talks_date);
             holder.tv_type = (TextView)convertView.findViewById(R.id.talks_type);
             holder.tv_duration = (TextView)convertView.findViewById(R.id.talks_duration);
             holder.bt_delete = (Button)convertView.findViewById(R.id.bt_delete);
-            convertView.setTag(holder);
+            view.setTag(holder);
         }
         else{
+            view = convertView;
             holder = (TalksViewHolder)convertView.getTag();
         }
         final TalksInfo info = datas.get(position);
@@ -87,6 +89,8 @@ public class TalksAdapter extends BaseAdapter{
                 delete.setId(info.getId()+"");
                 delete.setType(MyContant.DELETE_LOG);
                 App.selectedPhoneClient.send(OneCenterProtos.MessageType.MSG_ID_DELETE,delete);
+
+                AdapterAnimation.setAnimation(position,view,TalksAdapter.this);
             }
         });
         return convertView;
